@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 
 export function Sign() {
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -30,19 +30,23 @@ export function Sign() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ username, password}),
+                body: JSON.stringify({email, password}),
             });
 
             if(response.ok) {
                 // 회원가입 성공 처리
                 console.log('회원가입 성공');
                 gotoMain()
-            } else {
-                // 오류 처리
-                console.error('회원가입 실패');
+            } else {  // 오류 처리
+                // 서버에서 반환된 오류 메시지를 로그로 찍고, 사용자에게 알림
+                const errorData = await response.json(); // 오류 정보가 담긴 응답을 JSON 형태로 변환
+                console.error('회원가입 실패:', errorData.message);
+                alert(`회원가입 실패: ${errorData.message}`); // 사용자에게 오류 내용 알림
             }
         } catch (error) {
+            // 네트워크 오류 또는 예상치 못한 오류 처리
             console.error('서버 통신 오류', error);
+            alert('서버 통신 중 오류가 발생했습니다. 나중에 다시 시도해주세요.');
         }
     };
 
@@ -64,11 +68,11 @@ export function Sign() {
                     </div>
                     <input
                         type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)} // 추가
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)} // 추가
                         className="id3"
                         placeholder="아이디를 입력해주세요"
-                        autoComplete="username"/>
+                        autoComplete="email"/>
                     <div className="id3-9">
                         <span className="id3-2">
                             ID 중복확인
@@ -102,7 +106,7 @@ export function Sign() {
                 <button
                     type="submit"
                     className="id3-8"
-                    >다음으로
+                >다음으로
                 </button>
             </div>
         </form>
