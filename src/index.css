@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Inter_2";
+    font-weight: normal;
+    src: url("./fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+body {
+    font-family: "Inter_2";
+}
