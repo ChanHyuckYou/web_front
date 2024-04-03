@@ -1,0 +1,59 @@
+.admin2,
+.app-nupan5 {
+    position: relative;
+    font-weight: 600;
+}
+.admin2 {
+    display: inline-block;
+    min-width: 94px;
+}
+.app-nupan-container,
+.frame-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+.app-nupan-container {
+    flex: 1;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+}
+.frame-header {
+    width: 1413px;
+    justify-content: flex-end;
+    padding: 0 var(--padding-52xl);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--font-size-11xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}
+.frame-child3 {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid var(--color-black);
+    box-sizing: border-box;
+}
+.frame-parent5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-40xl);
+    max-width: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .frame-header {
+        padding-left: var(--padding-16xl);
+        padding-right: var(--padding-16xl);
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 750px) {
+    .frame-parent5 {
+        gap: 29px 59px;
+    }
+}

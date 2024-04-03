@@ -8,16 +8,20 @@ import {useMutation} from "react-query";
 
 export function Login() {
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const goTosign = () => {
         navigate('/Sign');
     };
-    const [loginUser, setLoginUser] = useState({ email: "", password: "" });
+    const [loginUser, setLoginUser] = useState({ email, password });
     // 오류 메시지 상태를 사용하는 부분 제거 및 사용하지 않는 setUsername, setPassword 제거
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setLoginUser({ ...loginUser, [name]: value });
+        if (name === 'email') setEmail(value);
+        if (name === 'password') setPassword(value);
     }
+
 
     const login = useMutation(async (loginUser) => {
         try {

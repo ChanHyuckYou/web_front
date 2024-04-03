@@ -1,0 +1,131 @@
+.i17 {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    min-width: 96px;
+}
+.storename-space {
+    height: 41px;
+    flex: 1;
+    position: relative;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+    min-width: 122px;
+}
+.parent3 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-lg);
+    min-width: 196px;
+}
+.i18 {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    min-width: 96px;
+}
+.accountname-space {
+    height: 41px;
+    flex: 1;
+    position: relative;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+    min-width: 122px;
+}
+.frame-wrapper1,
+.parent4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.parent4 {
+    align-self: stretch;
+    flex-direction: row;
+    gap: var(--gap-lg);
+}
+.frame-wrapper1 {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--padding-11xs) 0 0;
+    box-sizing: border-box;
+    min-width: 196px;
+}
+.frame-parent4,
+.frame-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+.frame-parent4 {
+    width: 675px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--gap-52xl);
+}
+.frame-wrapper {
+    align-self: stretch;
+    justify-content: flex-end;
+}
+.i19 {
+    position: relative;
+    font-size: var(--font-size-11xl);
+    display: inline-block;
+    font-weight: 600;
+    margin-top: -2px;
+}
+.adminpage-storeaccountmanage-inner1,
+.frame-parent3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+.frame-parent3 {
+    flex: 1;
+    flex-direction: column;
+}
+.adminpage-storeaccountmanage-inner1 {
+    width: 1098px;
+    flex-direction: row;
+    padding: 0 var(--padding-57xl);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+    .adminpage-storeaccountmanage-inner1 {
+        padding-left: var(--padding-19xl);
+        padding-right: var(--padding-19xl);
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 750px) {
+    .frame-parent4 {
+        gap: var(--gap-16xl);
+    }
+}
+@media screen and (max-width: 450px) {
+    .i17 {
+        font-size: var(--font-size-lgi);
+    }
+    .parent3 {
+        flex-wrap: wrap;
+    }
+    .i18 {
+        font-size: var(--font-size-lgi);
+    }
+    .parent4 {
+        flex-wrap: wrap;
+    }
+    .frame-parent4 {
+        gap: var(--gap-lg);
+    }
+}

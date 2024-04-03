@@ -1,0 +1,312 @@
+.qrcontainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.qrqr {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0 520px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.qrcontainer-1 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.qrapp-nupan {
+    margin: 0 98px 59px 98px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+
+.qrline-5 {
+    background: #000000;
+    margin-bottom: 50px;
+    width: 1440px;
+    height: 1px;
+}
+
+.qrcontainer-t {
+    margin: 0 14.5px 11px 0;
+    display: inline-block;
+    width: 702.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+
+.qrcontainer-100 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 123px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 5px 16px 5px 52px;
+    width: 642px;
+    box-sizing: border-box;
+}
+
+.qrcontainer-2 {
+    border-radius: 10px;
+    background: #DADADA;
+    position: relative;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 19.7px 5px 19px;
+    box-sizing: border-box;
+}
+
+.qrcontainer-3 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #000000;
+}
+.qrqr-1 {
+    border-radius: 10px;
+    background: #3FDF31;
+    position: relative;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px 12px 1px 13px;
+    box-sizing: border-box;
+
+}
+.qrqr-2 {  margin: 0 3.6px 0 2px;
+    overflow-wrap: break-word;
+    font-family: 'Inter_2';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.qrbiqr-code-scan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.qrgroup {
+    width: 30px;
+    height: 30px;
+}
+
+.qrcontainer-4 {
+    margin: 13px 14.5px 13px 0;
+    display: inline-block;
+    width: 416.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter_2';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.qrcontainer-5 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 123px 25px 123px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 5px 16px 5px 52px;
+    width: 642px;
+    box-sizing: border-box;
+}
+.qrcontainer-6 {
+    border-radius: 10px;
+    background: #DADADA;
+    position: relative;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 19.7px 5px 19px;
+    box-sizing: border-box;
+}
+.qrcontainer-7 {
+    overflow-wrap: break-word;
+    font-family: 'Inter_2';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #000000;
+}
+.qrqr-3 {
+    border-radius: 10px;
+    background: #3FDF31;
+    position: relative;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px 12px 1px 13px;
+    box-sizing: border-box;
+}
+.qrqr-4 {
+    margin: 0 3.6px 0 2px;
+    overflow-wrap: break-word;
+    font-family: 'Inter_2';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+.qrbiqr-code-scan-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.qrgroup-1 {
+    width: 30px;
+    height: 30px;
+}
+.qrcontainer-8 {
+    margin: 13px 14.5px 13px 0;
+    display: inline-block;
+    width: 416.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.qrcontainer-9 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 123px 25px 123px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 5px 16px 5px 52px;
+    width: 642px;
+    box-sizing: border-box;
+}
+.qrcontainer-10 {
+    border-radius: 10px;
+    background: #DADADA;
+    position: relative;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 19.7px 5px 19px;
+    box-sizing: border-box;
+}
+.qrcontainer-11 {
+    overflow-wrap: break-word;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #000000;
+}
+.qrqr-5 {
+    border-radius: 10px;
+    background: #3FDF31;
+    position: relative;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px 12px 1px 13px;
+    box-sizing: border-box;
+}
+.qrqr-6 {
+    margin: 0 3.6px 0 2px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+.qrbiqr-code-scan-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.qrgroup-2 {
+    width: 30px;
+    height: 30px;
+}
+.qrcontainer-12 {
+    margin: 13px 14.5px 13px 0;
+    display: inline-block;
+    width: 416.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.qrcontainer-13 {
+    background: #FF4C00;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px 13px 8px 14px;
+    box-sizing: border-box;
+}
+.qrcontainer-14 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.qrcontainer-20 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.qrcontainer-30 {
+    margin: 0 122px 14px 122px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 836px;
+    box-sizing: border-box;
+}

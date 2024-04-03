@@ -1,0 +1,456 @@
+.admin-page-sign-in-confirm .app-nupan {
+    margin-right: 18px;
+    width: 1159px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .line-5 {
+    background: #000000;
+    margin-bottom: 80px;
+    width: 1440px;
+    height: 1px;
+}
+.admin-page-sign-in-confirm .admin {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .authbtn {
+    margin: 0 0px 1px 0px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .storeuserbtn {
+    margin: 0 0 27px 0px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .userbtn {
+    margin: 0 0px;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-15 {
+    margin-right: 18px;
+    width: 568px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-13 {
+    margin-right: 14.5px;
+    width: 124.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-11 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-14 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-12 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .btnsub-3 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .btncan-3 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .line-8 {
+    background: #4097E8;
+    margin-bottom: 23px;
+    align-self: flex-start;
+    width: 173px;
+    height: 3px;
+}
+.admin-page-sign-in-confirm .btn-2 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .btncan-2 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-10 {
+    margin-right: 18px;
+    width: 568px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-9 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-8 {
+    margin-right: 14.5px;
+    width: 124.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-7 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-6 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .btnsub {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .btncan {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-5 {
+    margin-right: 18px;
+    width: 568px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-4 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-3 {
+    margin-right: 14.5px;
+    width: 124.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-2 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .input-1 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-sign-in-confirm .deny-bt {
+    border-radius: 10px;
+    background: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .store-info-3 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 10px 8px 16px;
+    width: 784px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .store-info {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    padding: 33px 0 312px 27px;
+    width: 1023px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .confirm-bt-3 {
+    border-radius: 10px;
+    background: #D9D9D9;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .frame {
+    margin: 0 71.8px 59px 98px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1270.2px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .frame-1 {
+    margin: 0 71px 0 76px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .deny-bt-3 {
+    border-radius: 10px;
+    background: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .store-info-1 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 10px 8px 16px;
+    width: 784px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .confirm-bt-2 {
+    border-radius: 10px;
+    background: #D9D9D9;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .deny-bt-2 {
+    border-radius: 10px;
+    background: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .store-info-2 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 10px 8px 16px;
+    width: 784px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .confirm-bt {
+    border-radius: 10px;
+    background: #D9D9D9;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container {
+    margin: 0 0.9px 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.1px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-1 {
+    margin-left: 0.4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.6px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-4 {
+    margin: 0 0.9px 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.1px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-5 {
+    margin-left: 0.4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.6px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 59px 0 54px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-6 {
+    margin-left: 0.4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.6px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-7 {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: 890px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-8 {
+    margin: 0 61.9px 573px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-10 {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: 890px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-11 {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: 890px;
+    box-sizing: border-box;
+}
+.admin-page-sign-in-confirm .container-12 {
+    margin: 0 0.9px 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.1px;
+    box-sizing: border-box;
+}

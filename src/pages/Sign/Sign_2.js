@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Sign_2.css'
+import '../../css/Sign/Sign_2.css'
 import {useNavigate} from "react-router-dom";
 export function Sign_2() {
     const navigate = useNavigate();

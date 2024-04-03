@@ -1,0 +1,252 @@
+.admin-page-store-account-manage {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0 54px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .app-nupan {
+    margin-right: 18px;
+    width: 1159px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .line-5 {
+    background: #000000;
+    margin-bottom: 39px;
+    width: 1440px;
+    height: 1px;
+}
+.admin-page-store-account-manage .admin {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container {
+    margin: 41px 18px 0 0;
+    display: inline-block;
+    width: 253px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-1 {
+    margin: 0 76px;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-2 {
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .line-8 {
+    background: #4097E8;
+    margin: 0 0 24px 1px;
+    width: 205px;
+    height: 3px;
+}
+.admin-page-store-account-manage .account-info {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 34px 0 0 28px;
+    width: 1023px;
+    height: 636px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-3 {
+    margin: 0 18.7px 12px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .delete-bt {
+    border-radius: 10px;
+    background: #D9D9D9;
+    position: relative;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 1px 9px 0;
+    width: 88px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-4 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .store-info-1 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 11px 9px 17px;
+    width: 784px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-5 {
+    margin-right: 18px;
+    width: 568px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-6 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-7 {
+    margin-right: 14.5px;
+    width: 124.5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-8 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .container-9 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .store-name-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 188px;
+    height: 41px;
+}
+.admin-page-store-account-manage .container-10 {
+    margin: 0 18.7px 12px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.admin-page-store-account-manage .account-name-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 188px;
+    height: 41px;
+}
+.admin-page-store-account-manage .container {
+    margin: 0 21.9px 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 734.1px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-1 {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-2 {
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-3 {
+    margin-left: 0.4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755.6px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-4 {
+    margin: 0 71.8px 59px 98px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1270.2px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-5 {
+    margin: 0 71px 0 76px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-6 {
+    margin: 0 76px 27px 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 946px;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-7 {
+    margin: 0 64px 573px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.admin-page-store-account-manage .container-8 {
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 675px;
+    height: fit-content;
+    box-sizing: border-box;
+}

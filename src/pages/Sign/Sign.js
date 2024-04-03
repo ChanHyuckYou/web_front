@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../../css/SignStyle.css';
+import '../../css/Sign/SignStyle.css';
 import {useNavigate} from 'react-router-dom';
 
 export function Sign() {
@@ -12,7 +12,7 @@ export function Sign() {
     //     navigate('/Sign_2');
     // };
     const gotoMain = () => {
-        navigate('/Main')
+        navigate('/')
     }
 
     const handleSubmit = async (e) => {

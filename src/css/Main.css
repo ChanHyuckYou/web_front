@@ -1,4 +1,42 @@
-.container2 {
+.more-menu-bt-ad {
+    margin-bottom: 12.8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 31.7px;
+    height: 28.3px;
+    box-sizing: border-box;
+}
+.vector-ad {
+    width: 31.7px;
+    height: 28.3px;
+}
+.container133-ad {
+    margin-right: 28.2px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.container-122-ad {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.container-ad {
+    margin: 0 85.2px 59px 98px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1256.8px;
+    box-sizing: border-box;
+}
+.container-1-ad {
     display: flex;
     flex-direction: row;
     align-self: center;
@@ -6,18 +44,18 @@
     width: 914px;
     box-sizing: border-box;
 }
-.id2-1 {
+.container-2-ad {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 59px 0 387px 0;
+    padding: 53.8px 0 387px 0;
     width: 1440px;
     box-sizing: border-box;
 }
-.app-nupan2 {
-    margin: 0 98px 59px 98px;
+.app-nupan-ad {
+    margin: 5.2px 18px 0 0;
     display: inline-block;
-    align-self: flex-start;
+    width: 1207.2px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -25,14 +63,14 @@
     font-size: 30px;
     color: #000000;
 }
-.line2-5 {
+.line-5-ad{
     background: #000000;
     margin-bottom: 58px;
     width: 1440px;
     height: 1px;
 }
-.user-name2 {
-    margin: 0 98px 138px 98px;
+.user-name-ad {
+    margin: 0 98px 14px 98px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -42,7 +80,7 @@
     font-size: 30px;
     color: #000000;
 }
-.id2-4 {
+ .container-3-ad {
     margin-right: 1.6px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -51,7 +89,7 @@
     font-size: 30px;
     color: #FFFFFF;
 }
-.id2-5 {
+.container-4-ad {
     border-radius: 10px;
     background: #FF4C00;
     position: relative;
@@ -62,7 +100,7 @@
     width: 250px;
     box-sizing: border-box;
 }
-.solarclipboard-list-outline2 {
+.solarclipboard-list-outline-ad {
     margin: 0 0 19.1px 3.6px;
     display: flex;
     flex-direction: row;
@@ -71,11 +109,11 @@
     height: 132.3px;
     box-sizing: border-box;
 }
-.vector2-7 {
+.vector-5-ad {
     width: 120px;
     height: 132.3px;
 }
-.id2-8 {
+.container-5-ad {
     margin-right: 13.3px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -84,7 +122,7 @@
     font-size: 30px;
     color: #FFFFFF;
 }
-.epmenu2 {
+.epmenu-ad {
     margin-bottom: 18.7px;
     display: flex;
     flex-direction: row;
@@ -93,11 +131,11 @@
     height: 112.5px;
     box-sizing: border-box;
 }
-.vector2-9 {
+ .vector-6-ad {
     width: 112.5px;
     height: 112.5px;
 }
-.id2-10 {
+.container-6-ad {
     border-radius: 10px;
     background: #4097E8;
     position: relative;
@@ -110,7 +148,7 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.qr {
+.qr-ad {
     border-radius: 10px;
     background: #3FDF31;
     position: relative;
@@ -123,7 +161,7 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.qr-12 {
+ .qr-1-ad {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -131,7 +169,7 @@
     font-size: 28px;
     color: #FFFFFF;
 }
-.biqr-code-scan {
+.biqr-code-scan-ad {
     margin: 0 0 7px 0.1px;
     display: flex;
     flex-direction: row;
@@ -140,7 +178,15 @@
     height: 140px;
     box-sizing: border-box;
 }
-.group2 {
+ .group-ad {
     width: 140px;
     height: 140px;
+}
+.container-2111-ad {
+    margin: 0 111px 88px 111px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
 }
