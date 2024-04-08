@@ -3,8 +3,13 @@ import MoreMenuBT from '../assets/MoreMenu_BT.png'
 import Vector from '../assets/Vector.png'
 import EPMENU from '../assets/ep_menu.png'
 import QR from '../assets/bi_qr-code-scan.png'
+import {useNavigate} from "react-router-dom";
 
 export default function Main() {
+    const navigate = useNavigate();
+    const goToQr = () => {
+        navigate('/Main/qrCRUD');
+    };
     return (
         <div className="container-2-ad">
             <div className="container-ad">
@@ -46,14 +51,15 @@ export default function Main() {
             주문확인
           </span>
                 </div>
-                <div className="qr-ad">
+                <button className="qr-ad"
+                onClick={goToQr}>
                     <div className="biqr-code-scan-ad">
                         <img className="vector-5-ad" src={QR} alt=""/>
                     </div>
                     <span className="qr-1-ad">
             QR, 출력
           </span>
-                </div>
+                </button>
             </div>
         </div>
     )

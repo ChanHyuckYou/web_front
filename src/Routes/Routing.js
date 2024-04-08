@@ -1,5 +1,5 @@
 import React from 'react';
-import App, {Login} from '../pages/Login';
+import App from '../pages/Login';
 import Sign from '../pages/Sign/Sign';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Main from "../pages/Main";
@@ -16,14 +16,14 @@ function Routing() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Login />} />
+                    <Route path='/' element={<App />} />
                     <Route path='/Main' element={<Main />} />
                     <Route path='/Sign' element={<Sign />} />
                     {/* eslint-disable-next-line react/jsx-pascal-case */}
                     <Route path='/Sign_2' element={<Sign_2 />} />
                     {/* eslint-disable-next-line react/jsx-pascal-case */}
                     <Route path='/Sign_3' element={<Sign_3 />} />
-                    <Route path='/Main/qr' element={<QrCRUD />} />
+                    <Route path='/Main/qrCRUD' element={<QrCRUD />} />
                     <Route path='/storesign' element={<StoreSign />}/>
 
                 </Routes>

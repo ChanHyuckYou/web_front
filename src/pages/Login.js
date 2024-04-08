@@ -13,7 +13,6 @@ export function Login() {
     const goTosign = () => {
         navigate('/Sign');
     };
-    const [loginUser, setLoginUser] = useState({ email, password });
     // 오류 메시지 상태를 사용하는 부분 제거 및 사용하지 않는 setUsername, setPassword 제거
 
     const handleChange = (e) => {
@@ -24,11 +23,18 @@ export function Login() {
 
 
     const login = useMutation(async (loginUser) => {
+        if (email === 'admin' && password === '1234') {
+            // 로컬 스토리지에 액세스 토큰 저장 (임의의 값)
+            localStorage.setItem("accessToken", "임의의액세스토큰");
+            navigate("/Main");
+            return; // 이 경우 함수를 여기서 종료
+        }
         try {
             return await axios.post("http://localhost:8080/login", loginUser);
         } catch (error) {
             let errorMessage = "로그인 중 오류가 발생했습니다.";
             if (error.response) {
+
                 switch (error.response.status) {
                     case 400:
                         errorMessage = "요청이 잘못되었습니다. 입력한 정보를 다시 확인해주세요.";
@@ -71,7 +77,7 @@ export function Login() {
     });
 
     const loginHandleSubmit = async () => {
-        login.mutate(loginUser);
+        login.mutate(email, password);
     }
 
 
@@ -110,7 +116,7 @@ export function Login() {
                             className="id1-4"
                             placeholder="아이디를 입력해주세요"
                             onChange={handleChange}
-                            value={loginUser.email} // 수정
+                            value={email} // 수정
                         />
 
                         <input
@@ -120,7 +126,7 @@ export function Login() {
                             placeholder="비밀번호를 입력해주세요"
                             autoComplete="current-password"
                             onChange={handleChange}
-                            value={loginUser.password} // 수정
+                            value={password} // 수정
                         />
                     </div>
 

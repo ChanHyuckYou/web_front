@@ -1,64 +1,95 @@
 import '../css/qr.css';
-import React from 'react';
+import QRCode from 'qrcode.react';
+import { useState } from "react";
 
-export function QrCRUD() {
+// QR 생성 함수
+const generateQR = () => {
+    // 여기에 QR 생성 및 관련 동작 추가
+    console.log("QR 생성됨!");
+};
+
+// QR CRUD 컴포넌트
+export default function QrCRUD() {
+    const [showTableFrame, setShowTableFrame] = useState(false);
+    const [tableCount, setTableCount] = useState(0);
+    const [qrGenerated, setQRGenerated] = useState(false);
+
+    const handleTableCreateClick = () => {
+        setShowTableFrame(true);
+    };
+
+    const handleCancelClick = () => {
+        setShowTableFrame(false);
+    };
+
+    const handleGenerateQRClick = () => {
+        generateQR(); // QR 생성 함수 호출
+        setQRGenerated(true); // QR 코드 생성됨을 표시
+    };
+
+    const handleTableCountChange = (event) => {
+        const count = parseInt(event.target.value);
+        setTableCount(count);
+        setQRGenerated(false); // 테이블 수 변경 시 QR 코드 생성 상태 초기화
+    };
+
     return (
-        <div className="qrqr">
-            <div className="qrapp-nupan">APP-nupan</div>
-            <div className="qrline-5"></div>
-            <div className="qrcontainer-30">
-                <div className="qrcontainer-t">테이블 번호</div>
-                <div className="qrcontainer-13">
-                    <span className="qrcontainer-14">테이블추가</span>
-                </div>
+        <div className="qrCRUD">
+            <div className="app-nupan11">
+                APP-nupan
             </div>
-
-            <div className="qrcontainer-9">
-                <div className="qrcontainer-12">1</div>
-                <div className="qrcontainer">
-                    <div className="qrqr-5">
-                        <div className="qrbiqr-code-scan-2">
-                            {/* <img className="group-2" src="assets/vectors/Group5_x2.svg" /> */}
-                        </div>
-                        <span className="qrqr-6">QR</span>
-                    </div>
-                    <div className="qrcontainer-10">
-                        <span className="qrcontainer-11">삭제</span>
-                    </div>
+            <div className="line-511"></div>
+            <div className="container-511">
+                <div className="table-number11">
+                    테이블 번호
                 </div>
+                <button className="table-add-bt" onClick={handleTableCreateClick}>
+                    <span className="table-add">
+                        테이블추가
+                    </span>
+                </button>
             </div>
-
-            <div className="qrcontainer-5">
-                <div className="qrcontainer-8">2</div>
-                <div className="qrcontainer-20">
-                    <div className="qrqr-3">
-                        <div className="qrbiqr-code-scan-1">
-                            {/* <img className="group-1" src="assets/vectors/Group2_x2.svg" /> */}
-                        </div>
-                        <span className="qrqr-4">QR</span>
+            {[...Array(tableCount)].map((_, index) => (
+                <div key={index} className="table-no-111">
+                    <div className="container-211">
+                        {index + 1}
                     </div>
-                    <div className="qrcontainer-6">
-                        <span className="qrcontainer-7">삭제</span>
+                    <div className="container11">
+                        <div className="qradd-bt-111">
+                            {qrGenerated && <QRCode value={`Table ${index + 1}`} />} {/* QR 코드 생성 여부에 따라 조건부 렌더링 */}
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
-            <div className="qrcontainer-100">
-                <div className="qrcontainer-4">3</div>
-                <div className="qrcontainer-1">
-                    <div className="qrqr-1">
-                        <div className="qrbiqr-code-scan">
-                            {/* <img className="group" src="assets/vectors/Group1_x2.svg" /> */}
-                        </div>
-                        <span className="qrqr-2">QR</span>
+            ))}
+            <div className={`tableframeeee11 ${showTableFrame ? 'show-tableframe' : ''}`}>
+                <div className="tablessssss11">
+                    테이블 생성
+                </div>
+                <div className="container-311">
+                    <div className="tablenummmmm11">
+                        테이블 수 :
                     </div>
-                    <div className="qrcontainer-2">
-                        <span className="qrcontainer-3">삭제</span>
+                    <input
+                        type="number"
+                        value={tableCount}
+                        onChange={handleTableCountChange}
+                        min={0}
+                    />
+                </div>
+                <div className="container-11111">
+                    <div className="tablesubmit11" onClick={handleCancelClick}>
+                        <span className="tbsub11">
+                            취소
+                        </span>
+                    </div>
+                    <div className="tablesubmit-111" onClick={handleGenerateQRClick}>
+                        <span className="tbsub-111">
+                            생성
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     );
 }
-
-export default QrCRUD;

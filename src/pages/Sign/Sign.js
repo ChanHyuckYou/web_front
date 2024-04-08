@@ -12,7 +12,7 @@ export function Sign() {
     //     navigate('/Sign_2');
     // };
     const gotoMain = () => {
-        navigate('/')
+        navigate('/Sign_3')
     }
 
     const handleSubmit = async (e) => {
