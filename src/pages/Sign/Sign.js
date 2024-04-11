@@ -4,110 +4,110 @@ import {useNavigate} from 'react-router-dom';
 
 export function Sign() {
     const navigate = useNavigate();
-    const [email, setEmail] = useState('');
+    const [ownerid, setOwnerid] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [ownername, setOwnername] = useState('');
+    const [ownercontact, setOwnercontact] = useState('');
 
-    // const gotoSignin = () => {
-    //     navigate('/Sign_2');
-    // };
     const gotoMain = () => {
         navigate('/Sign_3')
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // 폼 기본 제출 이벤트 방지
+        e.preventDefault();
 
-        // 비밀번호 확인 로직
         if(password !== confirmPassword) {
             alert('비밀번호가 일치하지 않습니다.');
             return;
         }
 
         try {
-            const response = await fetch('http://localhost:8080/user/create', {
+            const response = await fetch('http://43.201.92.62/store/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({
+                    ownerid,
+                    password,
+                    ownername,
+                    ownercontact
+                }),
             });
 
             if(response.ok) {
-                // 회원가입 성공 처리
                 console.log('회원가입 성공');
-                gotoMain()
-            } else {  // 오류 처리
-                // 서버에서 반환된 오류 메시지를 로그로 찍고, 사용자에게 알림
-                const errorData = await response.json(); // 오류 정보가 담긴 응답을 JSON 형태로 변환
+                gotoMain();
+            } else {
+                const errorData = await response.json();
                 console.error('회원가입 실패:', errorData.message);
-                alert(`회원가입 실패: ${errorData.message}`); // 사용자에게 오류 내용 알림
+                alert(`회원가입 실패: ${errorData.message}`);
             }
         } catch (error) {
-            // 네트워크 오류 또는 예상치 못한 오류 처리
             console.error('서버 통신 오류', error);
             alert('서버 통신 중 오류가 발생했습니다. 나중에 다시 시도해주세요.');
         }
     };
 
-    // 오타 수정: "from" -> "form"
     return (
         <form onSubmit={handleSubmit}>
             <div className="id3-11">
-                <div className="app-nupan3">
-                    APP-nupan
-                </div>
-                <div className="line3-5">
-                </div>
-                <div className="id3-14">
-                    회원가입
-                </div>
+                {/* Form content updated to include ownerid, ownername, and ownercontact */}
                 <div className="container3-11">
-                    <div className="id3-1">
-                        ID
-                    </div>
+                    <div className="id3-1">ID</div>
                     <input
                         type="text"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)} // 추가
+                        value={ownerid}
+                        onChange={(e) => setOwnerid(e.target.value)}
                         className="id3"
                         placeholder="아이디를 입력해주세요"
-                        autoComplete="email"/>
-                    <div className="id3-9">
-                        <span className="id3-2">
-                            ID 중복확인
-                        </span>
-                    </div>
+                        autoComplete="username"/>
+                </div>
+                <div className="container3-11">
+                    <div className="id3-1">이름</div>
+                    <input
+                        type="text"
+                        value={ownername}
+                        onChange={(e) => setOwnername(e.target.value)}
+                        className="id3"
+                        placeholder="이름을 입력해주세요"
+                        autoComplete="name"/>
+                </div>
+                <div className="container3-11">
+                    <div className="id3-1">연락처</div>
+                    <input
+                        type="text"
+                        value={ownercontact}
+                        onChange={(e) => setOwnercontact(e.target.value)}
+                        className="id3"
+                        placeholder="연락처를 입력해주세요"
+                        autoComplete="tel"/>
                 </div>
                 <div className="container3">
-                    <div className="id3-5">
-                        비밀번호
-                    </div>
+                    <div className="id3-5">비밀번호</div>
                     <input
                         type="password"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)} // 추가
+                        onChange={(e) => setPassword(e.target.value)}
                         placeholder="비밀번호를 입력해주세요"
-                        autoComplete="new-password" // 수정
+                        autoComplete="new-password"
                         className="id3-3"/>
                 </div>
                 <div className="container3-10">
-                    <div className="id3-6">
-                        비밀번호 확인
-                    </div>
+                    <div className="id3-6">비밀번호 확인</div>
                     <input
                         type="password"
-                        value={confirmPassword} // 수정
-                        onChange={(e) => setConfirmPassword(e.target.value)} // 추가
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                         placeholder="비밀번호를 확인해주세요"
-                        autoComplete="new-password" // 수정
+                        autoComplete="new-password"
                         className="id3-4"/>
                 </div>
                 <button
                     type="submit"
                     className="id3-8"
-                >다음으로
-                </button>
+                >다음으로</button>
             </div>
         </form>
     );
