@@ -8,6 +8,10 @@ import Sign_3 from "../pages/Sign/Sign_3";
 import QrCRUD from "../pages/qrCRUD";
 // import Payment from "../pages/requestPay";
 import StoreSign from "../pages/Sign/storeSign";
+// import test11 from '../pages/Test';
+import AdminPageSignInConfirm from "../pages/admin/AdminPageSignInConfirm";
+import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreAccountManage";
+
 
 
 
@@ -17,6 +21,7 @@ function Routing() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<App />} />
+                    {/*<Route path='/test' element={<test11 />} />*/}
                     <Route path='/Main' element={<Main />} />
                     <Route path='/Sign' element={<Sign />} />
                     {/* eslint-disable-next-line react/jsx-pascal-case */}
@@ -25,6 +30,8 @@ function Routing() {
                     <Route path='/Sign_3' element={<Sign_3 />} />
                     <Route path='/Main/qrCRUD' element={<QrCRUD />} />
                     <Route path='/storesign' element={<StoreSign />}/>
+                    <Route path='/adminsign' element={<AdminPageSignInConfirm />}/>
+                    <Route path='/adminacount' element={<AdminPageStoreAccountManage />}/>
 
                 </Routes>
             </BrowserRouter>

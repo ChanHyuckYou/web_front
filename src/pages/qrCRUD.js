@@ -57,6 +57,7 @@ export default function QrCRUD() {
                     <div className="container11">
                         <div className="qradd-bt-111">
                             {qrGenerated && <QRCode value={`Table ${index + 1}`} />} {/* QR 코드 생성 여부에 따라 조건부 렌더링 */}
+
                         </div>
 
                     </div>
