@@ -7,6 +7,8 @@ import {useNavigate} from "react-router-dom";
 
 export default function Main() {
     const navigate = useNavigate();
+    const ownerid = localStorage.getItem('ownerid');
+
     const goToQr = () => {
         navigate('/Main/qrCRUD');
     };
@@ -24,7 +26,7 @@ export default function Main() {
             <div className="line-5-ad">
             </div>
             <div className="user-name-ad">
-                User_Name 환영합니다.
+                {ownerid}님 환영합니다.
             </div>
             <div className="container-2111-ad">
         <span className="container133-ad">

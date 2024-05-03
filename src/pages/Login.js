@@ -23,7 +23,7 @@ export function Login() {
 
     const login = useMutation(async () => {
         if ((ownerid === 'admin' && password === '1234') || (ownerid === 'appnupan' && password === '1234')) {
-            localStorage.setItem('accessToken', '임의의액세스토큰');
+            localStorage.setItem('ownerid', ownerid);
             navigate(ownerid === 'admin' ? '/Main' : '/AdminPageSignInConfirm');
             return;
         }
