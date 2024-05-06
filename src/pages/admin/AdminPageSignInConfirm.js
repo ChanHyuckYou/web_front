@@ -2,7 +2,7 @@ import '../../css/admin/AdminPageSignInConfirm.css'
 
 export default function AdminPageSignInConfirm() {
     return (
-        <div className="admin-page-sign-in-confirm">
+        <div className="adminPageSignInConfirm">
             <div className="frame">
         <span className="app-nupan">
           APP-nupan

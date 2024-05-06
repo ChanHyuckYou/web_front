@@ -23,7 +23,7 @@ export function Sign() {
         }
 
         try {
-            const response = await fetch('http://43.201.92.62/store/register', {
+            const response = await fetch('http://43.201.92.62/owner/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

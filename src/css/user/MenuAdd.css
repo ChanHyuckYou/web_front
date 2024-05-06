@@ -1,0 +1,216 @@
+.menuAdd {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0 152px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.menuAdd .menu-add-1 {
+    margin: 0 98.3px 18px 98.3px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.menuAdd .app-nupan {
+    margin: 0 98px 59px 98px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.menuAdd .line-5 {
+    background: #000000;
+    margin-bottom: 17px;
+    width: 1440px;
+    height: 1px;
+}
+.menuAdd .image-sample {
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    margin-bottom: 9px;
+    width: 176px;
+    height: 141px;
+}
+.menuAdd .image-add {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+}
+.menuAdd .image-add-bt {
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    position: relative;
+    margin-right: 1px;
+    display: flex;
+    padding: 9px 0 8px 1px;
+    width: 125px;
+    box-sizing: border-box;
+}
+.menuAdd .image {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 151.3px 82px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px 0 10px 0;
+    width: 255px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .rectangle-57 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.menuAdd .menu-name {
+    margin: 6px 20.3px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.menuAdd .menu-name-space {
+    margin-bottom: 29px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .rectangle-58 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 540px;
+    height: 212px;
+}
+.menuAdd .meno-info {
+    margin: 8px 20.3px 175px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.menuAdd .menu-info-space {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .rectangle-581 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.menuAdd .tag {
+    margin: 6px 20.4px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.menuAdd .tag-space {
+    margin: 0 0 29px 103.4px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .rectangle-59 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.menuAdd .price {
+    margin: 6px 20.4px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.menuAdd .price-sapce {
+    margin: 0 0 167px 103.4px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .menu-add-2 {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.menuAdd .cancel {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.menuAdd .menu-add-bt {
+    background: #4097E8;
+    position: relative;
+    margin-right: 30px;
+    display: flex;
+    padding: 6px 9.7px 6px 9px;
+    box-sizing: border-box;
+}
+.menuAdd .add-cancel-bt {
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    padding: 6px 9.7px 6px 9px;
+    box-sizing: border-box;
+}
+.menuAdd .container {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.menuAdd .container-1 {
+    margin-top: 13px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.menuAdd .container-2 {
+    margin: 0 98px 29px 98px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+}

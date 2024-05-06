@@ -22,7 +22,7 @@ export function Login() {
     const login = useMutation({
         mutationFn: async (loginUser) => {
             try {
-                const response = await axios.post("http://43.201.92.62/store/login", loginUser);
+                const response = await axios.post("http://43.201.92.62/owner/login", loginUser);
                 return response;
             } catch (error) {
                 throw error;
