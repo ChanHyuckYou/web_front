@@ -1,4 +1,4 @@
-.adminPageAppManage {
+.AdminPageAppManage {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     width: 1440px;
     box-sizing: border-box;
 }
-.adminPageAppManage .app-nupan {
+.AdminPageAppManage .app-nupan {
     margin-right: 18px;
     width: 1159px;
     overflow-wrap: break-word;
@@ -17,13 +17,13 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageAppManage .line-5 {
+.AdminPageAppManage .line-5 {
     background: #000000;
     margin-bottom: 39px;
     width: 1440px;
     height: 1px;
 }
-.adminPageAppManage .admin {
+.AdminPageAppManage .admin {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -31,7 +31,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageAppManage .sing-in-confirm-bt {
+.AdminPageAppManage .sing-in-confirm-bt {
     margin-bottom: 27px;
     display: inline-block;
     align-self: flex-start;
@@ -42,7 +42,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageAppManage .store-user-bt {
+.AdminPageAppManage .store-user-bt {
     margin-bottom: 27px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -52,7 +52,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageAppManage .app-user-bt {
+.AdminPageAppManage .app-user-bt {
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -61,25 +61,25 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageAppManage .line-8 {
+.AdminPageAppManage .line-8 {
     background: #4097E8;
     margin: 0 2px;
     align-self: flex-start;
     width: 150px;
     height: 3px;
 }
-.adminPageAppManage .menu-list {
+.AdminPageAppManage .menu-list {
     margin: 0 61.9px 570px 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.adminPageAppManage .container {
+.AdminPageAppManage .container {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.adminPageAppManage .phone-number {
+.AdminPageAppManage .phone-number {
     margin: 0 11.8px 12px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -89,19 +89,19 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageAppManage .phone-number-space {
+.AdminPageAppManage .phone-number-space {
     border: 1px solid #000000;
     background: #FFFFFF;
     width: 188px;
     height: 41px;
 }
-.adminPageAppManage .user-name-space {
+.AdminPageAppManage .user-name-space {
     border: 1px solid #000000;
     background: #FFFFFF;
     width: 188px;
     height: 41px;
 }
-.adminPageAppManage .user-name {
+.AdminPageAppManage .user-name {
     margin: 0 18.7px 12px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -111,7 +111,7 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageAppManage .account-info {
+.AdminPageAppManage .account-info {
     border: 1px solid #000000;
     background: #FFFFFF;
     position: relative;
@@ -123,7 +123,7 @@
     height: 636px;
     box-sizing: border-box;
 }
-.adminPageAppManage .delete-bt-1 {
+.AdminPageAppManage .delete-bt-1 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -134,14 +134,14 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.adminPageAppManage .delete-1 {
+.AdminPageAppManage .delete-1 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageAppManage .account-1 {
+.AdminPageAppManage .account-1 {
     border: 1px solid #000000;
     background: #FFFFFF;
     position: relative;
@@ -153,14 +153,14 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.adminPageAppManage .ellipse-1 {
+.AdminPageAppManage .ellipse-1 {
     border-radius: 40px;
     background: #D9D9D9;
     margin-right: 15.4px;
     width: 80px;
     height: 80px;
 }
-.adminPageAppManage .user-name-1 {
+.AdminPageAppManage .user-name-1 {
     margin: 0 0.1px 15px 0.1px;
     display: inline-block;
     align-self: flex-start;
@@ -170,14 +170,14 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageAppManage .user-mailemail-com {
+.AdminPageAppManage .user-mailemail-com {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 24px;
     color: #000000;
 }
-.adminPageAppManage .container-1 {
+.AdminPageAppManage .container-1 {
     margin: 0 71.8px 59px 98px;
     display: flex;
     flex-direction: row;
@@ -185,14 +185,14 @@
     width: 1270.2px;
     box-sizing: border-box;
 }
-.adminPageAppManage .container-2 {
+.AdminPageAppManage .container-2 {
     margin: 0 71px 0 76px;
     display: flex;
     flex-direction: row;
     width: fit-content;
     box-sizing: border-box;
 }
-.adminPageAppManage .container-3 {
+.AdminPageAppManage .container-3 {
     margin-right: 71px;
     display: flex;
     flex-direction: row;
@@ -200,12 +200,12 @@
     width: 675px;
     box-sizing: border-box;
 }
-.adminPageAppManage .container-4 {
+.AdminPageAppManage .container-4 {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.adminPageAppManage .container-5 {
+.AdminPageAppManage .container-5 {
     margin-top: 7px;
     display: flex;
     flex-direction: column;

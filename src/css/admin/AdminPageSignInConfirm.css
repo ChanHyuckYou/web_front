@@ -1,4 +1,4 @@
-.adminPageSignInConfirm .app-nupan {
+.AdminPageSignInConfirm .app-nupan {
     margin-right: 18px;
     width: 1159px;
     overflow-wrap: break-word;
@@ -8,13 +8,13 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .line-5 {
+.AdminPageSignInConfirm .line-5 {
     background: #000000;
     margin-bottom: 80px;
     width: 1440px;
     height: 1px;
 }
-.adminPageSignInConfirm .admin {
+.AdminPageSignInConfirm .admin {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -22,7 +22,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .authbtn {
+.AdminPageSignInConfirm .authbtn {
     margin: 0 0px 1px 0px;
     display: inline-block;
     align-self: flex-start;
@@ -33,7 +33,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .storeuserbtn {
+.AdminPageSignInConfirm .storeuserbtn {
     margin: 0 0 27px 0px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -43,7 +43,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .userbtn {
+.AdminPageSignInConfirm .userbtn {
     margin: 0 0px;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -53,7 +53,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-15 {
+.AdminPageSignInConfirm .input-15 {
     margin-right: 18px;
     width: 568px;
     overflow-wrap: break-word;
@@ -63,7 +63,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-13 {
+.AdminPageSignInConfirm .input-13 {
     margin-right: 14.5px;
     width: 124.5px;
     overflow-wrap: break-word;
@@ -72,14 +72,14 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-11 {
+.AdminPageSignInConfirm .input-11 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-14 {
+.AdminPageSignInConfirm .input-14 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -87,49 +87,49 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-12 {
+.AdminPageSignInConfirm .input-12 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .btnsub-3 {
+.AdminPageSignInConfirm .btnsub-3 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .btncan-3 {
+.AdminPageSignInConfirm .btncan-3 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .line-8 {
+.AdminPageSignInConfirm .line-8 {
     background: #4097E8;
     margin-bottom: 23px;
     align-self: flex-start;
     width: 173px;
     height: 3px;
 }
-.adminPageSignInConfirm .btn-2 {
+.AdminPageSignInConfirm .btn-2 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .btncan-2 {
+.AdminPageSignInConfirm .btncan-2 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-10 {
+.AdminPageSignInConfirm .input-10 {
     margin-right: 18px;
     width: 568px;
     overflow-wrap: break-word;
@@ -139,7 +139,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-9 {
+.AdminPageSignInConfirm .input-9 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -147,7 +147,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-8 {
+.AdminPageSignInConfirm .input-8 {
     margin-right: 14.5px;
     width: 124.5px;
     overflow-wrap: break-word;
@@ -156,35 +156,35 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-7 {
+.AdminPageSignInConfirm .input-7 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-6 {
+.AdminPageSignInConfirm .input-6 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .btnsub {
+.AdminPageSignInConfirm .btnsub {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .btncan {
+.AdminPageSignInConfirm .btncan {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-5 {
+.AdminPageSignInConfirm .input-5 {
     margin-right: 18px;
     width: 568px;
     overflow-wrap: break-word;
@@ -194,7 +194,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-4 {
+.AdminPageSignInConfirm .input-4 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -202,7 +202,7 @@
     font-size: 30px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-3 {
+.AdminPageSignInConfirm .input-3 {
     margin-right: 14.5px;
     width: 124.5px;
     overflow-wrap: break-word;
@@ -211,21 +211,21 @@
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-2 {
+.AdminPageSignInConfirm .input-2 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .input-1 {
+.AdminPageSignInConfirm .input-1 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 24px;
     color: #000000;
 }
-.adminPageSignInConfirm .deny-bt {
+.AdminPageSignInConfirm .deny-bt {
     border-radius: 10px;
     background: #D9D9D9;
     display: flex;
@@ -233,7 +233,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .store-info-3 {
+.AdminPageSignInConfirm .store-info-3 {
     border: 1px solid #000000;
     background: #FFFFFF;
     margin-right: 18px;
@@ -244,7 +244,7 @@
     width: 784px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .store-info {
+.AdminPageSignInConfirm .store-info {
     border: 1px solid #000000;
     background: #FFFFFF;
     margin-top: 18px;
@@ -255,7 +255,7 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .confirm-bt-3 {
+.AdminPageSignInConfirm .confirm-bt-3 {
     border-radius: 10px;
     background: #D9D9D9;
     margin-bottom: 8px;
@@ -264,7 +264,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .frame {
+.AdminPageSignInConfirm .frame {
     margin: 0 71.8px 59px 98px;
     display: flex;
     flex-direction: row;
@@ -272,14 +272,14 @@
     width: 1270.2px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .frame-1 {
+.AdminPageSignInConfirm .frame-1 {
     margin: 0 71px 0 76px;
     display: flex;
     flex-direction: row;
     width: fit-content;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .deny-bt-3 {
+.AdminPageSignInConfirm .deny-bt-3 {
     border-radius: 10px;
     background: #D9D9D9;
     display: flex;
@@ -287,7 +287,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .store-info-1 {
+.AdminPageSignInConfirm .store-info-1 {
     border: 1px solid #000000;
     background: #FFFFFF;
     margin-right: 18px;
@@ -298,7 +298,7 @@
     width: 784px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .confirm-bt-2 {
+.AdminPageSignInConfirm .confirm-bt-2 {
     border-radius: 10px;
     background: #D9D9D9;
     margin-bottom: 8px;
@@ -307,7 +307,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .deny-bt-2 {
+.AdminPageSignInConfirm .deny-bt-2 {
     border-radius: 10px;
     background: #D9D9D9;
     display: flex;
@@ -315,7 +315,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .store-info-2 {
+.AdminPageSignInConfirm .store-info-2 {
     border: 1px solid #000000;
     background: #FFFFFF;
     margin-right: 18px;
@@ -326,7 +326,7 @@
     width: 784px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .confirm-bt {
+.AdminPageSignInConfirm .confirm-bt {
     border-radius: 10px;
     background: #D9D9D9;
     margin-bottom: 8px;
@@ -335,7 +335,7 @@
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container {
+.AdminPageSignInConfirm .container {
     margin: 0 0.9px 10px 0;
     display: flex;
     flex-direction: row;
@@ -343,7 +343,7 @@
     width: 755.1px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-1 {
+.AdminPageSignInConfirm .container-1 {
     margin-left: 0.4px;
     display: flex;
     flex-direction: row;
@@ -351,21 +351,21 @@
     width: 755.6px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-2 {
+.AdminPageSignInConfirm .container-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-3 {
+.AdminPageSignInConfirm .container-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-4 {
+.AdminPageSignInConfirm .container-4 {
     margin: 0 0.9px 10px 0;
     display: flex;
     flex-direction: row;
@@ -373,7 +373,7 @@
     width: 755.1px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-5 {
+.AdminPageSignInConfirm .container-5 {
     margin-left: 0.4px;
     display: flex;
     flex-direction: row;
@@ -381,7 +381,7 @@
     width: 755.6px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm {
+.AdminPageSignInConfirm {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -390,7 +390,7 @@
     width: 1440px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-6 {
+.AdminPageSignInConfirm .container-6 {
     margin-left: 0.4px;
     display: flex;
     flex-direction: row;
@@ -398,7 +398,7 @@
     width: 755.6px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-7 {
+.AdminPageSignInConfirm .container-7 {
     margin-bottom: 32px;
     display: flex;
     flex-direction: row;
@@ -406,27 +406,27 @@
     width: 890px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-8 {
+.AdminPageSignInConfirm .container-8 {
     margin: 0 61.9px 573px 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-9 {
+.AdminPageSignInConfirm .container-9 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 88px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-10 {
+.AdminPageSignInConfirm .container-10 {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
     width: 890px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-11 {
+.AdminPageSignInConfirm .container-11 {
     margin-bottom: 32px;
     display: flex;
     flex-direction: row;
@@ -434,7 +434,7 @@
     width: 890px;
     box-sizing: border-box;
 }
-.adminPageSignInConfirm .container-12 {
+.AdminPageSignInConfirm .container-12 {
     margin: 0 0.9px 10px 0;
     display: flex;
     flex-direction: row;

@@ -1,6 +1,6 @@
 import '../../css/admin/AdminPageAppManage.css'
 
-export default function AdminPageAppAccountManage() {
+export function AdminPageAppAccountManage() {
     return (
         <div className="adminPageAppManage">
             <div className="container-1">
@@ -66,3 +66,4 @@ export default function AdminPageAppAccountManage() {
         </div>
     )
 }
+export default AdminPageAppAccountManage;

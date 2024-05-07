@@ -24,7 +24,7 @@ export function Login() {
     const login = useMutation(async () => {
         if ((ownerid === 'admin' && password === '1234') || (ownerid === 'appnupan' && password === '1234')) {
             localStorage.setItem('ownerid', ownerid);
-            navigate(ownerid === 'admin' ? '/Main' : '/AdminPageSignInConfirm');
+            navigate(ownerid === 'admin' ? '/Main' : '/adminsign');
             return;
         }
         try {
@@ -66,7 +66,7 @@ export function Login() {
     }, {
         onSuccess: (response) => {
             if (response && response.status === 200) {
-                localStorage.setItem('accessToken', response.data);
+                localStorage.setItem('ownerid', ownerid);
                 navigate('/Main');
             }
         },

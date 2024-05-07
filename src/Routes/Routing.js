@@ -9,8 +9,9 @@ import QrCRUD from "../pages/qrCRUD";
 // import Payment from "../pages/requestPay";
 import StoreSign from "../pages/Sign/storeSign";
 // import test11 from '../pages/Test';
+
 import AdminPageSignInConfirm from "../pages/admin/AdminPageSignInConfirm";
-import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreAccountManage";
+import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreManage";
 
 
 import AdminSignCon from '../pages/admin/AdminPageSignInConfirm';
@@ -34,16 +35,15 @@ function Routing() {
                     <Route path='/' element={<App />} />
                     {/*<Route path='/test' element={<test11 />} />*/}
                     <Route path='/Main' element={<Main />} />
-                    <Route path='/Sign' element={<Sign />} />
+                    <Route path='/Sign' element={<SignInPage />} />
                     {/* eslint-disable-next-line react/jsx-pascal-case */}
-                    <Route path='/Sign_2' element={<Sign_2 />} />
+                    <Route path='/Sign_2' element={<SignInPage2 />} />
                     {/* eslint-disable-next-line react/jsx-pascal-case */}
-                    <Route path='/Sign_3' element={<Sign_3 />} />
+                    <Route path='/Sign_3' element={<SignInCom />} />
                     <Route path='/Main/qrCRUD' element={<QrCRUD />} />
                     <Route path='/storesign' element={<StoreSign />}/>
                     <Route path='/adminsign' element={<AdminPageSignInConfirm />}/>
                     <Route path='/adminacount' element={<AdminPageStoreAccountManage />}/>
-
                 </Routes>
             </BrowserRouter>
         </div>
