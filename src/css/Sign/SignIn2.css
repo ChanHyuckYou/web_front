@@ -1,0 +1,168 @@
+.signInPage2 .office-space {
+    border: 3px solid #B0B0B0;
+    background: #FFFFFF;
+    width: 309px;
+    height: 56px;
+}
+.signInPage2 .store-office {
+    margin: 12px 17.8px 15px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .store-address {
+    margin: 12px 20.7px 15px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .store-address-space {
+    background: #FFFFFF;
+    border: 3px solid #B0B0B0;
+    width: 309px;
+    height: 56px;
+}
+.signInPage2 .container {
+    margin: 0 142px 32px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.signInPage2 .container-1 {
+    margin: 0 97px 32px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.signInPage2 .container-2 {
+    margin: 0 140px 32px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.signInPage2 {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 59px 0 256px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.signInPage2 .user-name-space {
+    border: 3px solid #B0B0B0;
+    background: #FFFFFF;
+    width: 309px;
+    height: 56px;
+}
+.signInPage2 .phone-num-space {
+    border: 3px solid #B0B0B0;
+    background: #FFFFFF;
+    width: 309px;
+    height: 56px;
+}
+.signInPage2 .user-name {
+    margin: 27px 19.8px 0 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .phone-num {
+    margin: 14px 18.7px 13px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .sing-in-request {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.signInPage2 .app-nupan {
+    margin: 0 98px 59px 98px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.signInPage2 .sign-in {
+    margin: 0 98px 61px 98px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.signInPage2 .line-5 {
+    background: #000000;
+    margin-bottom: 28px;
+    width: 1440px;
+    height: 1px;
+}
+.signInPage2 .store-name-space {
+    border: 3px solid #B0B0B0;
+    background: #FFFFFF;
+    width: 309px;
+    height: 56px;
+}
+.signInPage2 .store-name {
+    margin: 13px 18.7px 14px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .sign-in-bt {
+    background: #FF4C00;
+    position: relative;
+    margin-left: 109px;
+    display: flex;
+    padding: 9px 14.6px 10px 14px;
+    box-sizing: border-box;
+}
+.signInPage2 .container-3 {
+    margin: 0 140px 32px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.signInPage2 .container-4 {
+    margin: 0 95px 32px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}

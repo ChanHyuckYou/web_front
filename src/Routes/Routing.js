@@ -13,6 +13,17 @@ import AdminPageSignInConfirm from "../pages/admin/AdminPageSignInConfirm";
 import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreAccountManage";
 
 
+import AdminSignCon from '../pages/admin/AdminPageSignInConfirm';
+import AdminStoreMan from '../pages/admin/AdminPageStoreManage';
+import AdminAppMan from '../pages/admin/AdminPageAppManage';
+
+import OrderCheck from '../pages/user/OrderCheck';
+import MenuEdit from '../pages/user/MenuEdit';
+import MenuAdd from '../pages/user/MenuAdd';
+
+import SignInPage from '../pages/Sign/SignIn';
+import SignInPage2 from '../pages/Sign/SignIn2';
+import SignInCom from   '../pages/Sign/SignInCom';
 
 
 function Routing() {
