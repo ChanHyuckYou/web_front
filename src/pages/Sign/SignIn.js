@@ -6,8 +6,8 @@ export default function SignInPage1() {
     const [ownerid, setOwnerId] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const ownername = '찬혁';
-    const ownercontact = '1'
+    const [ownername, setOwnerName] = useState('');
+    const [ownercontact, setOwnerContact] = useState('')
     // const gotoSignin = () => {
     //     navigate('/Sign_2');
     // };
@@ -71,7 +71,7 @@ export default function SignInPage1() {
                     onChange={(e) => setOwnerId(e.target.value)} // 추가
                     className="inputid"
                     placeholder="아이디를 입력해주세요"
-                    autoComplete="email"/>
+                    autoComplete="ownername"/>
 
             <div className="nick-ok">
           <span className="id-ok">
@@ -105,22 +105,27 @@ export default function SignInPage1() {
             </div>
             <div className="container">
                 <div className="email">
-                    이메일
+                    이름
                 </div>
-                <div className="inputpwd">
-                </div>
-                <div className="confrimpwd-2">
-          <span className="email-authen">
-            인증번호 발송
-          </span>
-                </div>
+                    <input
+                        type="text"
+                        value={ownername} // 수정
+                        onChange={(e) => setOwnerName(e.target.value)} // 추가
+                        placeholder="비밀번호를 확인해주세요"
+                        autoComplete="ownername" // 수정
+                        className="inputpwd"/>
             </div>
             <div className="container-1">
                 <div className="authen">
-                    인증번호
+                    전화번호
                 </div>
-                <div className="pwdcf">
-                </div>
+                <input
+                    type="text"
+                    value={ownercontact} // 수정
+                    onChange={(e) => setOwnerContact(e.target.value)} // 추가
+                        placeholder="전화번호를 입력해주세요."
+                        autoComplete="contact" // 수정
+                        className="pwdcf"/>
             </div>
             <button className="nextform"
                     type="submit">

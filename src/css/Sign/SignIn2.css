@@ -5,7 +5,7 @@
     height: 56px;
 }
 .signInPage2 .store-office {
-    margin: 12px 17.8px 15px 0;
+    margin: 12px 20.7px 15px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -160,7 +160,7 @@
     box-sizing: border-box;
 }
 .signInPage2 .container-4 {
-    margin: 0 95px 32px 0;
+    margin: 0 173px 32px 0;
     display: flex;
     flex-direction: row;
     width: fit-content;

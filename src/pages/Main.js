@@ -12,11 +12,23 @@ export default function Main() {
     const goToQr = () => {
         navigate('/Main/qrCRUD');
     };
+    const MenuEdit = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main/MenuEdit');
+    };
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log(data); // 여기서 받은 데이터를 활용
+    //         })
+    //         .catch(error => console.error("Error fetching data: ", error));
+    // }, [ownerid]); // ownerid가 변경될 때마다 다시 호출
     return (
         <div className="container-2-ad">
             <div className="container-ad">
                 <div className="app-nupan-ad">
-                    APP-nu pan
+                    APP-nupan
                 </div>
                 <div className="more-menu-bt-ad">
                     <img className="vector-ad" src={MoreMenuBT} alt={""} />
@@ -37,14 +49,15 @@ export default function Main() {
         </span>
             </div>
             <div className="container-1-ad">
-                <div className="container-6-ad">
+                <button className="container-6-ad"
+                onClick={MenuEdit}>
                     <div className="epmenu-ad">
                         <img className="vector-5-ad" src={EPMENU} alt="" />
                     </div>
                     <span className="container-3-ad">
             메뉴편집
           </span>
-                </div>
+                </button>
                 <div className="container-4-ad">
                     <div className="solarclipboard-list-outline-ad">
                         <img className="vector-5-ad" src={Vector}alt=""/>

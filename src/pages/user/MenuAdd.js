@@ -1,6 +1,36 @@
 import '../../css/user/MenuAdd.css'
+import { useState} from "react";
+import React, { useRef } from 'react';
+// import {useNavigate} from 'react-router-dom';
 
 export default function MenuAdd() {
+    // const navigate = useNavigate();
+    const [productname, setProductName] = useState('');
+    const [price, setPrice] = useState('');
+    const [category, setCategory] = useState('');
+    const [preview, setPreview] = useState(''); // 이미지 미리보기 URL을 저장할 상태
+
+    // input 태그를 참조하기 위한 ref 생성
+    const fileInputRef = useRef();
+
+    // "사진추가" 버튼 클릭 시 실행될 함수
+    const handleFileChange = (e) => {
+        const file = e.target.files[0]; // 선택된 파일
+        if (file && file.type.substr(0, 5) === "image") {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setPreview(reader.result); // 파일 읽기가 완료되면 미리보기 URL을 상태에 저장
+            };
+            reader.readAsDataURL(file); // 파일을 Data URL 형태로 읽습니다.
+        } else {
+            setPreview(''); // 이미지 파일이 아니면 미리보기를 비웁니다.
+        }
+    };
+
+    const handleButtonClick = () => {
+        fileInputRef.current.click(); // 버튼 클릭 시 숨겨진 파일 입력을 트리거합니다.
+    };
+
     return (
         <div className="menuAdd">
             <div className="app-nupan">
@@ -13,21 +43,32 @@ export default function MenuAdd() {
             </div>
             <div className="container-2">
                 <div className="image">
-                    <div className="image-sample">
-                    </div>
-                    <div className="image-add-bt">
-            <span className="image-add">
-              사진추가
-            </span>
-                    </div>
+                    {preview && (
+                            // eslint-disable-next-line jsx-a11y/img-redundant-alt
+                            <img src={preview} alt="메뉴 미리보기" className="image-sample" />
+                    )}
+                    <button className="image-add-bt" onClick={handleButtonClick}>
+                        <span className="image-add">사진추가</span>
+                    </button>
+                    <input
+                        type="file"
+                        ref={fileInputRef}
+                        onChange={handleFileChange}
+                        style={{display: 'none'}} // 사용자에게 보이지 않도록 숨깁니다
+                    />
                 </div>
                 <div className="container-1">
                     <div className="menu-name-space">
                         <div className="menu-name">
-                            메뉴이름
+                        메뉴이름
                         </div>
-                        <div className="rectangle-57">
-                        </div>
+                        <input
+                            type="text"
+                            value={productname}
+                            onChange={(e) => setProductName(e.target.value)} // 추가
+                            className="rectangle-57"
+                            placeholder="아이디를 입력해주세요"
+                            autoComplete="ownername"/>
                     </div>
                     <div className="menu-info-space">
                         <div className="meno-info">
@@ -35,6 +76,7 @@ export default function MenuAdd() {
                         </div>
                         <div className="rectangle-58">
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -42,27 +84,46 @@ export default function MenuAdd() {
                 <div className="tag">
                     태그
                 </div>
-                <div className="rectangle-581">
-                </div>
+
+                <input
+                    list="categories"
+                    type="text"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    className="rectangle-581"
+                    placeholder="태그 이름"
+                    autoComplete="off"/>
+                <datalist id="categories">
+                    <option value="태그1"></option>
+                    <option value="태그2"></option>
+                    <option value="태그3"></option>
+                </datalist>
             </div>
             <div className="price-sapce">
                 <div className="price">
                     가격
                 </div>
-                <div className="rectangle-59">
-                </div>
+                <input
+                    type="text"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)} // 추가
+                    className="rectangle-59"
+                    placeholder="아이디를 입력해주세요"
+                    autoComplete="ownername"/>
             </div>
             <div className="container">
-                <div className="menu-add-bt">
+                <button className="menu-add-bt">
           <span className="menu-add-2">
             메뉴추가
           </span>
-                </div>
-                <div className="add-cancel-bt">
+                </button>
+                <button className="add-cancel-bt"
+                        // onClick={navigate('/Main/Menu/Edit')}
+                >
           <span className="cancel">
             작성취소
           </span>
-                </div>
+                </button>
             </div>
         </div>
     )

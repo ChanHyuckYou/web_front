@@ -1,6 +1,7 @@
 import React from 'react';
 import App from '../pages/Login';
-import Sign from '../pages/Sign/Sign';
+// import App from '../pages/Sign/Sign';
+// import Sign from '../pages/Sign/Sign';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Main from "../pages/Main";
 import Sign_2 from "../pages/Sign/Sign_2";
@@ -44,6 +45,8 @@ function Routing() {
                     <Route path='/storesign' element={<StoreSign />}/>
                     <Route path='/adminsign' element={<AdminPageSignInConfirm />}/>
                     <Route path='/adminacount' element={<AdminPageStoreAccountManage />}/>
+                    <Route path='/Main/Menu/Edit' element={<MenuEdit />}/>
+                    <Route path='/Main/Menu/Add' element={<MenuAdd />}/>
                 </Routes>
             </BrowserRouter>
         </div>

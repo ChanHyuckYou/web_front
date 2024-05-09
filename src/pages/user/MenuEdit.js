@@ -1,6 +1,7 @@
 import '../../css/user/MenuEdit.css'
-
+import {useNavigate} from 'react-router-dom';
 export default function MenuEditPage() {
+    const navigate = useNavigate();
     return (
         <div className="MenuEdit">
             <div className="app-nupan">
@@ -37,11 +38,11 @@ export default function MenuEditPage() {
                 <div className="menu-edit">
                     메뉴 관리
                 </div>
-                <div className="menu-add-bt">
+                <button className="menu-add-bt" onClick={navigate('/Main/Menu/Add')}>
           <span className="menu-add">
             메뉴 추가
           </span>
-                </div>
+                </button>
             </div>
             <div className="menu-list">
                 <div className="menu-1">
