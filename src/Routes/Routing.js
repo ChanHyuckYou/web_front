@@ -34,7 +34,7 @@ function Routing() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<OrderCheck />} />
+                    <Route path='/' element={<App />} />
                     {/*<Route path='/test' element={<test11 />} />*/}
                     <Route path='/Main' element={<Main />} />
                     <Route path='/Sign' element={<SignInPage />} />
