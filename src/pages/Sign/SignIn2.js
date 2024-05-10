@@ -156,6 +156,7 @@ export default function SignInPage2() {
                     className="store-name-space"
                     placeholder="가게 전화번호를 입력해주세요"
                     autoComplete="contact"/>
+
             </div>
 
             <div className="container">

@@ -1,17 +1,25 @@
 import '../../css/user/MenuAdd.css'
 import { useState} from "react";
+// import axios from 'axios';
 import React, { useRef } from 'react';
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function MenuAdd() {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [productname, setProductName] = useState('');
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('');
+    // const category = 'tag1'
     const [preview, setPreview] = useState(''); // 이미지 미리보기 URL을 저장할 상태
-
+    const storename = '스타벅스'
     // input 태그를 참조하기 위한 ref 생성
     const fileInputRef = useRef();
+    const ownerid = localStorage.getItem('ownerid');
+
+    const goToMenuEdit = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main/Menu/Edit');
+    };
 
     // "사진추가" 버튼 클릭 시 실행될 함수
     const handleFileChange = (e) => {
@@ -30,8 +38,51 @@ export default function MenuAdd() {
     const handleButtonClick = () => {
         fileInputRef.current.click(); // 버튼 클릭 시 숨겨진 파일 입력을 트리거합니다.
     };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('productname', productname);
+        formData.append('price', price);
+        formData.append('category', category);
+        formData.append('menuimage', fileInputRef.current.files[0]);
+        formData.append('storename', storename)
+
+    //     try {
+    //         const response = await axios.post(`http://43.201.92.62/store/${ownerid}/menu`, formData);
+    //         console.log('Server Response:', response.formData);
+    //     } catch (error) {
+    //         console.error('Error uploading the menu:', error.response.formData);
+    //     }
+    // };
+
+
+    try {
+            const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`, {
+                method: 'POST',
+                // headers: {
+                //     'Content-Type': 'multipart/form-data',
+                // },
+                body: formData
+            });
+            if (response.ok) {
+                // Menu item added successfully
+                // You can redirect or show a success message here
+                goToMenuEdit()
+                console.log(`메뉴아이템 등록 성공 : ${formData}`);
+            } else {
+                // Handle error response
+                console.error('Failed to add menu item:', response.statusText);
+                alert("Failed add menu")
+            }
+        } catch (error) {
+            console.error('Error adding menu item:', error);
+            alert(`Failed add menu222${ownerid}`)
+        }
+    };
 
     return (
+        <form onSubmit={handleSubmit}>
         <div className="menuAdd">
             <div className="app-nupan">
                 APP-nupan
@@ -47,7 +98,7 @@ export default function MenuAdd() {
                             // eslint-disable-next-line jsx-a11y/img-redundant-alt
                             <img src={preview} alt="메뉴 미리보기" className="image-sample" />
                     )}
-                    <button className="image-add-bt" onClick={handleButtonClick}>
+                    <button className="image-add-bt" onClick={handleButtonClick} type={"button"}>
                         <span className="image-add">사진추가</span>
                     </button>
                     <input
@@ -67,7 +118,7 @@ export default function MenuAdd() {
                             value={productname}
                             onChange={(e) => setProductName(e.target.value)} // 추가
                             className="rectangle-57"
-                            placeholder="아이디를 입력해주세요"
+                            placeholder="메뉴이름을 입력해주세요"
                             autoComplete="ownername"/>
                     </div>
                     <div className="menu-info-space">
@@ -112,13 +163,14 @@ export default function MenuAdd() {
                     autoComplete="ownername"/>
             </div>
             <div className="container">
-                <button className="menu-add-bt">
+                <button className="menu-add-bt" type={"submit"}>
           <span className="menu-add-2">
             메뉴추가
           </span>
                 </button>
                 <button className="add-cancel-bt"
-                        // onClick={navigate('/Main/Menu/Edit')}
+                        onClick={goToMenuEdit()}
+                    type={"button"}
                 >
           <span className="cancel">
             작성취소
@@ -126,5 +178,6 @@ export default function MenuAdd() {
                 </button>
             </div>
         </div>
+        </form>
     )
 }

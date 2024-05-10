@@ -2,6 +2,11 @@ import '../../css/user/MenuEdit.css'
 import {useNavigate} from 'react-router-dom';
 export default function MenuEditPage() {
     const navigate = useNavigate();
+    const ownerid = localStorage.getItem('ownerid');
+    const goToMenuAdd = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main/Menu/Add');
+    };
     return (
         <div className="MenuEdit">
             <div className="app-nupan">
@@ -38,7 +43,8 @@ export default function MenuEditPage() {
                 <div className="menu-edit">
                     메뉴 관리
                 </div>
-                <button className="menu-add-bt" onClick={navigate('/Main/Menu/Add')}>
+                <button className="menu-add-bt"
+                        onClick={goToMenuAdd}>
           <span className="menu-add">
             메뉴 추가
           </span>

@@ -14,7 +14,7 @@ export default function Main() {
     };
     const MenuEdit = () => {
         localStorage.setItem('ownerid', ownerid);
-        navigate('/Main/MenuEdit');
+        navigate('/Main/Menu/Edit');
     };
     // useEffect(() => {
     //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
