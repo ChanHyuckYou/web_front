@@ -2,7 +2,7 @@ import '../../css/admin/AdminPageAppManage.css'
 
 export function AdminPageAppAccountManage() {
     return (
-        <div className="adminPageAppManage">
+        <div className="AdminPageAppManage">
             <div className="container-1">
         <span className="app-nupan">
           APP-nupan

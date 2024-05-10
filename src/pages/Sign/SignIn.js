@@ -52,88 +52,85 @@ export default function SignInPage1() {
 
     return (
         <form onSubmit={handleSubmit}>
-        <div className="signInPage">
-            <div className="app-nupan">
-                APP-nupan
-            </div>
-            <div className="line-5">
-            </div>
-            <div className="text-auth">
-                회원가입
-            </div>
-            <div className="container-4">
-                <div className="id">
-                    ID
+            <div className="signInPage">
+                <div className="app-nupan">
+                    APP-nupan
                 </div>
-                <input
-                    type="text"
-                    value={ownerid}
-                    onChange={(e) => setOwnerId(e.target.value)} // 추가
-                    className="inputid"
-                    placeholder="아이디를 입력해주세요"
-                    autoComplete="ownername"/>
-
-            <div className="nick-ok">
-          <span className="id-ok">
-            ID 중복확인
-          </span>
-            </div>
-        </div>
-            <div className="container-2">
-                <div className="pwd">
-                    비밀번호
+                <div className="line-5">
                 </div>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} // 추가
-                    placeholder="비밀번호를 입력해주세요"
-                    autoComplete="new-password" // 수정
-                    className="inputconfpwd"/>
-            </div>
-            <div className="container-3">
-                <div className="confrimpwd">
-                    비밀번호 확인
+                <div className="text-auth">
+                    회원가입
                 </div>
-                <input
-                    type="password"
-                    value={confirmPassword} // 수정
-                    onChange={(e) => setConfirmPassword(e.target.value)} // 추가
-                    placeholder="비밀번호를 확인해주세요"
-                    autoComplete="new-password" // 수정
-                    className="pwdconff"/>
-            </div>
-            <div className="container">
-                <div className="email">
-                    이름
+                <div className="itemContainer">
+                    <div className="textContainer">
+                        <div className="id">
+                            ID
+                        </div>
+                        <div className="pwd">
+                            비밀번호
+                        </div>
+                        <div className="confirmpwd">
+                            비밀번호 확인
+                        </div>
+                        <div className="name">
+                            이름
+                        </div>
+                        <div className="phoneNum">
+                            전화번호
+                        </div>
+                    </div>
+                    <div className="inputContainer">
+                        <input
+                            type="text"
+                            value={ownerid}
+                            onChange={(e) => setOwnerId(e.target.value)} // 추가
+                            className="inputid"
+                            placeholder="아이디를 입력해주세요"
+                            autoComplete="ownername"/>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)} // 추가
+                            placeholder="비밀번호를 입력해주세요"
+                            autoComplete="new-password" // 수정
+                            className="inputpwd"/>
+                        <input
+                            type="password"
+                            value={confirmPassword} // 수정
+                            onChange={(e) => setConfirmPassword(e.target.value)} // 추가
+                            placeholder="비밀번호를 확인해주세요"
+                            autoComplete="new-password" // 수정
+                            className="inputpwd2"/>
+                        <input
+                            type="text"
+                            value={ownername} // 수정
+                            onChange={(e) => setOwnerName(e.target.value)} // 추가
+                            placeholder="이름을 입력해주세요."
+                            autoComplete="ownername" // 수정
+                            className="inputName"/>
+                        <input
+                            type="text"
+                            value={ownercontact} // 수정
+                            onChange={(e) => setOwnerContact(e.target.value)} // 추가
+                            placeholder="전화번호를 입력해주세요."
+                            autoComplete="contact" // 수정
+                            className="inputPhone"/>
+                    </div>
+                    <div className="btnContainer">
+                        <div className="nick-ok">
+                            <span className="id-ok">
+                                ID 중복확인
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                    <input
-                        type="text"
-                        value={ownername} // 수정
-                        onChange={(e) => setOwnerName(e.target.value)} // 추가
-                        placeholder="비밀번호를 확인해주세요"
-                        autoComplete="ownername" // 수정
-                        className="inputpwd"/>
+                <button className="nextform"
+                        type="submit">
+                    <span className="nexybtn">
+                         다음으로
+                    </span>
+                </button>
             </div>
-            <div className="container-1">
-                <div className="authen">
-                    전화번호
-                </div>
-                <input
-                    type="text"
-                    value={ownercontact} // 수정
-                    onChange={(e) => setOwnerContact(e.target.value)} // 추가
-                        placeholder="전화번호를 입력해주세요."
-                        autoComplete="contact" // 수정
-                        className="pwdcf"/>
-            </div>
-            <button className="nextform"
-                    type="submit">
-        <span className="nexybtn">
-          다음으로
-        </span>
-            </button>
-        </div>
         </form>
     )
 }

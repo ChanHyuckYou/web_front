@@ -1,4 +1,4 @@
-import '../../css/Sign/SignIn2.css'
+import '../../css/Sign/SignIn2.css';
 import { useState} from "react";
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -130,83 +130,94 @@ export default function SignInPage2() {
             <div className="sign-in">
                 회원가입
             </div>
-
-            <div className="container-2">
-                <div className="phone-num">
-                    가게이름
-                </div>
-                <input
-                    type="text"
-                    value={storename}
-                    onChange={(e) => setStoreName(e.target.value)} // 추가
-                    className="phone-num-space"
-                    placeholder="
-                    가게이름을 입력해주세요"
-                    autoComplete="storename"/>
-            </div>
-            <div className="container-3">
-                <div className="store-name">
-                    전화번호
-                </div>
-
-                <input
-                    type="text"
-                    value={contact}
-                    onChange={(e) => setContact(e.target.value)} // 추가
-                    className="store-name-space"
-                    placeholder="가게 전화번호를 입력해주세요"
-                    autoComplete="contact"/>
-            </div>
-
-            <div className="container">
-                <div className="store-address">
-                    가게주소
-                </div>
-
-                <input
-                    type="text"
-                    value={address}
-                    onClick={openPostCode}
-                    readOnly
-                    className="store-address-space"
-                    placeholder="가게주소를 입력해주세요"
-                    autoComplete="address"
-                />
-
-                {isPostOpen && (
-                    <div style={{ display: 'block', position: 'absolute', top: '100px', zIndex: '100' }}>
-                        <DaumPostcode
-                            onComplete={handlePostCodeComplete}
-                            width={600}
-                            height={450}
-                            style={{ display: 'block' }}
-                        />
-                        <button type="button" onClick={() => setIsPostOpen(false)}>닫기</button>
+            <div className="itemContainer">
+                <div className="textContainer">
+                    <div className="store-name">
+                        가게이름
                     </div>
-                )}
-            </div>
-            <div className="container-4">
-                <div className="store-office">
-                    사업자 등록번호
+                    <div className="phone-num">
+                        가게번호
+                    </div>
+                    <div className="store-address">
+                        가게주소
+                    </div>
+                    <div className="store-office">
+                        사업자 등록번호
+                    </div>
+
+                </div>
+                <div className="inputContainer">
+                    <input
+                        type="text"
+                        value={contact}
+                        onChange={(e) => setContact(e.target.value)} // 추가
+                        className="inputStoreName"
+                        placeholder="가게이름을 입력해주세요"
+                        autoComplete="contact"/>
+                    <input
+                        type="text"
+                        value={storename}
+                        onChange={(e) => setStoreName(e.target.value)} // 추가
+                        className="inputStoreNum"
+                        placeholder="가게 전화번호를 입력해주세요"
+                        autoComplete="storename"/>
+                    <input
+                        type="text"
+                        value={address}
+                        onClick={openPostCode}
+                        readOnly
+                        className="inputStoreAddress"
+                        placeholder="가게주소를 입력해주세요"
+                        autoComplete="address"
+                    />
+                    {isPostOpen && (
+                        <div style={{
+                            display: 'block',
+                            position: 'absolute',
+                            top: '100px',
+                            zIndex: '100',
+                            border: '1px solid',
+                            backgroundColor: '#ffffff'
+                        }}>
+                            <DaumPostcode
+                                onComplete={handlePostCodeComplete}
+                                width={600}
+                                height={450}
+                                style={{display: 'block'}}
+                            />
+                            <button type="button" onClick={() => setIsPostOpen(false)}
+                                    style={{margin: '0 0 10px 10px'}}>닫기
+                            </button>
+                        </div>
+                    )}
                     <input
                         type="text"
                         value={storeUID}
                         onChange={(e) => setStoreUID(e.target.value)} // 추가
-                        className="store-address-space"
-                        placeholder="가게주소를 입력해주세요"
+                        className="inputStoreId"
+                        placeholder="사업자등록번호를 입력해주세요"
                         autoComplete="storeUID"/>
+
                 </div>
-                <button type="button" onClick={fetchBusinessStatus}>조회</button>
+                <div className="btnContainer">
+                    <button className= "idCheckBtn"
+                            type="button" onClick={fetchBusinessStatus}>
+                        조회
+                    </button>
+                </div>
             </div>
-            {registrationStatus && (
-                <div className="registration-status">
+            <div style={{height: '10px',
+            marginLeft: '225px'}}>
+                {registrationStatus && (
+                    <div className="registration-status">
                     {registrationStatus}
-                </div>
-            )}
+                    </div>
+                )}
+            </div>
             <button className="sign-in-bt" type={"submit"}>
-        <span className="sing-in-request">
-          회원가입 신청
-        </span>
+                <span className="sing-in-request">
+                    회원가입 신청
+                </span>
             </button>
         </div>
         </form>
