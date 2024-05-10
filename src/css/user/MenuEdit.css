@@ -15,7 +15,7 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -33,7 +33,7 @@
     position: relative;
     margin-right: 17px;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -80,7 +80,7 @@
     color: #000000;
 }
 .MenuEdit .menu-4-tag {
-    margin-bottom: 72px;
+    margin: 0 0 72px 200px;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -213,6 +213,7 @@
     font-weight: 300;
     font-size: 27px;
     color: #000000;
+    margin: 0 auto;
 }
 .MenuEdit .side-tab {
     border-radius: 10px;
@@ -229,6 +230,7 @@
     font-weight: 300;
     font-size: 27px;
     color: #000000;
+    margin: 0 auto;
 }
 .MenuEdit .tab-add-bt {
     border-radius: 10px;
@@ -289,7 +291,7 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -307,7 +309,7 @@
     position: relative;
     margin-right: 17px;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -365,7 +367,7 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -383,7 +385,7 @@
     position: relative;
     margin-right: 17px;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -457,7 +459,7 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }
@@ -475,7 +477,7 @@
     position: relative;
     margin-right: 17px;
     display: flex;
-    padding: 3px 0.8px 4px 0;
+    padding: 3px 21px 4px 21px;
     width: 87px;
     box-sizing: border-box;
 }

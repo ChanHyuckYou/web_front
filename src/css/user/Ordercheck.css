@@ -1,3 +1,11 @@
+.orderCheck {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0 102px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
 .orderCheck .container {
     margin: 15px 0 20px 0;
     display: flex;
@@ -25,14 +33,6 @@
     height: fit-content;
     box-sizing: border-box;
 }
-.orderCheck {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    padding: 59px 0 102px 0;
-    width: 1440px;
-    box-sizing: border-box;
-}
 .orderCheck .container-4 {
     margin-top: 1px;
     display: flex;
@@ -49,6 +49,7 @@
     padding: 0 37.8px 0 13px;
     width: 1065px;
     box-sizing: border-box;
+    border: 1px solid #000000;
 }
 .orderCheck .order-check {
     margin: 0 125px;
@@ -613,6 +614,7 @@
     padding: 0 37.8px 0 13px;
     width: 1065px;
     box-sizing: border-box;
+    border: 1px solid #000000;
 }
 .orderCheck .container-8 {
     display: flex;
@@ -641,6 +643,7 @@
     padding: 0 37.8px 0 13px;
     width: 1065px;
     box-sizing: border-box;
+    border: 1px solid #000000;
 }
 .orderCheck .container-12 {
     margin: 15.3px 0 20px 0;
@@ -659,6 +662,7 @@
     padding: 0 37.8px 0px 13px;
     width: 1065px;
     box-sizing: border-box;
+    border: 1px solid #000000;
 }
 .orderCheck .container-14 {
     display: flex;

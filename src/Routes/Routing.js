@@ -22,6 +22,7 @@ import AdminAppMan from '../pages/admin/AdminPageAppManage';
 import OrderCheck from '../pages/user/OrderCheck';
 import MenuEdit from '../pages/user/MenuEdit';
 import MenuAdd from '../pages/user/MenuAdd';
+import MyPage from '../pages/user/MyPage';
 
 import SignInPage from '../pages/Sign/SignIn';
 import SignInPage2 from '../pages/Sign/SignIn2';
@@ -33,7 +34,7 @@ function Routing() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<App />} />
+                    <Route path='/' element={<OrderCheck />} />
                     {/*<Route path='/test' element={<test11 />} />*/}
                     <Route path='/Main' element={<Main />} />
                     <Route path='/Sign' element={<SignInPage />} />

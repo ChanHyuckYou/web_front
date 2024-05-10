@@ -35,7 +35,7 @@
     background: #FF4C00;
     position: relative;
     display: flex;
-    padding: 13px 9.6px 14px 9px;
+    padding: 19px 9.6px 14px 9px;
     box-sizing: border-box;
 }
 .signInPage .email-authen {
@@ -160,7 +160,7 @@
     position: relative;
     margin-left: 136px;
     display: flex;
-    padding: 9px 1.7px 10px 0;
+    padding: 10px 25px 9px 26px;
     width: 140px;
     box-sizing: border-box;
 }
@@ -168,7 +168,7 @@
     background: #FF4C00;
     position: relative;
     display: flex;
-    padding: 14px 19.7px 13px 19px;
+    padding: 19px 19.7px 14px 19px;
     box-sizing: border-box;
 }
 .signInPage .container-1 {
