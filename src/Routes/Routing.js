@@ -17,6 +17,7 @@ import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreManage";
 import OrderCheck from '../pages/user/OrderCheck';
 import MenuEdit from '../pages/user/MenuEdit';
 import MenuAdd from '../pages/user/MenuAdd';
+import MyPage from '../pages/user/MyPage';
 
 import SignInPage from '../pages/Sign/SignIn';
 import SignInPage2 from '../pages/Sign/SignIn2';

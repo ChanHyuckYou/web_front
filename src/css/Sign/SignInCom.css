@@ -3,12 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 59px 0 359px 0;
-    width: 1440px;
+    padding: 4vh 0 359px 0;
     box-sizing: border-box;
 }
 .signInCom .app-nupan {
-    margin: 0 98px 59px 98px;
+    margin: 0 98px 5vh 4vw;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -21,7 +20,7 @@
 .signInCom .line-5 {
     background: #000000;
     margin-bottom: 105px;
-    width: 1440px;
+    width: 100%;
     height: 1px;
 }
 .signInCom .sign-in-complete {
@@ -57,7 +56,7 @@
     position: relative;
     margin-right: 894px;
     display: flex;
-    padding: 16px 1.6px 16px 0;
+    padding: 16px 22px 16px 23px;
     width: 184px;
     box-sizing: border-box;
 }

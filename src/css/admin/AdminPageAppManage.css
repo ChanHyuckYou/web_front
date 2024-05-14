@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     padding: 59px 0 54px 0;
-    width: 1440px;
     box-sizing: border-box;
 }
 .AdminPageAppManage .app-nupan {
@@ -129,7 +128,7 @@
     position: relative;
     margin-bottom: 55px;
     display: flex;
-    padding: 9px 1px 9px 0;
+    padding: 9px 21px 9px 22px;
     width: 88px;
     height: fit-content;
     box-sizing: border-box;
@@ -211,3 +210,7 @@
     flex-direction: column;
     box-sizing: border-box;
 }
+
+/*디폴트 화면*/
+@media screen and (min-width: 1024px)
+{}
