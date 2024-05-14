@@ -16,10 +16,10 @@ export default function MenuAdd() {
     const fileInputRef = useRef();
     const ownerid = localStorage.getItem('ownerid');
 
-    const goToMenuEdit = () => {
-        localStorage.setItem('ownerid', ownerid);
-        navigate('/Main/Menu/Edit');
-    };
+    // const goToMenuEdit = () => {
+    //     localStorage.setItem('ownerid', ownerid);
+    //     navigate('/Main/Menu/Edit');
+    // };
 
     // "사진추가" 버튼 클릭 시 실행될 함수
     const handleFileChange = (e) => {
@@ -68,7 +68,7 @@ export default function MenuAdd() {
             if (response.ok) {
                 // Menu item added successfully
                 // You can redirect or show a success message here
-                goToMenuEdit()
+                // goToMenuEdit()
                 console.log(`메뉴아이템 등록 성공 : ${formData}`);
             } else {
                 // Handle error response
@@ -169,7 +169,7 @@ export default function MenuAdd() {
           </span>
                 </button>
                 <button className="add-cancel-bt"
-                        onClick={goToMenuEdit()}
+                        // onClick={goToMenuEdit()}
                     type={"button"}
                 >
           <span className="cancel">

@@ -4,8 +4,7 @@ import App from '../pages/Login';
 // import Sign from '../pages/Sign/Sign';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Main from "../pages/Main";
-import Sign_2 from "../pages/Sign/Sign_2";
-import Sign_3 from "../pages/Sign/Sign_3";
+
 import QrCRUD from "../pages/qrCRUD";
 // import Payment from "../pages/requestPay";
 import StoreSign from "../pages/Sign/storeSign";
@@ -14,10 +13,6 @@ import StoreSign from "../pages/Sign/storeSign";
 import AdminPageSignInConfirm from "../pages/admin/AdminPageSignInConfirm";
 import AdminPageStoreAccountManage from "../pages/admin/AdminPageStoreManage";
 
-
-import AdminSignCon from '../pages/admin/AdminPageSignInConfirm';
-import AdminStoreMan from '../pages/admin/AdminPageStoreManage';
-import AdminAppMan from '../pages/admin/AdminPageAppManage';
 
 import OrderCheck from '../pages/user/OrderCheck';
 import MenuEdit from '../pages/user/MenuEdit';
@@ -47,6 +42,7 @@ function Routing() {
                     <Route path='/adminacount' element={<AdminPageStoreAccountManage />}/>
                     <Route path='/Main/Menu/Edit' element={<MenuEdit />}/>
                     <Route path='/Main/Menu/Add' element={<MenuAdd />}/>
+                    <Route path='/Main/Menu/OrderCheck' element={<OrderCheck />}/>
                 </Routes>
             </BrowserRouter>
         </div>

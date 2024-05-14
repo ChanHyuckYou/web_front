@@ -159,7 +159,7 @@ export default function OrderCheckPage() {
                             </div>
                             <div className="order-2-check">
                                 <div className="material-symbolscheck">
-                                    <img className="vector" src="assets/vectors/Vector1_x2.svg" />
+                                    {/*<img className="vector" src="assets/vectors/Vector1_x2.svg" />*/}
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ export default function OrderCheckPage() {
                         </div>
                         <div className="order-1-check">
                             <div className="material-symbolscheck-1">
-                                <img className="vector-1" src="assets/vectors/Vector6_x2.svg" />
+                                {/*<img className="vector-1" src="assets/vectors/Vector6_x2.svg" />*/}
                             </div>
                         </div>
                     </div>

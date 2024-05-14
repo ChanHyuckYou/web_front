@@ -14,7 +14,27 @@ export default function SignInPage2() {
     const [registrationStatus, setRegistrationStatus] = useState(''); // 사업자 등록 상태 메시지 state
     // const API_URL = "PXG4lbu1zrrFC627PIole4Nm0A1pWRNSNrPPZN9EF64HZEvNt1NSrVm98ZZsqkDYtdQ9s98zQCcW84N984DDiw%3D%3D";
     const [isPostOpen, setIsPostOpen] = useState(false);
-
+    // const [code, setCode] = useState('');
+    // const [confirmationResult, setConfirmationResult] = useState(null);
+    //
+    //
+    // const sendVerificationCode = () => {
+    //     const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    //     firebase.auth().signInWithPhoneNumber(phone, recaptchaVerifier)
+    //         .then((confirmationResult) => {
+    //             setConfirmationResult(confirmationResult);
+    //         }).catch((error) => {
+    //         console.error(error);
+    //     });
+    // };
+    // const verifyCode = () => {
+    //     confirmationResult.confirm(code).then((result) => {
+    //         const user = result.user;
+    //         console.log(user);
+    //     }).catch((error) => {
+    //         console.error(error);
+    //     });
+    // };
 
     const fetchBusinessStatus = async () => {
         const data = {
