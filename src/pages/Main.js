@@ -37,11 +37,12 @@ export default function Main() {
             </div>
             <div className="line-5-ad">
             </div>
+
             <div className="user-name-ad">
                 {ownerid}님 환영합니다.
             </div>
             <div className="container-2111-ad">
-        <span className="container133-ad">
+        <span className="storeName">
           가게이름-1
         </span>
                 <span className="container-122-ad">
@@ -55,16 +56,16 @@ export default function Main() {
                         <img className="vector-5-ad" src={EPMENU} alt="" />
                     </div>
                     <span className="container-3-ad">
-            메뉴편집
-          </span>
+                        메뉴편집
+                    </span>
                 </button>
                 <div className="container-4-ad">
                     <div className="solarclipboard-list-outline-ad">
                         <img className="vector-5-ad" src={Vector}alt=""/>
                     </div>
                     <span className="container-5-ad">
-            주문확인
-          </span>
+                        주문확인
+                    </span>
                 </div>
                 <button className="qr-ad"
                 onClick={goToQr}>

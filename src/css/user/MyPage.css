@@ -1,0 +1,237 @@
+.myPage .container {
+    margin: 0 98px 12px 98px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .container-1 {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0 152px 0;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.myPage .app-nupan {
+    margin: 0 98px 59px 98px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.myPage .line-5 {
+    background: #000000;
+    margin-bottom: 17px;
+    width: 1440px;
+    height: 1px;
+}
+.myPage .my-info {
+    margin: 0 98.4px 18px 98.4px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.myPage .store-name-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.myPage .store-name-text {
+    margin: 6px 29.5px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .image {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin-right: 151.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px 0 10px 0;
+    width: 255px;
+    box-sizing: border-box;
+}
+.myPage .image-sample {
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    margin-bottom: 9px;
+    width: 176px;
+    height: 141px;
+}
+.myPage .image-add-bt {
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    position: relative;
+    margin-right: 1px;
+    display: flex;
+    padding: 9px 25px 8px 26px;
+    width: 125px;
+    box-sizing: border-box;
+}
+.myPage .image-change-bt {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+}
+.myPage .store-name {
+    margin-bottom: 29px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .store-office {
+    margin-bottom: 29px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .store-office-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.myPage .store-office-text {
+    margin: 6px 29.4px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .store-address {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .store-address-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.myPage .store-address-text {
+    margin: 6px 29.5px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .user-name {
+    margin: 0 0 29px 75.5px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .user-name-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.myPage .user-name-text {
+    margin: 6px 29.5px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .phone-num {
+    margin: 0 0 266px 82.3px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+.myPage .phone-num-space {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 382px;
+    height: 42px;
+}
+.myPage .phone-num-text {
+    margin: 6px 29.3px 7px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .menu-add-bt {
+    background: #4097E8;
+    position: relative;
+    margin-right: 30px;
+    display: flex;
+    padding: 6px 9.7px 6px 9px;
+    box-sizing: border-box;
+}
+.myPage .menu-add {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.myPage .add-cancel-bt {
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    padding: 6px 9.7px 6px 9px;
+    box-sizing: border-box;
+}
+.myPage .cancel {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.myPage .container-2 {
+    margin: 13px 0 17px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+}

@@ -2,67 +2,11 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 59px 0 102px 0;
-    width: 1440px;
+    padding: 4vh 0 102px 0;
     box-sizing: border-box;
-}
-.orderCheck .container {
-    margin: 15px 0 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-.orderCheck .container-1 {
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-2 {
-    margin: 15px 0 20px 0;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-3 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 1135px;
-    height: fit-content;
-    box-sizing: border-box;
-}
-.orderCheck .container-4 {
-    margin-top: 1px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-5 {
-    background: #FFFFFF;
-    position: relative;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 37.8px 0 13px;
-    width: 1065px;
-    box-sizing: border-box;
-    border: 1px solid #000000;
-}
-.orderCheck .order-check {
-    margin: 0 125px;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
 }
 .orderCheck .app-nupan {
-    margin: 0 98px 59px 98px;
+    margin: 0 98px 5vh 4vw;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -74,164 +18,29 @@
 }
 .orderCheck .line-5 {
     background: #000000;
-    margin-bottom: 58px;
-    width: 1440px;
+    margin-bottom: 28px;
+    width: 100%;
     height: 1px;
 }
-.orderCheck .order-number {
-    margin-right: 14.5px;
-    width: 132.5px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-table {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-menu {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-4 {
-    margin: 15px 14.5px 15px 0;
+.orderCheck .order-check {
+    margin: 2vh 98px 5vh 4vw;
     display: inline-block;
-    width: 106px;
+    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 30px;
     color: #000000;
 }
-.orderCheck .order-4-table {
-    margin: 15px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .line-6 {
-    background: #000000;
-    margin-right: 12.5px;
-    width: 1px;
-    height: 59px;
-}
-.orderCheck .line-7 {
-    background: #000000;
-    margin-right: 37px;
-    width: 1px;
-    height: 58px;
-}
+
+
+/*오더 컨테이너*/
 .orderCheck .order-no-4 {
     margin-bottom: 21px;
     display: flex;
     flex-direction: row;
     width: 1135px;
-    box-sizing: border-box;
-}
-.orderCheck .table-list {
-    margin-bottom: 21px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1163.3px;
-    box-sizing: border-box;
-}
-.orderCheck .order-4-menu-1 {
-    margin: 14px 0 15px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-amount {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-4-menu-1-amount {
-    margin: 15px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-payment {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-4-payment {
-    margin-right: 14.7px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-price {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-4-menu-1-price {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .serving-check {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .rectangle-46 {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 30px;
-    height: 30px;
-}
-.orderCheck .order-4-check {
-    margin: 14px 0 15px 0;
-    display: flex;
-    width: 30px;
-    height: 30px;
     box-sizing: border-box;
 }
 .orderCheck .order-no-3 {
@@ -241,34 +50,109 @@
     width: 1135px;
     box-sizing: border-box;
 }
-.orderCheck .order-3-check {
-    margin: 14px 0 15px 0;
+.orderCheck .order-no-2 {
+    position: relative;
+    margin-bottom: 21px;
     display: flex;
-    width: 30px;
-    height: 30px;
+    padding-bottom: 1px;
+    width: 1135px;
     box-sizing: border-box;
 }
-.orderCheck .rectangle-461 {
-    border: 1px solid #000000;
+.orderCheck .order-no-1 {
+    display: flex;
+    flex-direction: row;
+    width: 1135px;
+    box-sizing: border-box;
+}
+/*오더 컨테이너*/
+
+/*오더 인포 컨테이너*/
+.orderCheck .order4InfoContainer {
     background: #FFFFFF;
-    width: 30px;
-    height: 30px;
+    position: relative;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 37.8px 0 13px;
+    width: 1065px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
 }
-.orderCheck .line-61 {
-    background: #000000;
-    margin-right: 12.5px;
-    width: 1px;
-    height: 59px;
+.orderCheck .order3InfoContainer {
+    background: #FFFFFF;
+    position: relative;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 37.8px 0 13px;
+    width: 1065px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
 }
-.orderCheck .line-71 {
-    background: #000000;
-    margin-right: 37px;
-    width: 1px;
-    height: 58px;
+.orderCheck .order2Info2Container {
+    background: #FFFFFF;
+    position: relative;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 37.8px 0 13px;
+    width: 1065px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
 }
-.orderCheck .order-3-menu-1-price {
-    margin: 15px 0;
-    display: inline-block;
+.orderCheck .order1Info1Container {
+    background: #FFFFFF;
+    position: relative;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 37.8px 0 13px;
+    width: 1065px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+/*오더 인포 컨테이너*/
+
+/*오더 세부컨테이너*/
+.orderCheck .orderNoContainer {
+    border-right: 1px solid #000000;
+    display: flex;
+    width: 100px;
+}
+.orderCheck .orderTableContainer {
+    border-right: 1px solid #000000;
+    display: flex;
+    width: 130px;
+}
+.orderCheck .orderMenuContainer {
+    border-right: 1px solid #000000;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+}
+.orderCheck .orderAmountContainer {
+    border-right: 1px solid #000000;
+    display: flex;
+    width: 70px;
+    flex-direction: column;
+}
+.orderCheck .orderPaymentContainer {
+    border-right: 1px solid #000000;
+    display: flex;
+    width: 130px;
+    flex-direction: column;
+}
+.orderCheck .orderPriceContainer {
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+}
+/*오더 세부컨테이너*/
+
+
+/*주문정보 테이블*/
+.orderCheck .order-number {
+    margin-right: 30px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -276,9 +160,8 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-3-payment {
-    margin: 15px 0;
-    display: inline-block;
+.orderCheck .order-table {
+    margin-right: 25px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -286,9 +169,8 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-3-table {
-    margin: 15px 0;
-    display: inline-block;
+.orderCheck .order-menu {
+    margin-right: 160px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -296,9 +178,8 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-3-menu-1 {
-    margin: 14px 0 15px 0;
-    display: inline-block;
+.orderCheck .order-amount {
+    margin-right: 33px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -306,9 +187,42 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-3-menu-1-amount {
-    margin: 15px 0;
+.orderCheck .order-payment {
+    margin-right: 52px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-price {
+    margin-right: 20px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .serving-check {
+    margin-left: auto;
+    margin-right: 5px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*주문정보 테이블*/
+
+
+/*오더 넘버 리스트*/
+.orderCheck .order-4 {
+    margin: 15px 14.5px 15px 0;
     display: inline-block;
+    width: 106px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -327,14 +241,225 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-no-2 {
-    position: relative;
+.orderCheck .order-2 {
+    margin: 15px 14.5px 15px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-1 {
+    margin: 15px 14.5px 15px 0;
+    display: inline-block;
+    width: 106px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*오더 넘버 리스트*/
+
+
+/*테이블 넘버 리스트*/
+.orderCheck .order-4-table {
+    margin: 15px 13px 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-3-table {
+    margin: 15px 13px 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-2-table {
+    margin: 15px 13px 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-1-table {
+    margin: 15px 13px 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*테이블 넘버 리스트*/
+
+
+/*메뉴 리스트*/
+.orderCheck .order-4-menu-1 {
+    margin: 15px 0 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-3-menu-1 {
+    margin: 15px 0 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-2-menu-1 {
+    margin: 15px 0 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-2-menu-2 {
+    margin: 0 0 15px 13px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.orderCheck .order-1-menu-1 {
+    margin: 15px 0 15px 13px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*메뉴 리스트*/
+
+/*주문 수량*/
+.orderCheck .orderAmount {
+    margin: 15px 0 0 5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*주문 수량*/
+
+/*결제여부*/
+.orderCheck .orderPayment {
+    margin: 15px 5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*결제여부*/
+
+
+/*메뉴가격*/
+.orderCheck .orderPrice {
+    margin: 15px 5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+/*메뉴가격*/
+
+
+.orderCheck .table-list {
     margin-bottom: 21px;
     display: flex;
-    padding-bottom: 1px;
-    width: 1135px;
+    flex-direction: row;
+    width: 1163.3px;
     box-sizing: border-box;
 }
+
+.orderCheck .order-4-payment {
+    margin-right: 14.7px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+
+.orderCheck .order-4-menu-1-price {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+
+.orderCheck .rectangle-46 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 30px;
+    height: 30px;
+}
+.orderCheck .order-4-check {
+    margin: 14px 0 15px 0;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.orderCheck .order-3-check {
+    margin: 14px 0 15px 0;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.orderCheck .rectangle-461 {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
 .orderCheck .order-2-check {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -356,20 +481,7 @@
     width: 20.4px;
     height: 15.3px;
 }
-.orderCheck .line-62 {
-    background: #000000;
-    margin-right: 12.5px;
-    width: 1px;
-    height: 100px;
-}
-.orderCheck .line-72 {
-    background: #000000;
-    position: absolute;
-    left: 264px;
-    bottom: 0px;
-    width: 1px;
-    height: 100px;
-}
+
 .orderCheck .order-2-menu-1-price {
     margin-bottom: 6.7px;
     display: inline-block;
@@ -390,52 +502,7 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-2-table {
-    margin: 15.3px 0 55.7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-2-menu-1 {
-    margin: 0 4.1px 6.7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-2-menu-1-amount {
-    margin: 0 0 7px 1px;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-2 {
-    margin: 15px 74.8px 56px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-no-1 {
-    display: flex;
-    flex-direction: row;
-    width: 1135px;
-    box-sizing: border-box;
-}
+
 .orderCheck .order-1-check {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -457,18 +524,7 @@
     width: 20.4px;
     height: 15.3px;
 }
-.orderCheck .line-63 {
-    background: #000000;
-    margin-right: 12.5px;
-    width: 1px;
-    height: 60px;
-}
-.orderCheck .line-73 {
-    background: #000000;
-    margin-right: 37px;
-    width: 1px;
-    height: 59px;
-}
+
 .orderCheck .order-1-menu-1-price {
     margin: 15.3px 0 15.7px 0;
     display: inline-block;
@@ -489,73 +545,7 @@
     font-size: 24px;
     color: #000000;
 }
-.orderCheck .order-1-table {
-    margin: 15.3px 0 15.7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-1-menu-1 {
-    margin: 14.2px 0 15.7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-1-menu-1-amount {
-    margin: 15.3px 0 15.7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-1 {
-    margin: 15.3px 14.5px 15.7px 0;
-    display: inline-block;
-    width: 106px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .container-6 {
-    margin: 15px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 328.2px;
-    height: fit-content;
-    box-sizing: border-box;
-}
-.orderCheck .order-2-menu-2 {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
-.orderCheck .order-2-menu-2-amount {
-    margin-right: 1px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 24px;
-    color: #000000;
-}
+
 .orderCheck .order-2-menu-2-price {
     margin-right: 0.5px;
     overflow-wrap: break-word;
@@ -570,20 +560,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1135px;
+    width: 1164px;
+    height: 550px;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 .orderCheck .order-list-table {
     border-radius: 20px;
-    border: 1px solid #000000;
+    border: 3px solid #DC6721;
     background: #FFFFFF;
     position: relative;
-    margin: 0 104px 0 103px;
+    margin: 0 104px 0 4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 41px 18.7px 240px 51px;
+    padding: 41px 18.7px 41px 51px;
     width: 1233px;
+    height: 673px;
     box-sizing: border-box;
 }
 .orderCheck .order-2-pay-check {
@@ -603,88 +596,4 @@
     font-weight: 500;
     font-size: 24px;
     color: #000000;
-}
-.orderCheck .container-7 {
-    background: #FFFFFF;
-    position: relative;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 37.8px 0 13px;
-    width: 1065px;
-    box-sizing: border-box;
-    border: 1px solid #000000;
-}
-.orderCheck .container-8 {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-9 {
-    margin-top: 1px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-10 {
-    margin-top: 1px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-11 {
-    background: #FFFFFF;
-    position: relative;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 37.8px 0 13px;
-    width: 1065px;
-    box-sizing: border-box;
-    border: 1px solid #000000;
-}
-.orderCheck .container-12 {
-    margin: 15.3px 0 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-.orderCheck .container-13 {
-    background: #FFFFFF;
-    position: relative;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 37.8px 0px 13px;
-    width: 1065px;
-    box-sizing: border-box;
-    border: 1px solid #000000;
-}
-.orderCheck .container-14 {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-15 {
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.orderCheck .container-16 {
-    margin-top: 0.3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-.orderCheck .container-17 {
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
 }

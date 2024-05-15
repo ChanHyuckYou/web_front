@@ -14,24 +14,24 @@ export default function MenuEditPage() {
             </div>
             <div className="container-14">
                 <div className="recommended-menu">
-          <span className="recommended">
-            추천 메뉴
-          </span>
+                    <span className="recommended">
+                        추천 메뉴
+                     </span>
                 </div>
                 <div className="main-menu">
-          <span className="main">
-            주 메뉴
-          </span>
+                    <span className="main">
+                        주 메뉴
+                    </span>
                 </div>
                 <div className="side-tab">
-          <span className="side">
-            사이드
-          </span>
+                    <span className="side">
+                        사이드
+                    </span>
                 </div>
                 <div className="tab-add-bt">
-          <span className="tab-add">
-            + 탭 추가
-          </span>
+                    <span className="tab-add">
+                        + 탭 추가
+                    </span>
                 </div>
             </div>
             <div className="container-7">
@@ -39,9 +39,9 @@ export default function MenuEditPage() {
                     메뉴 관리
                 </div>
                 <button className="menu-add-bt" onClick={navigate('/Main/Menu/Add')}>
-          <span className="menu-add">
-            메뉴 추가
-          </span>
+                    <span className="menu-add">
+                        메뉴 추가
+                    </span>
                 </button>
             </div>
             <div className="menu-list">
@@ -54,8 +54,8 @@ export default function MenuEditPage() {
                                 메뉴 1 이름
                             </div>
                             <span className="menu-1-info">
-                메뉴 1 설명
-              </span>
+                                메뉴 1 설명
+                            </span>
                         </div>
                     </div>
                     <div className="container-18">
@@ -65,19 +65,19 @@ export default function MenuEditPage() {
                         <div className="container-3">
                             <div className="container-10">
                                 <div className="edit-bt-1">
-                  <span className="edit-1">
-                    수정
-                  </span>
+                                <span className="edit-1">
+                                    수정
+                                </span>
                                 </div>
                                 <div className="del-bt">
-                  <span className="del-1">
-                    삭제
-                  </span>
+                                    <span className="del-1">
+                                        삭제
+                                    </span>
                                 </div>
                             </div>
                             <span className="menu-1-price">
-                8,000₩
-              </span>
+                                8,000₩
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -166,25 +166,27 @@ export default function MenuEditPage() {
               </span>
                         </div>
                     </div>
-                    <div className="menu-4-tag">
-                        #사이드
-                    </div>
-                    <div className="container-17">
-                        <div className="container-1">
-                            <div className="edit-bt-4">
-                <span className="edit-4">
-                  수정
-                </span>
-                            </div>
-                            <div className="del-bt-4">
-                <span className="del-4">
-                  삭제
-                </span>
-                            </div>
+                    <div className="menu4SecondContainer">
+                        <div className="menu-4-tag">
+                            #사이드
                         </div>
-                        <span className="menu-4-price">
-              4,000₩
-            </span>
+                        <div className="container-17">
+                            <div className="container-1">
+                                <div className="edit-bt-4">
+                                <span className="edit-4">
+                                    수정
+                                </span>
+                                </div>
+                                <div className="del-bt-4">
+                                    <span className="del-4">
+                                        삭제
+                                    </span>
+                                </div>
+                            </div>
+                            <span className="menu-4-price">
+                                4,000₩
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

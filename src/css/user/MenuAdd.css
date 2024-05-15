@@ -2,23 +2,11 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 59px 0 152px 0;
-    width: 1440px;
+    padding: 4vh 0 152px 0;
     box-sizing: border-box;
 }
-.menuAdd .menu-add-1 {
-    margin: 0 98.3px 18px 98.3px;
-    display: inline-block;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
-}
 .menuAdd .app-nupan {
-    margin: 0 98px 59px 98px;
+    margin: 0 98px 5vh 4vw;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -30,10 +18,108 @@
 }
 .menuAdd .line-5 {
     background: #000000;
-    margin-bottom: 17px;
-    width: 1440px;
+    margin-bottom: 28px;
+    width: 100%;
     height: 1px;
 }
+.menuAdd .menu-add-1 {
+    margin: 2vh 98px 5vh 4vw;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+
+.menuAdd .menuItemContainer {
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.menuAdd .menuInfoContainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.menuAdd .textContainer {
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+
+
+}
+.menuAdd .inputContainer {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+.menuAdd .image {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 4vw 82px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px 0 10px 0;
+    width: 255px;
+    min-width: 255px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.menuAdd .menu-name {
+    margin: 8px 0 33px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+    width: 89px;
+    height: 29px;
+}
+.menuAdd .menu-info {
+    margin: 8px 0 212px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+    width: 89px;
+    height: 29px;
+}
+.menuAdd .tag {
+    margin: 8px 0 34px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+    width: 45px;
+    height: 29px;
+}
+.menuAdd .price {
+    margin: 9px 0 29px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+    width: 45px;
+    height: 29px;
+}
+
 .menuAdd .image-sample {
     border: 1px solid #000000;
     background: #D9D9D9;
@@ -59,109 +145,52 @@
     width: 125px;
     box-sizing: border-box;
 }
-.menuAdd .image {
+
+.menuAdd .inputMenuName {
     border: 1px solid #000000;
     background: #FFFFFF;
-    position: relative;
-    margin: 0 151.3px 82px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 13px 0 10px 0;
-    width: 255px;
-    height: fit-content;
-    box-sizing: border-box;
-}
-.menuAdd .rectangle-57 {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 382px;
+    width: 45vw;
+    max-width: 382px;
+    min-width: 382px;
     height: 42px;
-}
-.menuAdd .menu-name {
-    margin: 6px 20.3px 7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-}
-.menuAdd .menu-name-space {
     margin-bottom: 29px;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-start;
-    width: fit-content;
-    box-sizing: border-box;
 }
-.menuAdd .rectangle-58 {
+
+
+.menuAdd .inputMenuInfo {
     border: 1px solid #000000;
     background: #FFFFFF;
-    width: 540px;
+    width: 45vw;
+    max-width: 540px;
+    min-width: 387px;
     height: 212px;
+    margin-bottom: 29px;
 }
-.menuAdd .meno-info {
-    margin: 8px 20.3px 175px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-}
-.menuAdd .menu-info-space {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    box-sizing: border-box;
-}
-.menuAdd .rectangle-581 {
+
+
+.menuAdd .inputMenuTag {
     border: 1px solid #000000;
     background: #FFFFFF;
-    width: 382px;
+    width: 45vw;
+    max-width: 382px;
+    min-width: 382px;
     height: 42px;
+    margin-bottom: 29px;
+
 }
-.menuAdd .tag {
-    margin: 6px 20.4px 7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-}
-.menuAdd .tag-space {
-    margin: 0 0 29px 103.4px;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: fit-content;
-    box-sizing: border-box;
-}
-.menuAdd .rectangle-59 {
+
+
+.menuAdd .inputMenuPrice {
     border: 1px solid #000000;
     background: #FFFFFF;
-    width: 382px;
+    width: 45vw;
+    max-width: 382px;
+    min-width: 382px;
     height: 42px;
+    margin-bottom: 29px;
+
 }
-.menuAdd .price {
-    margin: 6px 20.4px 7px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-}
-.menuAdd .price-sapce {
-    margin: 0 0 167px 103.4px;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: fit-content;
-    box-sizing: border-box;
-}
+
 .menuAdd .menu-add-2 {
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -201,17 +230,4 @@
     width: fit-content;
     box-sizing: border-box;
 }
-.menuAdd .container-1 {
-    margin-top: 13px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-.menuAdd .container-2 {
-    margin: 0 98px 29px 98px;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-start;
-    width: fit-content;
-    box-sizing: border-box;
-}
+
