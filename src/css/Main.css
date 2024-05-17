@@ -1,5 +1,30 @@
+.container-2-ad {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 0 256px 0;
+    box-sizing: border-box;
+}
+
+.container-ad {
+    margin: 0 4vw 5vh 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.app-nupan-ad {
+    margin: 0;
+    display: inline-block;
+    width: 1207.2px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
 .more-menu-bt-ad {
-    margin-bottom: 12.8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,11 +32,18 @@
     height: 28.3px;
     box-sizing: border-box;
 }
+.line-5-ad{
+    background: #000000;
+    margin-bottom: 58px;
+    width: 100%;
+    height: 1px;
+}
+
 .vector-ad {
     width: 31.7px;
     height: 28.3px;
 }
-.container133-ad {
+.storeName {
     margin-right: 28.2px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -28,49 +60,17 @@
     font-size: 30px;
     color: #000000;
 }
-.container-ad {
-    margin: 0 85.2px 59px 98px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1256.8px;
-    box-sizing: border-box;
-}
+
 .container-1-ad {
     display: flex;
     flex-direction: row;
     align-self: center;
-    column-gap: 112px;
-    width: 914px;
+    column-gap: 8vw;
     box-sizing: border-box;
 }
-.container-2-ad {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    padding: 53.8px 0 387px 0;
-    width: 1440px;
-    box-sizing: border-box;
-}
-.app-nupan-ad {
-    margin: 5.2px 18px 0 0;
-    display: inline-block;
-    width: 1207.2px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
-}
-.line-5-ad{
-    background: #000000;
-    margin-bottom: 58px;
-    width: 1440px;
-    height: 1px;
-}
+
 .user-name-ad {
-    margin: 0 98px 14px 98px;
+    margin: 0 98px 14px 8vw;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -183,7 +183,7 @@
     height: 140px;
 }
 .container-2111-ad {
-    margin: 0 111px 88px 111px;
+    margin: 0 111px 88px 8vw;
     display: flex;
     flex-direction: row;
     align-self: flex-start;
