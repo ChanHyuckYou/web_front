@@ -68,7 +68,7 @@ export default function MenuAdd() {
             if (response.ok) {
                 // Menu item added successfully
                 // You can redirect or show a success message here
-                goToMenuEdit()
+                goToMenuEdit();
                 console.log(`메뉴아이템 등록 성공 : ${formData}`);
             } else {
                 // Handle error response
@@ -170,7 +170,7 @@ export default function MenuAdd() {
                 </button>
                 <button className="add-cancel-bt"
                         type={"button"}
-                        onClick={goToMenuEdit()}>
+                        onClick={goToMenuEdit}>
                     <span className="cancel">
                         작성취소
                     </span>

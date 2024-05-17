@@ -53,6 +53,20 @@ export default function SignInPage1() {
     const handleSubmit = async (e) => {
         e.preventDefault(); // 폼 기본 제출 이벤트 방지
 
+        // 아이디 길이 검증
+        if(ownerid.length < 6) {
+            alert('아이디는 6자 이상이어야 합니다.');
+            return;
+        }
+
+        // 비밀번호 복잡성 검증
+        // 영문자, 숫자, 특수문자를 포함하는 정규식
+        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}":;'<>?,.]).{8,}$/;
+        if(!passwordRegex.test(password)) {
+            alert('비밀번호는 영문자, 숫자, 특수문자를 포함해야 합니다.');
+            return;
+        }
+
         if(!isIdUnique) {
             alert('ID 중복을 확인해주세요.');
             return;
