@@ -1,3 +1,40 @@
+.qrCRUD {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 0 520px 0;
+    box-sizing: border-box;
+}
+.app-nupan11 {
+    margin: 0 98px 5vh 4vw;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+.line-511 {
+    background: #000000;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 1px;
+}
+
+.container-511 {
+    margin: 0 122px 14px 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 80vw;
+    min-width: 642px;
+    max-width: 944px;
+    box-sizing: border-box;
+}
+
 .qrCRUD .tablesubmit11 {
     background: #FF4C00;
     position: relative;
@@ -82,14 +119,7 @@
     width: 259px;
     box-sizing: border-box;
 }
-.qrCRUD {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    padding: 59px 0 520px 0;
-    width: 1440px;
-    box-sizing: border-box;
-}
+
 .container-211 {
     display: flex;
     flex-direction: row;
@@ -103,23 +133,8 @@
     width: fit-content;
     box-sizing: border-box;
 }
-.app-nupan11 {
-    margin: 0 98px 59px 98px;
-    display: inline-block;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
-}
-.line-511 {
-    background: #000000;
-    margin-bottom: 50px;
-    width: 1440px;
-    height: 1px;
-}
+
+
 .table-number11 {
     margin: 0 14.5px 11px 0;
     display: inline-block;
@@ -285,13 +300,15 @@
     border: 1px solid #000000;
     background: #FFFFFF;
     position: relative;
-    margin: 0 123px 25px 123px;
+    margin: 0 123px 25px 4vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-self: flex-start;
     padding: 5px 16px 5px 52px;
-    width: 642px;
+    width: 70vw;
+    min-width: 642px;
+    max-width: 844px;
     box-sizing: border-box;
 }
 .table-delete-bt-111 {
@@ -364,6 +381,8 @@
     justify-content: center;
     padding: 8px 13px 8px 14px;
     box-sizing: border-box;
+    width: 119px;
+    height: 40px;
 }
 .table-add {
     overflow-wrap: break-word;
@@ -372,21 +391,15 @@
     font-weight: 600;
     font-size: 20px;
     color: #FFFFFF;
+    width: 92px;
+    height: 24px;
 }
 .container-411 {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.container-511 {
-    margin: 0 122px 14px 122px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: flex-start;
-    width: 836px;
-    box-sizing: border-box;
-}
+
 
 
 

@@ -51,8 +51,6 @@
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
-
-
 }
 .menuAdd .inputContainer {
     display: flex;
@@ -60,6 +58,7 @@
     box-sizing: border-box;
     align-items: flex-start;
 }
+
 .menuAdd .image {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -74,7 +73,7 @@
     height: fit-content;
     box-sizing: border-box;
 }
-
+/*메뉴인포텍스트*/
 .menuAdd .menu-name {
     margin: 8px 0 33px 0;
     display: inline-block;
@@ -119,6 +118,7 @@
     width: 45px;
     height: 29px;
 }
+/*메뉴인포텍스트*/
 
 .menuAdd .image-sample {
     border: 1px solid #000000;
@@ -224,6 +224,7 @@
 }
 .menuAdd .container {
     margin-left: 30px;
+    margin-top: auto;
     display: flex;
     flex-direction: row;
     align-self: center;

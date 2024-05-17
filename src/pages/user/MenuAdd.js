@@ -108,16 +108,16 @@ export default function MenuAdd() {
             </div>
             <div className="container">
                 <button className="menu-add-bt">
-          <span className="menu-add-2">
-            메뉴추가
-          </span>
+                    <span className="menu-add-2">
+                        메뉴추가
+                    </span>
                 </button>
                 <button className="add-cancel-bt"
                         // onClick={navigate('/Main/Menu/Edit')}
                 >
-          <span className="cancel">
-            작성취소
-          </span>
+                    <span className="cancel">
+                        작성취소
+                    </span>
                 </button>
             </div>
         </div>
