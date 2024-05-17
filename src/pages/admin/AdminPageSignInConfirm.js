@@ -13,7 +13,7 @@ export default function AdminPageSignInConfirm() {
 
     const fetchStoreInfo = async () => {
         try {
-            const response = await fetch('http://43.201.92.62/store');
+            const response = await fetch('http://43.201.92.62/franchise');
             const data = await response.json();
             setStoreInfo(data.pendingStores); // 수정된 부분
         } catch (error) {
@@ -21,7 +21,7 @@ export default function AdminPageSignInConfirm() {
         }
     };
     const handleConfirm = (tempstoreid) => {
-        axios.post('http://43.201.92.62/store/confirm', { tempstoreid: tempstoreid })
+        axios.post('http://43.201.92.62/franchise/confirm', { tempstoreid: tempstoreid })
             .then(response => {
                 console.log(response.data);
                 // 성공적으로 처리된 경우, 사용자에게 알림 또는 상태 업데이트
@@ -36,7 +36,7 @@ export default function AdminPageSignInConfirm() {
 
     // 거절 버튼 클릭 이벤트 핸들러
     const handleDeny = (tempstoreid) => {
-        axios.put('http://43.201.92.62/store/deny', { tempstoreid: tempstoreid })
+        axios.put('http://43.201.92.62/franchise/deny', { tempstoreid: tempstoreid })
             .then(response => {
                 console.log(response.data);
                 // 성공적으로 처리된 경우, 사용자에게 알림 또는 상태 업데이트
