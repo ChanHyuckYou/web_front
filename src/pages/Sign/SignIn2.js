@@ -3,46 +3,44 @@ import { useState} from "react";
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import DaumPostcode from 'react-daum-postcode';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function SignInPage2() {
     const navigate = useNavigate();
     const [storename, setStoreName] = useState('');
     const [address, setAddress] = useState('');
-    const [contact, setContact] = useState('');
-    const [storeUID, setStoreUID] = useState('');
+    const [businessnumber, setBusinessNumber] = useState('');
+    const [bossname, setBossName] = useState('');
     const ownerid = localStorage.getItem('ownerid');
     const [registrationStatus, setRegistrationStatus] = useState(''); // 사업자 등록 상태 메시지 state
-    // const API_URL = "PXG4lbu1zrrFC627PIole4Nm0A1pWRNSNrPPZN9EF64HZEvNt1NSrVm98ZZsqkDYtdQ9s98zQCcW84N984DDiw%3D%3D";
     const [isPostOpen, setIsPostOpen] = useState(false);
-    // const [code, setCode] = useState('');
-    // const [confirmationResult, setConfirmationResult] = useState(null);
-    //
-    //
-    // const sendVerificationCode = () => {
-    //     const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-    //     firebase.auth().signInWithPhoneNumber(phone, recaptchaVerifier)
-    //         .then((confirmationResult) => {
-    //             setConfirmationResult(confirmationResult);
-    //         }).catch((error) => {
-    //         console.error(error);
-    //     });
-    // };
-    // const verifyCode = () => {
-    //     confirmationResult.confirm(code).then((result) => {
-    //         const user = result.user;
-    //         console.log(user);
-    //     }).catch((error) => {
-    //         console.error(error);
-    //     });
+    const [businessdate, setBusinessDate] = useState('');
+
+    // const handleDateChange = (e) => {
+    //     const dateValue = e.target.value; // "YYYY-MM-DD" 형식의 값
+    //     const formattedDate = dateValue.replace(/-/g, ''); // "-"를 제거하여 "YYYYMMDD" 형식으로 변환
+    //     setBusinessDate(formattedDate); // 변환된 날짜를 상태에 저장
     // };
 
+    const handleDateChange = (date) => {
+        setBusinessDate(date);
+    };
+    const formatDateToYYYYMMDD = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}${month}${day}`;
+    };
     const fetchBusinessStatus = async () => {
+        const formattedDate = formatDateToYYYYMMDD(businessdate); // Date 객체를 YYYYMMDD 형식으로 변환
+        console.log('변환된 사업자 등록일자:', formattedDate);
         const data = {
             businesses: [
                 {
-                    b_no: "1303587275", // 사용자로부터 입력받은 사업자번호
-                    start_dt: '19960425', // 예시 개업일자, 실제 사용 시 변경 필요
-                    p_nm: '김태성', // 예시 대표자명, 실제 사용 시 변경 필요
+                    b_no: businessnumber, // 사용자로부터 입력받은 사업자번호
+                    start_dt: formattedDate, // 예시 개업일자, 실제 사용 시 변경 필요
+                    p_nm: bossname, // 예시 대표자명, 실제 사용 시 변경 필요
                 },
             ],
         };
@@ -67,6 +65,7 @@ export default function SignInPage2() {
                         setRegistrationStatus("사업자 등록번호가 확인되었습니다.");
                     } else if (result.valid === '02') {
                         console.log('진위확인 실패:', result.valid_msg);
+                        console.log('사업자 등록일자', businessdate)
                         setRegistrationStatus("사업자 등록번호가 일치하지 않습니다.");
                     }
                 });
@@ -85,7 +84,7 @@ export default function SignInPage2() {
         if (registrationStatus === "사업자 등록번호가 확인되었습니다.") {
             // 사업자 등록번호 확인 성공 시
             localStorage.setItem('ownerid', ownerid);
-            localStorage.setItem('storeUID', storeUID);
+            localStorage.setItem('storeUID', businessnumber);
             navigate('/Sign_3');
         } else {
             // 사업자 등록번호 확인 실패 시
@@ -95,14 +94,15 @@ export default function SignInPage2() {
     };
 
     const handleSubmit = async (e) => {
+        const formattedDate = formatDateToYYYYMMDD(businessdate); // Date 객체를 YYYYMMDD 형식으로 변환
         e.preventDefault();
         try {
-            const response = await fetch('http://43.201.92.62/store/regist', {
+            const response = await fetch('http://43.201.92.62/franchise/regist', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ storename, address, contact, ownerid }),
+                body: JSON.stringify({ storename, address, businessdate: formattedDate, ownerid, businessnumber, bossname }),
             });
             if (response.ok) {
                 console.log('가맹점 등록 성공');
@@ -141,95 +141,120 @@ export default function SignInPage2() {
 
     return (
         <form onSubmit={handleSubmit}>
-        <div className="signInPage2">
-            <div className="app-nupan">
-                APP-nupan
-            </div>
-            <div className="line-5">
-            </div>
-            <div className="sign-in">
-                회원가입
-            </div>
-
-            <div className="container-2">
-                <div className="phone-num">
-                    가게이름
+            <div className="signInPage2">
+                <div className="app-nupan">
+                    APP-nupan
                 </div>
-                <input
-                    type="text"
-                    value={storename}
-                    onChange={(e) => setStoreName(e.target.value)} // 추가
-                    className="phone-num-space"
-                    placeholder="
-                    가게이름을 입력해주세요"
-                    autoComplete="storename"/>
-            </div>
-            <div className="container-3">
-                <div className="store-name">
-                    전화번호
+                <div className="line-5">
                 </div>
-
-                <input
-                    type="text"
-                    value={contact}
-                    onChange={(e) => setContact(e.target.value)} // 추가
-                    className="store-name-space"
-                    placeholder="가게 전화번호를 입력해주세요"
-                    autoComplete="contact"/>
-
-            </div>
-
-            <div className="container">
-                <div className="store-address">
-                    가게주소
+                <div className="sign-in">
+                    회원가입
                 </div>
+                <div className="itemContainer">
+                    <div className="textContainer">
+                        <div className="store-name">
+                            가맹점 대표자이름
+                        </div>
+                        <div className="phone-num">
+                            상호명
+                        </div>
+                        <div className="store-address">
+                            가게주소
+                        </div>
+                        <div className={"store-date"}>
+                            사업자 등록번호
+                        </div>
+                        <div className="store-office">
+                            사업자 등록일자
+                        </div>
 
-                <input
-                    type="text"
-                    value={address}
-                    onClick={openPostCode}
-                    readOnly
-                    className="store-address-space"
-                    placeholder="가게주소를 입력해주세요"
-                    autoComplete="address"
-                />
 
-                {isPostOpen && (
-                    <div style={{ display: 'block', position: 'absolute', top: '100px', zIndex: '100' }}>
-                        <DaumPostcode
-                            onComplete={handlePostCodeComplete}
-                            width={600}
-                            height={450}
-                            style={{ display: 'block' }}
-                        />
-                        <button type="button" onClick={() => setIsPostOpen(false)}>닫기</button>
                     </div>
-                )}
-            </div>
-            <div className="container-4">
-                <div className="store-office">
-                    사업자 등록번호
-                    <input
-                        type="text"
-                        value={storeUID}
-                        onChange={(e) => setStoreUID(e.target.value)} // 추가
-                        className="store-address-space"
-                        placeholder="가게주소를 입력해주세요"
-                        autoComplete="storeUID"/>
+                    <div className="inputContainer">
+                        <input
+                            type="text"
+                            value={bossname}
+                            onChange={(e) => setBossName(e.target.value)} // 추가
+                            className="inputStoreName"
+                            placeholder="가맹점 대표자 이름을 입력해주세요"
+                            autoComplete="contact"/>
+                        <input
+                            type="text"
+                            value={storename}
+                            onChange={(e) => setStoreName(e.target.value)} // 추가
+                            className="inputStoreNum"
+                            placeholder="지점명, 상호명을 입력해주세요"
+                            autoComplete="storename"/>
+                        <input
+                            type="text"
+                            value={address}
+                            onClick={openPostCode}
+                            readOnly
+                            className="inputStoreAddress"
+                            placeholder="가게주소를 입력해주세요"
+                            autoComplete="address"
+                        />
+                        {isPostOpen && (
+                            <div style={{
+                                display: 'block',
+                                position: 'absolute',
+                                top: '100px',
+                                zIndex: '100',
+                                border: '1px solid',
+                                backgroundColor: '#ffffff'
+                            }}>
+                                <DaumPostcode
+                                    onComplete={handlePostCodeComplete}
+                                    width={600}
+                                    height={450}
+                                    style={{display: 'block'}}
+                                />
+                                <button type="button" onClick={() => setIsPostOpen(false)}
+                                        style={{margin: '0 0 10px 10px'}}>닫기
+                                </button>
+                            </div>
+                        )}
+
+
+                        <input
+                            type="text"
+                            value={businessnumber}
+                            onChange={(e) => setBusinessNumber(e.target.value)} // 추가
+                            className="inputStoreId"
+                            placeholder="'-'를 제외한 숫자만 입력해주세요."
+                            autoComplete="storeUID"/>
+                        <DatePicker
+                            dateFormat="yyyyMMdd"
+                            className="inputStoreName"
+                            placeholder="사업자 등록일자를 입력해주세요."
+                            shouldCloseOnSelect
+                            selected={businessdate}
+                            onChange={handleDateChange}
+                        />
+
+                    </div>
+                    <div className="btnContainer">
+                        <button className="idCheckBtn"
+                                type="button" onClick={fetchBusinessStatus}>
+                            조회
+                        </button>
+                    </div>
                 </div>
-                <button type="button" onClick={fetchBusinessStatus}>조회</button>
-            </div>
-            {registrationStatus && (
-                <div className="registration-status">
-                    {registrationStatus}
+                <div style={{
+                    height: '10px',
+                    marginLeft: '225px'}}>
+                    {registrationStatus && (
+                        <div className="registration-status">
+                            {registrationStatus}
+                        </div>
+                    )}
                 </div>
-            )}
-            <button className="sign-in-bt" type={"submit"}>
-        <span className="sing-in-request">
-          회원가입 신청
-        </span>
-            </button>
-        </div>
+                <button className="sign-in-bt" type={"submit"}>
+                <span className="sing-in-request">
+                    회원가입 신청
+                </span>
+                </button>
+            </div>
         </form>
     )
 }

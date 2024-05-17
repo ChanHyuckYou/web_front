@@ -8,6 +8,7 @@ export default function SignInPage1() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [ownername, setOwnerName] = useState('');
     const [ownercontact, setOwnerContact] = useState('')
+    const [isIdUnique, setIsIdUnique] = useState(true); // ID 중복 상태 추가
     // const gotoSignin = () => {
     //     navigate('/Sign_2');
     // };
@@ -15,9 +16,47 @@ export default function SignInPage1() {
         localStorage.setItem('ownerid', ownerid);
         navigate('/Sign_2')
     }
+    const checkIdDuplicate = async () => {
+        if(!ownerid) {
+            alert('ID를 입력해주세요.');
+            return;
+        }
+        try {
+            // GET 요청이므로, URL에 쿼리 파라미터를 포함시켜 요청합니다.
+            const url = `http://43.201.92.62/owner/check?ownerid=${encodeURIComponent(ownerid)}`;
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if(response.ok) {
+                const data = await response.json();
+                // 백엔드에서 'This ownerid is available' 메시지를 반환하면, ID가 중복되지 않음을 의미합니다.
+                if(data.message === 'This ownerid is available') {
+                    alert('사용 가능한 ID입니다.');
+                    setIsIdUnique(true);
+                } else {
+                    alert('이미 사용 중인 ID입니다.');
+                    setIsIdUnique(false);
+                }
+            } else {
+                alert('ID 중복 확인 중 오류가 발생했습니다.');
+            }
+        } catch (error) {
+            console.error('서버 통신 오류', error);
+            alert('서버 통신 중 오류가 발생했습니다.');
+        }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // 폼 기본 제출 이벤트 방지
+
+        if(!isIdUnique) {
+            alert('ID 중복을 확인해주세요.');
+            return;
+        }
 
         // 비밀번호 확인 로직
         if(password !== confirmPassword) {
@@ -116,12 +155,15 @@ export default function SignInPage1() {
                             autoComplete="contact" // 수정
                             className="inputPhone"/>
                     </div>
-                    <div className="btnContainer">
-                        <div className="nick-ok">
+                    <div
+                        className="btnContainer">
+                        <button className="nick-ok"
+                                type={"button"}
+                                onClick={checkIdDuplicate}>
                             <span className="id-ok">
                                 ID 중복확인
                             </span>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <button className="nextform"

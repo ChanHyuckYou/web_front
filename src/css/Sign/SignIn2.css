@@ -101,6 +101,16 @@
     align-items: flex-end;
     box-sizing: border-box;
 }
+.signInPage2 .store-date {
+    margin: 17px 0 29px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
 .signInPage2 .store-name {
     margin: 17px 0 29px 0;
     display: inline-block;
@@ -172,6 +182,13 @@
     width: 309px;
     height: 56px;
 }
+.signInPage2 .inputBossName {
+    border: 3px solid #B0B0B0;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+    width: 309px;
+    height: 56px;
+}
 .signInPage2 .inputStoreId {
     border: 3px solid #B0B0B0;
     background: #FFFFFF;
@@ -186,3 +203,5 @@
     align-items: center;
     box-sizing: border-box;
 }
+
+
