@@ -10,6 +10,7 @@ export default function Main() {
     const ownerid = localStorage.getItem('ownerid');
 
     const goToQr = () => {
+        localStorage.setItem('ownerid', ownerid);
         navigate('/Main/qrCRUD');
     };
     const MenuEdit = () => {

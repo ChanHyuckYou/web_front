@@ -1,11 +1,12 @@
 import '../css/qr.css';
 import QRCode from 'qrcode.react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-// QR 생성 함수
-const generateQR = () => {
-    // 여기에 QR 생성 및 관련 동작 추가
-    console.log("QR 생성됨!");
+// QR 생성 함수 - 이제 ownerid와 tableidx를 파라미터로 받아 사용합니다.
+const generateQR = (ownerid, tableidx) => {
+    console.log(`QR 생성됨! Owner ID: ${ownerid}, Table Index: ${tableidx}`);
+    // 여기에서는 콘솔 로그만 찍고 있지만, 실제로는 이 정보를 바탕으로 QR 코드를 생성할 수 있습니다.
+    return `Owner ID: ${ownerid}, Table Index: ${tableidx}`; // 이 값을 QR 코드 값으로 사용합니다.
 };
 
 // QR CRUD 컴포넌트
@@ -13,6 +14,15 @@ export default function QrCRUD() {
     const [showTableFrame, setShowTableFrame] = useState(false);
     const [tableCount, setTableCount] = useState(0);
     const [qrGenerated, setQRGenerated] = useState(false);
+    const ownerid = localStorage.getItem('ownerid');
+
+    // 각 테이블에 대한 QR 코드 생성 상태를 관리하기 위한 상태
+    const [qrValues, setQrValues] = useState([]);
+
+    useEffect(() => {
+        // 테이블 수가 변경될 때마다 QR 코드 배열을 초기화합니다.
+        setQrValues(Array(tableCount).fill('')); // 테이블 수에 맞게 배열 크기 조정
+    }, [tableCount]);
 
     const handleTableCreateClick = () => {
         setShowTableFrame(true);
@@ -23,7 +33,8 @@ export default function QrCRUD() {
     };
 
     const handleGenerateQRClick = () => {
-        generateQR(); // QR 생성 함수 호출
+        const newQrValues = qrValues.map((_, index) => generateQR(ownerid, index + 1));
+        setQrValues(newQrValues); // 새로운 QR 코드 값으로 상태 업데이트
         setQRGenerated(true); // QR 코드 생성됨을 표시
     };
 
@@ -56,10 +67,9 @@ export default function QrCRUD() {
                     </div>
                     <div className="container11">
                         <div className="qradd-bt-111">
-                            {qrGenerated && <QRCode value={`Table ${index + 1}`} />} {/* QR 코드 생성 여부에 따라 조건부 렌더링 */}
-
+                            {/* QR 코드 값이 존재하면 QRCode 컴포넌트를 통해 표시합니다. */}
+                            {qrValues[index] && <QRCode value={qrValues[index]} />}
                         </div>
-
                     </div>
                 </div>
             ))}
