@@ -92,11 +92,11 @@ export default function MenuAdd() {
             <div className="menu-add-1">
                 메뉴추가
             </div>
-            <div className="container-2">
+            <div className="menuItemContainer">
                 <div className="image">
                     {preview && (
-                            // eslint-disable-next-line jsx-a11y/img-redundant-alt
-                            <img src={preview} alt="메뉴 미리보기" className="image-sample" />
+                        // eslint-disable-next-line jsx-a11y/img-redundant-alt
+                        <img src={preview} alt="메뉴 미리보기" className="image-sample"/>
                     )}
                     <button className="image-add-bt" onClick={handleButtonClick} type={"button"}>
                         <span className="image-add">사진추가</span>
@@ -108,59 +108,74 @@ export default function MenuAdd() {
                         style={{display: 'none'}} // 사용자에게 보이지 않도록 숨깁니다
                     />
                 </div>
-                <div className="container-1">
-                    <div className="menu-name-space">
+                <div className="menuInfoContainer">
+                    <div className="textContainer">
                         <div className="menu-name">
-                        메뉴이름
+                            메뉴이름
                         </div>
+                        <div className="menu-info">
+                            메뉴설명
+                        </div>
+                        <div className="tag">
+                            태그
+                        </div>
+                        <div className="price">
+                            가격
+                        </div>
+                    </div>
+                    <div className="inputContainer">
                         <input
                             type="text"
                             value={productname}
                             onChange={(e) => setProductName(e.target.value)} // 추가
-                            className="rectangle-57"
+                            className="inputMenuName"
                             placeholder="메뉴이름을 입력해주세요"
                             autoComplete="ownername"/>
+                        <div className="inputMenuInfo">
+                        </div>
+                        <input
+                            list="categories"
+                            type="text"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                            className="inputMenuTag"
+                            placeholder="태그 이름"
+                            autoComplete="off"/>
+                        <datalist id="categories">
+                            <option value="태그1"></option>
+                            <option value="태그2"></option>
+                            <option value="태그3"></option>
+                        </datalist>
+                        <input
+                            type="text"
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)} // 추가
+                            className="inputMenuPrice"
+                            placeholder="아이디를 입력해주세요"
+                            autoComplete="ownername"/>
+                    </div>
+                </div>
+            </div>
+            <div className="container-2">
+
+                <div className="container-1">
+                    <div className="menu-name-space">
+
+
                     </div>
                     <div className="menu-info-space">
-                        <div className="meno-info">
-                            메뉴설명
-                        </div>
-                        <div className="rectangle-58">
-                        </div>
+
 
                     </div>
                 </div>
             </div>
             <div className="tag-space">
-                <div className="tag">
-                    태그
-                </div>
 
-                <input
-                    list="categories"
-                    type="text"
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    className="rectangle-581"
-                    placeholder="태그 이름"
-                    autoComplete="off"/>
-                <datalist id="categories">
-                    <option value="태그1"></option>
-                    <option value="태그2"></option>
-                    <option value="태그3"></option>
-                </datalist>
+
             </div>
             <div className="price-sapce">
-                <div className="price">
-                    가격
-                </div>
-                <input
-                    type="text"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)} // 추가
-                    className="rectangle-59"
-                    placeholder="아이디를 입력해주세요"
-                    autoComplete="ownername"/>
+
+
             </div>
             <div className="container">
                 <button className="menu-add-bt" type={"submit"}>

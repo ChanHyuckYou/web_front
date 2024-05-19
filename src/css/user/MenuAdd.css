@@ -146,6 +146,7 @@
     box-sizing: border-box;
 }
 
+/*인풋스페이스*/
 .menuAdd .inputMenuName {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -155,8 +156,6 @@
     height: 42px;
     margin-bottom: 29px;
 }
-
-
 .menuAdd .inputMenuInfo {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -166,8 +165,6 @@
     height: 212px;
     margin-bottom: 29px;
 }
-
-
 .menuAdd .inputMenuTag {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -178,8 +175,6 @@
     margin-bottom: 29px;
 
 }
-
-
 .menuAdd .inputMenuPrice {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -188,8 +183,10 @@
     min-width: 382px;
     height: 42px;
     margin-bottom: 29px;
-
 }
+/*인풋스페이스*/
+
+
 
 .menuAdd .menu-add-2 {
     overflow-wrap: break-word;
