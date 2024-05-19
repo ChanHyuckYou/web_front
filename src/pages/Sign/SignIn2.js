@@ -97,12 +97,19 @@ export default function SignInPage2() {
         const formattedDate = formatDateToYYYYMMDD(businessdate); // Date 객체를 YYYYMMDD 형식으로 변환
         e.preventDefault();
         try {
+            console.log('bodyjson :', formattedDate, storename, address, businessnumber, ownerid)
             const response = await fetch('http://43.201.92.62/franchise/regist', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ storename, address, businessdate: formattedDate, ownerid, businessnumber, bossname }),
+                body: JSON.stringify({
+                    storename: storename,
+                    address: address,
+                    businessdate: formattedDate,
+                    ownerid: ownerid,
+                    businessnumber: businessnumber,
+                    bossname: bossname }),
             });
             if (response.ok) {
                 console.log('가맹점 등록 성공');
