@@ -3,6 +3,8 @@ import '../css/Loginstyle.css'
 import {useNavigate} from 'react-router-dom';
 import axios from "axios"
 import {useMutation} from "react-query";
+
+import Icon from '../assets/IconSample.png';
 // eslint-disable-next-line no-unused-vars
 // import main from './main'
 
@@ -79,8 +81,12 @@ export function Login() {
 
         return (
             <div className="id1-1">
-                <div className="app-nupan1-2">
-                    APP-nupan
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan1-2">
+                        APP-nupan
+                    </div>
                 </div>
                 <div className="line1-5">
                 </div>
