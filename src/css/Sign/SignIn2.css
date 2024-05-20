@@ -56,7 +56,7 @@
     color: #000000;
 }
 
-.signInPage2 .sing-in-request {
+.signInPage2 .sign-in-request {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -69,7 +69,7 @@
 .signInPage2 .sign-in-bt {
     background: #FF4C00;
     position: relative;
-    margin: 15px 0 0 280px;
+    margin: 15px 0 0 170px;
     display: flex;
     padding: 9px 14.6px 10px 14px;
     box-sizing: border-box;
@@ -77,11 +77,19 @@
 .signInPage2 .idCheckBtn {
     background: #FF4C00;
     position: relative;
-    margin-top: 255px;
+    margin-top: 230px;
     display: flex;
-    padding: 9px 14.6px 10px 14px;
+    padding: 9px 14px 10px 14px;
     box-sizing: border-box;
-
+    min-width: 70px;
+}
+.signInPage2 .idCheck {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
 }
 
 
@@ -100,6 +108,38 @@
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
+    min-width: 200px;
+}
+
+.signInPage2 .store-name {
+    margin: 17px 0 20px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .phone-num {
+    margin: 27px 0 25px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .store-address {
+    margin: 22px 0 29px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
 }
 .signInPage2 .store-date {
     margin: 17px 0 29px 0;
@@ -111,38 +151,8 @@
     font-size: 24px;
     color: #000000;
 }
-.signInPage2 .store-name {
-    margin: 17px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
-.signInPage2 .phone-num {
-    margin: 29px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
-.signInPage2 .store-address {
-    margin: 29px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
 .signInPage2 .store-office {
-    margin: 24px 0 34px 0;
+    margin: 20px 0 34px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';

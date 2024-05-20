@@ -116,9 +116,9 @@ export function Login() {
 
                     <button className="id1-3"
                             onClick={loginHandleSubmit}>
-                    <span className="id1-9">
-                        로그인
-                      </span>
+                        <span className="id1-9">
+                            로그인
+                        </span>
                     </button>
 
                 </div>

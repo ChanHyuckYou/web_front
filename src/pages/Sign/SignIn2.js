@@ -243,7 +243,9 @@ export default function SignInPage2() {
                     <div className="btnContainer">
                         <button className="idCheckBtn"
                                 type="button" onClick={fetchBusinessStatus}>
-                            조회
+                                <span className="idCheck">
+                                    조회
+                                </span>
                         </button>
                     </div>
                 </div>
@@ -257,9 +259,9 @@ export default function SignInPage2() {
                     )}
                 </div>
                 <button className="sign-in-bt" type={"submit"}>
-                <span className="sing-in-request">
-                    회원가입 신청
-                </span>
+                    <span className="sign-in-request">
+                        회원가입 신청
+                    </span>
                 </button>
             </div>
         </form>

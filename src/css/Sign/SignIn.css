@@ -34,16 +34,7 @@
     font-size: 30px;
     color: #000000;
 }
-.signInPage .name {
-    margin: 24px 0 34px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
+
 .signInPage .phoneNum {
     margin: 20px 0 29px 0;
     display: inline-block;
@@ -71,17 +62,6 @@
 }
 
 
-
-.signInPage .id {
-    margin: 17px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
 .signInPage .id-ok {
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -90,8 +70,20 @@
     font-size: 24px;
     color: #FFFFFF;
 }
+
+
+.signInPage .id {
+    margin: 17px 0 18px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
 .signInPage .pwd {
-    margin: 29px 0 29px 0;
+    margin: 29px 0 20px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -101,7 +93,17 @@
     color: #000000;
 }
 .signInPage .confirmpwd {
-    margin: 29px 0 29px 0;
+    margin: 26px 0 26px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage .name {
+    margin: 24px 0 30px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -121,7 +123,7 @@
 .signInPage .nextform {
     background: #FF4C00;
     position: relative;
-    margin-left: 170px;
+    margin-left: 145px;
     display: flex;
     padding: 10px 25px 9px 26px;
     width: 140px;
