@@ -56,7 +56,7 @@
     background: #4097E8;
     position: absolute;
     top: 205px;
-    right: 424px;
+    left: 25vw;
 
     display: none; /* 초기에는 숨김 */
     flex-direction: column;

@@ -86,7 +86,7 @@
     height: 29px;
 }
 .menuAdd .menu-info {
-    margin: 8px 0 212px 0;
+    margin: 8px 0 210px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -97,7 +97,7 @@
     height: 29px;
 }
 .menuAdd .tag {
-    margin: 8px 0 34px 0;
+    margin: 5px 0 34px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
