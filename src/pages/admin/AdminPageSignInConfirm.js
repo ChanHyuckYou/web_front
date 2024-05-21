@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../../css/admin/AdminPageSignInConfirm.css'
 import axios from 'axios';
 
@@ -21,7 +21,7 @@ export default function AdminPageSignInConfirm() {
         }
     };
     const handleConfirm = (tempstoreid) => {
-        axios.post('http://43.201.92.62/franchise/confirm', { tempstoreid: tempstoreid })
+        axios.post('http://43.201.92.62/franchise/confirm', {tempstoreid: tempstoreid})
             .then(response => {
                 console.log(response.data);
                 // 성공적으로 처리된 경우, 사용자에게 알림 또는 상태 업데이트
@@ -36,7 +36,7 @@ export default function AdminPageSignInConfirm() {
 
     // 거절 버튼 클릭 이벤트 핸들러
     const handleDeny = (tempstoreid) => {
-        axios.put('http://43.201.92.62/franchise/deny', { tempstoreid: tempstoreid })
+        axios.put('http://43.201.92.62/franchise/deny', {tempstoreid: tempstoreid})
             .then(response => {
                 console.log(response.data);
                 // 성공적으로 처리된 경우, 사용자에게 알림 또는 상태 업데이트
@@ -49,60 +49,59 @@ export default function AdminPageSignInConfirm() {
             });
     };
     return (
-        <div className="AdminPageSignInConfirm">
-            <div className="dsadsa">
-                <div className="frame">
-                    <span className="app-nupan">
+        <div className="adminPageSignInConfirm">
+            <div className="logoContainer">
+                <span className="app-nupan">
                     APP-nupan
-                    </span>
-                    <span className="admin">
+                </span>
+                <span className="admin">
                     Admin
-                    </span>
-                </div>
-                <div className="line-5">
-                </div>
-                <div className="frame-1">
-                    <div className="container-8">
-                        <div className="authbtn">
-                            회원가입 승인
-                        </div>
-                        <div className="line-8">
-                        </div>
-                        <div className="storeuserbtn">
-                            사업자 회원 조회
-                        </div>
-                        <span className="userbtn">
-                        앱 회원 조회
-                        </span>
+                </span>
+            </div>
+            <div className="line-5">
+            </div>
+            <div className="itemContainer">
+                <div className="menu-list">
+                    <div className="sign-in-confirm-bt">
+                        회원가입 승인
                     </div>
-                    <div className="store-info">
-                        {Array.isArray(storeInfo) && storeInfo.map((store, index) => (
-                            <div key={index} className="container-7"> {/* key 추가 권장 */}
-                                <div className="store-info-1">
-                                    <div className="container-12">
-                                        <span className="input-15">{store.tempstoreid}</span>
-                                        <span className="input-14">{store.storename}</span>
-                                    </div>
-                                    <div className="container-5">
-                                        {/*<span className="input-13">{store.address}</span>*/}
-                                        <span className="input-11">{store.address}</span>
-                                        <span className="input-12">{store.contact}</span>
-                                    </div>
+                    <div className="line-8">
+                    </div>
+                    <div className="store-user-bt">
+                        사업자 회원 조회
+                    </div>
+                    <div className="app-user-bt">
+                        앱 회원 조회
+                    </div>
+                </div>
+                <div className="store-info">
+                    {Array.isArray(storeInfo) && storeInfo.map((store, index) => (
+                        <div key={index} className="storeContainer"> {/* key 추가 권장 */}
+                            <div className="storeInfoContainer">
+                                <div className="storeInfo1Container">
+                                    <span className="storeIdText">{store.tempstoreid}</span>
+                                    <span className="storeNameText">{store.storename}</span>
                                 </div>
-                                <div className="container-2">
-                                    <button
-                                        onClick={() => handleConfirm(store.tempstoreid)}
-                                        className="confirm-bt-3">
-                                        <span className="btnsub-3">승인</span>
-                                    </button>
-                                    <button
-                                        onClick={() => handleDeny(store.tempstoreid)} className="deny-bt-3">
-                                        <span className="btncan-3">거절</span>
-                                    </button>
+                                <div className="storeInfo2Container">
+                                    {/*<span className="input-13">{store.address}</span>*/}
+                                    <span className="input-11">{store.address}</span>
+                                    <span className="input-12">{store.contact}</span>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                            <div className="container-2">
+                                <button
+                                    onClick={() => handleConfirm(store.tempstoreid)}
+                                    className="confirm-bt-3">
+                                    <span className="btnsub-3">승인</span>
+                                </button>
+                                <button
+                                    onClick={() => handleDeny(store.tempstoreid)}
+                                    className="deny-bt-3">
+                                    <span className="btncan-3">거절</span>
+                                </button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -49,6 +49,7 @@
     align-self: flex-start;
 }
 .adminPageStoreManage .menu-list {
+    width: 165px;
     margin: 0 61.9px 573px 0;
     display: flex;
     flex-direction: column;
@@ -65,7 +66,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-self: flex-start;
-    width: 675px;
+    min-width: 675px;
+    width: 70vw;
     box-sizing: border-box;
     flex-wrap: wrap;
 }
@@ -126,15 +128,17 @@
     color: #000000;
 }
 
+
+/*메뉴 버튼*/
 .adminPageStoreManage .sign-in-confirm-bt {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
     color: #000000;
 }
 .adminPageStoreManage .store-user-bt {
@@ -142,7 +146,7 @@
     font-family: 'Inter';
     font-style: italic;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
     color: #000000;
 }
 .adminPageStoreManage .app-user-bt {
@@ -151,15 +155,18 @@
     font-family: 'Inter';
     font-style: italic;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
     color: #000000;
 }
 .adminPageStoreManage .line-8 {
     background: #4097E8;
-    margin: 0 2.1px 24px 1px;
-    width: 205px;
+    margin: 0 2.1px 20px 1px;
+    width: 160px;
     height: 3px;
 }
+/*메뉴 버튼*/
+
+
 .adminPageStoreManage .account-info {
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -167,7 +174,8 @@
     display: flex;
     flex-direction: row;
     padding: 34px 0 0 28px;
-    width: 1023px;
+    min-width: 690px;
+    width: 71vw;
     height: 636px;
     box-sizing: border-box;
 }
@@ -180,6 +188,7 @@
     display: flex;
     padding: 9px 21px 9px 22px;
     width: 88px;
+    height: 47px;
     height: fit-content;
     box-sizing: border-box;
 }
@@ -199,13 +208,12 @@
     flex-direction: column;
     align-items: center;
     padding: 18px 11px 9px 17px;
-    width: 784px;
+    width: 76%;
     height: fit-content;
     box-sizing: border-box;
 }
 .adminPageStoreManage .store-1-name {
     margin-right: 18px;
-    width: 568px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -262,7 +270,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 734.1px;
+    width: 95%;
     box-sizing: border-box;
 }
 
@@ -273,7 +281,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 755.6px;
+    width: 97%;
     box-sizing: border-box;
 }
 

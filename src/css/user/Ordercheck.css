@@ -37,10 +37,11 @@
 
 /*오더 컨테이너*/
 .orderCheck .order-no-4 {
+
     margin-bottom: 21px;
     display: flex;
     flex-direction: row;
-    width: 1135px;
+    width: 97.5%;
     box-sizing: border-box;
 }
 .orderCheck .order-no-3 {
@@ -70,7 +71,7 @@
 .orderCheck .order4InfoContainer {
     background: #FFFFFF;
     position: relative;
-    margin-right: 40px;
+    margin-right: 3.4%;
     display: flex;
     flex-direction: row;
     padding: 0 37.8px 0 13px;
@@ -406,7 +407,8 @@
     margin-bottom: 21px;
     display: flex;
     flex-direction: row;
-    width: 1163.3px;
+    width: 100%;
+    max-width: 1163px;
     box-sizing: border-box;
 }
 
@@ -556,11 +558,13 @@
     color: #000000;
 }
 .orderCheck .order-list {
+
     margin-right: 28.3px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1164px;
+    width: 100.5%;
+    max-width: 1164px;
     height: 550px;
     padding-top: 10px;
     box-sizing: border-box;
@@ -575,7 +579,9 @@
     flex-direction: column;
     align-items: center;
     padding: 41px 18.7px 41px 51px;
-    width: 1233px;
+    width: 85vw;
+    min-width: 1000px;
+    max-width: 1233px;
     height: 673px;
     box-sizing: border-box;
 }
