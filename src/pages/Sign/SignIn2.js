@@ -224,7 +224,7 @@ export default function SignInPage2() {
                                     style={{display: 'block'}}
                                 />
                                 <button type="button" onClick={() => setIsPostOpen(false)}
-                                        style={{margin: '0 0 10px 10px'}}>닫기
+                                        style={{margin: '0 0 10px 10px'}} style={{cursor: 'pointer'}}>닫기
                                 </button>
                             </div>
                         )}
@@ -249,7 +249,7 @@ export default function SignInPage2() {
                     </div>
                     <div className="btnContainer">
                         <button className="idCheckBtn"
-                                type="button" onClick={fetchBusinessStatus}>
+                                type="button" onClick={fetchBusinessStatus} style={{cursor: 'pointer'}}>
                                 <span className="idCheck">
                                     조회
                                 </span>
@@ -265,7 +265,7 @@ export default function SignInPage2() {
                         </div>
                     )}
                 </div>
-                <button className="sign-in-bt" type={"submit"}>
+                <button className="sign-in-bt" type={"submit"} style={{cursor: 'pointer'}}>
                     <span className="sign-in-request">
                         회원가입 신청
                     </span>
