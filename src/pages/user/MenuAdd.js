@@ -57,14 +57,9 @@ export default function MenuAdd() {
     //         console.error('Error uploading the menu:', error.response.formData);
     //     }
     // };
-
-
-    try {
+        try {
             const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`, {
                 method: 'POST',
-                // headers: {
-                //     'Content-Type': 'multipart/form-data',
-                // },
                 body: formData
             });
             if (response.ok) {

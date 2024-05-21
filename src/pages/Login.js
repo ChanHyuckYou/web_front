@@ -79,78 +79,78 @@ export function Login() {
     };
 
 
-        return (
-            <div className="id1-1">
-                <div className="logoContainer-login">
-                    <img className="appNupanIcon-login" src={Icon} alt="">
-                    </img>
-                    <div className="app-nupan1-2">
-                        APP-nupan
+    return (
+        <div className="id1-1">
+            <div className="logoContainer-login">
+                <img className="appNupanIcon-login" src={Icon} alt="">
+                </img>
+                <div className="app-nupan1-2">
+                    APP-nupan
+                </div>
+            </div>
+            <div className="line1-5">
+            </div>
+            <div className="container1-11">
+                <div className="container1-10">
+                    <div className="id1-7">
+                        ID
                     </div>
-                </div>
-                <div className="line1-5">
-                </div>
-                <div className="container1-11">
-                    <div className="container1-10">
-                        <div className="id1-7">
-                            ID
-                        </div>
-                        <span className="id1-8">
+                    <span className="id1-8">
                      비밀번호
                     </span>
-                    </div>
-                    <div className="container1-1">
-                        <input
-                            type="text"
-                            name="email" // name 속성 추가
-                            className="id1-4"
-                            placeholder="아이디를 입력해주세요"
-                            onChange={handleChange}
-                            value={ownerid} // 수정
-                        />
+                </div>
+                <div className="container1-1">
+                    <input
+                        type="text"
+                        name="email" // name 속성 추가
+                        className="id1-4"
+                        placeholder="아이디를 입력해주세요"
+                        onChange={handleChange}
+                        value={ownerid} // 수정
+                    />
 
-                        <input
-                            type="password"
-                            name="password" // name 속성 추가
-                            className="id1-5"
-                            placeholder="비밀번호를 입력해주세요"
-                            autoComplete="current-password"
-                            onChange={handleChange}
-                            value={password} // 수정
-                        />
-                    </div>
+                    <input
+                        type="password"
+                        name="password" // name 속성 추가
+                        className="id1-5"
+                        placeholder="비밀번호를 입력해주세요"
+                        autoComplete="current-password"
+                        onChange={handleChange}
+                        value={password} // 수정
+                    />
+                </div>
 
-                    <button className="id1-3"
-                            onClick={loginHandleSubmit}>
+                <button className="id1-3"
+                        onClick={loginHandleSubmit}>
                         <span className="id1-9">
                             로그인
                         </span>
-                    </button>
+                </button>
 
-                </div>
+            </div>
 
-                <div className="container1-2">
-                    <button>
+            <div className="container1-2">
+                <button>
                     <span className="id1-2"
-                        onClick={goTosign}>
+                          onClick={goTosign}>
                         회원가입
                     </span>
-                    </button>
-                    <button>
+                </button>
+                <button>
                     <span className="id1">
                          ID/비밀번호찾기
                     </span>
-                    </button>
+                </button>
+            </div>
+            <div className="info1">
+                <div className="mdiinformation-outline">
+                    {/*<img className="vector" />*/}
                 </div>
-                <div className="info1">
-                    <div className="mdiinformation-outline">
-                        {/*<img className="vector" />*/}
-                    </div>
-                    <span className="app-nupan1-6">
+                <span className="app-nupan1-6">
           App-nupan웹은 사업자 전용입니다.
         </span>
-                </div>
             </div>
-        )
+        </div>
+    )
 }
 export default Login;
