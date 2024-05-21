@@ -2,6 +2,8 @@ import '../../css/user/MenuEdit.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
+import Icon from '../../assets/IconSample.png';
+
 export default function MenuEditPage() {
     const navigate = useNavigate();
     const ownerid = localStorage.getItem('ownerid');
@@ -34,10 +36,22 @@ export default function MenuEditPage() {
     };
 
     return (
-        <div className="MenuEdit">
-            <div className="app-nupan">
-                APP-nupan
+        <div className="menuEdit">
+            <div className="headerContainer">
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
+                </div>
+                <div className="goBackBtn">
+                    <div className="goBackTxt">
+                        뒤로가기
+                    </div>
+                </div>
             </div>
+
             <div className="line-5"></div>
             <div className="menu-tab-edit">
                 메뉴 탭 관리

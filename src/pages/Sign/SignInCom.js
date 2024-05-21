@@ -1,5 +1,7 @@
 import '../../css/Sign/SignInCom.css';
 
+import Icon from '../../assets/IconSample.png';
+
 
 
 export default function SignInCompletePage() {
@@ -12,8 +14,12 @@ export default function SignInCompletePage() {
 
     return (
         <div className="signInCom">
-            <div className="app-nupan">
-                APP-nupan
+            <div className="logoContainer">
+                <img className="appNupanIcon" src={Icon} alt="">
+                </img>
+                <div className="app-nupan">
+                    APP-nupan
+                </div>
             </div>
             <div className="line-5">
             </div>

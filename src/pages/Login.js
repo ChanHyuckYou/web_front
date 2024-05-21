@@ -81,8 +81,8 @@ export function Login() {
 
         return (
             <div className="id1-1">
-                <div className="logoContainer">
-                    <img className="appNupanIcon" src={Icon} alt="">
+                <div className="logoContainer-login">
+                    <img className="appNupanIcon-login" src={Icon} alt="">
                     </img>
                     <div className="app-nupan1-2">
                         APP-nupan

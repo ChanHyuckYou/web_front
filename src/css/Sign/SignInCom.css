@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4vh 0 359px 0;
+    padding: 2vh 0 359px 0;
     box-sizing: border-box;
 }
 .signInCom .app-nupan {
-    margin: 0 98px 5vh 4vw;
+    margin-top: 26px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -18,10 +18,10 @@
     color: #000000;
 }
 .signInCom .line-5 {
-    background: #000000;
-    margin-bottom: 105px;
+    background: #DC6721;
+    margin-bottom: 28px;
     width: 100%;
-    height: 1px;
+    height: 2px;
 }
 .signInCom .sign-in-complete {
     margin: 0 394.7px 82px 0;
@@ -33,6 +33,23 @@
     font-size: 50px;
     color: #000000;
 }
+
+.signInCom .appNupanIcon{
+    width: 79px;
+    height: 80px;
+    margin-right: 26px;
+}
+
+.signInCom .logoContainer {
+    margin: 0 98px 2vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+
 .signInCom .waitting-for-admin {
     margin: 0 723.2px 165px 0;
     display: inline-block;

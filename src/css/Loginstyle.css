@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-.logoContainer{
+.logoContainer-login{
     margin: 0 98px 2vh 4vw;
     display: flex;
     box-sizing: border-box;
@@ -31,7 +31,7 @@
     font-size: 30px;
     color: #000000;
 }
-.appNupanIcon {
+.appNupanIcon-login {
     width: 79px;
     height: 80px;
     margin-right: 26px;

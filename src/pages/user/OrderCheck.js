@@ -1,10 +1,23 @@
 import '../../css/user/Ordercheck.css'
 
+import Icon from '../../assets/IconSample.png';
+
 export default function OrderCheckPage() {
     return (
         <div className="orderCheck">
-            <div className="app-nupan">
-                APP-nupan
+            <div className="headerContainer">
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
+                </div>
+                <div className="goBackBtn">
+                    <div className="goBackTxt">
+                            뒤로가기
+                    </div>
+                </div>
             </div>
             <div className="line-5">
             </div>

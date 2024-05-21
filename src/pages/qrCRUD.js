@@ -2,6 +2,9 @@ import '../css/qr.css';
 import QRCode from 'qrcode.react';
 import { useState, useEffect } from "react";
 
+import Icon from '../assets/IconSample.png';
+
+
 // QR 생성 함수 - 이제 ownerid와 tableidx를 파라미터로 받아 사용합니다.
 const generateQR = (ownerid, tableidx) => {
     console.log(`QR 생성됨! Owner ID: ${ownerid}, Table Index: ${tableidx}`);
@@ -46,9 +49,21 @@ export default function QrCRUD() {
 
     return (
         <div className="qrCRUD">
-            <div className="app-nupan11">
-                APP-nupan
+            <div className="headerContainer-qr">
+                <div className="logoContainer-qr">
+                    <img className="appNupanIcon-qr" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan11">
+                        APP-nupan
+                    </div>
+                </div>
+                <div className="goBackBtn-qr">
+                    <div className="goBackTxt-qr">
+                        뒤로가기
+                    </div>
+                </div>
             </div>
+
             <div className="line-511"></div>
             <div className="container-511">
                 <div className="table-number11">

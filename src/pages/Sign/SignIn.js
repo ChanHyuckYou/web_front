@@ -1,6 +1,9 @@
 import '../../css/Sign/SignIn.css'
 import {useState} from "react";
 import {useNavigate} from 'react-router-dom';
+
+import Icon from '../../assets/IconSample.png';
+
 export default function SignInPage1() {
     const navigate = useNavigate();
     const [ownerid, setOwnerId] = useState('');
@@ -17,7 +20,7 @@ export default function SignInPage1() {
         navigate('/Sign_2')
     }
     const checkIdDuplicate = async () => {
-        if(!ownerid) {
+        if (!ownerid) {
             alert('ID를 입력해주세요.');
             return;
         }
@@ -31,10 +34,10 @@ export default function SignInPage1() {
                 }
             });
 
-            if(response.ok) {
+            if (response.ok) {
                 const data = await response.json();
                 // 백엔드에서 'This ownerid is available' 메시지를 반환하면, ID가 중복되지 않음을 의미합니다.
-                if(data.message === 'This ownerid is available') {
+                if (data.message === 'This ownerid is available') {
                     alert('사용 가능한 ID입니다.');
                     setIsIdUnique(true);
                 } else {
@@ -54,7 +57,7 @@ export default function SignInPage1() {
         e.preventDefault(); // 폼 기본 제출 이벤트 방지
 
         // 아이디 길이 검증
-        if(ownerid.length < 6) {
+        if (ownerid.length < 6) {
             alert('아이디는 6자 이상이어야 합니다.');
             return;
         }
@@ -62,18 +65,18 @@ export default function SignInPage1() {
         // 비밀번호 복잡성 검증
         // 영문자, 숫자, 특수문자를 포함하는 정규식
         const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}":;'<>?,.]).{8,}$/;
-        if(!passwordRegex.test(password)) {
+        if (!passwordRegex.test(password)) {
             alert('비밀번호는 영문자, 숫자, 특수문자를 포함해야 합니다.');
             return;
         }
 
-        if(!isIdUnique) {
+        if (!isIdUnique) {
             alert('ID 중복을 확인해주세요.');
             return;
         }
 
         // 비밀번호 확인 로직
-        if(password !== confirmPassword) {
+        if (password !== confirmPassword) {
             alert('비밀번호가 일치하지 않습니다.');
             return;
         }
@@ -87,7 +90,7 @@ export default function SignInPage1() {
                 body: JSON.stringify({ownerid, password, ownername, ownercontact}),
             });
 
-            if(response.ok) {
+            if (response.ok) {
                 // 회원가입 성공 처리
                 console.log('회원가입 성공');
                 gotoMain()
@@ -106,8 +109,12 @@ export default function SignInPage1() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signInPage">
-                <div className="app-nupan">
-                    APP-nupan
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
                 </div>
                 <div className="line-5">
                 </div>

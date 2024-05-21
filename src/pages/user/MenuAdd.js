@@ -4,6 +4,8 @@ import { useState} from "react";
 import React, { useRef } from 'react';
 import {useNavigate} from 'react-router-dom';
 
+import Icon from '../../assets/IconSample.png'
+
 export default function MenuAdd() {
     const navigate = useNavigate();
     const [productname, setProductName] = useState('');
@@ -84,8 +86,12 @@ export default function MenuAdd() {
     return (
         <form onSubmit={handleSubmit}>
         <div className="menuAdd">
-            <div className="app-nupan">
-                APP-nupan
+            <div className="logoContainer">
+                <img className="appNupanIcon" src={Icon} alt="">
+                </img>
+                <div className="app-nupan">
+                    APP-nupan
+                </div>
             </div>
             <div className="line-5">
             </div>

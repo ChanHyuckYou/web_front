@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import '../../css/admin/AdminPageSignInConfirm.css'
 import axios from 'axios';
 
+import Icon from '../../assets/IconSample.png';
+
 export default function AdminPageSignInConfirm() {
     // 상태 정의
     const [storeInfo, setStoreInfo] = useState([]);
@@ -50,14 +52,19 @@ export default function AdminPageSignInConfirm() {
     };
     return (
         <div className="adminPageSignInConfirm">
-            <div className="logoContainer">
-                <span className="app-nupan">
-                    APP-nupan
-                </span>
-                <span className="admin">
+            <div className="headerContainer">
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
+                </div>
+                <div className="admin">
                     Admin
-                </span>
+                </div>
             </div>
+
             <div className="line-5">
             </div>
             <div className="itemContainer">

@@ -2,21 +2,21 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 4vh 0 256px 0;
+    padding: 2vh 0 256px 0;
     box-sizing: border-box;
 }
 
 .container-ad {
-    margin: 0 4vw 5vh 4vw;
+    margin-right: 4vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
 }
 .app-nupan-ad {
-    margin: 0;
+    margin-top: 26px;
     display: inline-block;
-    width: 1207.2px;
+    align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -25,6 +25,7 @@
     color: #000000;
 }
 .more-menu-bt-ad {
+    margin-top: 26px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,15 +34,36 @@
     box-sizing: border-box;
 }
 .line-5-ad{
-    background: #000000;
+    background: #DC6721;
     margin-bottom: 58px;
     width: 100%;
-    height: 1px;
+    height: 2px;
 }
+.logoContainer-main {
+    margin: 0 98px 2vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+}
+.appNupanIcon-main {
+    width: 79px;
+    height: 80px;
+    margin-right: 26px;
+}
+
 
 .vector-ad {
     width: 31.7px;
     height: 28.3px;
+}
+
+.userWelcome {
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 .storeName {
     margin-right: 28.2px;
@@ -52,6 +74,7 @@
     font-size: 30px;
     color: #000000;
 }
+
 .container-122-ad {
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -70,7 +93,7 @@
 }
 
 .user-name-ad {
-    margin: 0 98px 14px 8vw;
+    margin: 0 98px 14px 0;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -183,7 +206,7 @@
     height: 140px;
 }
 .container-2111-ad {
-    margin: 0 111px 88px 8vw;
+    margin: 0 111px 88px 0;
     display: flex;
     flex-direction: row;
     align-self: flex-start;

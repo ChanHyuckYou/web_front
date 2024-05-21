@@ -6,6 +6,9 @@ import DaumPostcode from 'react-daum-postcode';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import Icon from '../../assets/IconSample.png';
+
+
 export default function SignInPage2() {
     const navigate = useNavigate();
     const [storename, setStoreName] = useState('');
@@ -149,8 +152,12 @@ export default function SignInPage2() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signInPage2">
-                <div className="app-nupan">
-                    APP-nupan
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
                 </div>
                 <div className="line-5">
                 </div>
@@ -159,7 +166,7 @@ export default function SignInPage2() {
                 </div>
                 <div className="itemContainer">
                     <div className="textContainer">
-                        <div className="store-name">
+                    <div className="store-name">
                             가맹점 대표자이름
                         </div>
                         <div className="phone-num">

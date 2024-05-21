@@ -2,11 +2,11 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 4vh 0 520px 0;
+    padding: 2vh 0 520px 0;
     box-sizing: border-box;
 }
 .app-nupan11 {
-    margin: 0 98px 5vh 4vw;
+    margin-top: 26px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -17,11 +17,52 @@
     color: #000000;
 }
 .line-511 {
-    background: #000000;
+    background: #DC6721;
     margin-bottom: 50px;
     width: 100%;
-    height: 1px;
+    height: 2px;
 }
+.appNupanIcon-qr {
+    width: 79px;
+    height: 80px;
+    margin-right: 26px;
+}
+.goBackBtn-qr {
+    border-radius: 10px;
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    padding: 14px 14.7px 13px 16px;
+    box-sizing: border-box;
+    width: 117px;
+    height: 54px;
+}
+.goBackTxt-qr {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    width: 89px;
+    height: 29px;
+}
+.headerContainer-qr {
+    margin-right: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.logoContainer-qr {
+    margin: 0 98px 2vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+}
+
 
 .container-511 {
     margin: 0 122px 14px 4vw;

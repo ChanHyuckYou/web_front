@@ -3,6 +3,8 @@ import MoreMenuBT from '../assets/MoreMenu_BT.png'
 import Vector from '../assets/Vector.png'
 import EPMENU from '../assets/ep_menu.png'
 import QR from '../assets/bi_qr-code-scan.png'
+import MyPage from '../assets/MyPage.png';
+import Icon from '../assets/IconSample.png';
 import {useNavigate} from "react-router-dom";
 
 export default function Main() {
@@ -28,31 +30,37 @@ export default function Main() {
     return (
         <div className="container-2-ad">
             <div className="container-ad">
-                <div className="app-nupan-ad">
-                    APP-nupan
+                <div className="logoContainer-main">
+                    <img className="appNupanIcon-main" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan-ad">
+                        APP-nupan
+                    </div>
                 </div>
                 <div className="more-menu-bt-ad">
-                    <img className="vector-ad" src={MoreMenuBT} alt={""} />
-
+                <img className="vector-ad" src={MyPage} alt={""} />
                 </div>
             </div>
             <div className="line-5-ad">
             </div>
+            <div className="userWelcome">
+                <div className="user-name-ad">
+                    {ownerid}님 환영합니다.
+                </div>
+                <div className="container-2111-ad">
+                <span className="storeName">
+                    가게이름-1
+                </span>
+                    <span className="container-122-ad">
+                    00지점
+                </span>
+                </div>
+            </div>
 
-            <div className="user-name-ad">
-                {ownerid}님 환영합니다.
-            </div>
-            <div className="container-2111-ad">
-        <span className="storeName">
-          가게이름-1
-        </span>
-                <span className="container-122-ad">
-          00지점
-        </span>
-            </div>
+
             <div className="container-1-ad">
                 <button className="container-6-ad"
-                onClick={MenuEdit}>
+                        onClick={MenuEdit}>
                     <div className="epmenu-ad">
                         <img className="vector-5-ad" src={EPMENU} alt="" />
                     </div>

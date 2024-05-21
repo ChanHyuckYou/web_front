@@ -1,12 +1,12 @@
-.MenuEdit {
+.menuEdit {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 4vh 0 256px 0;
+    padding: 2vh 0 256px 0;
     box-sizing: border-box;
 }
-.MenuEdit .app-nupan {
-    margin: 0 98px 5vh 4vw;
+.menuEdit .app-nupan {
+    margin-top: 26px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -15,15 +15,63 @@
     font-weight: 600;
     font-size: 30px;
     color: #000000;
+    width: 165px;
+    height: 36px;
 }
-.MenuEdit .line-5 {
-    background: #000000;
+.menuEdit .line-5 {
+    background: #DC6721;
     margin-bottom: 24px;
     width: 100%;
-    height: 1px;
+    height: 2px;
+}
+.menuEdit .appNupanIcon{
+    width: 79px;
+    height: 80px;
+    margin-right: 26px;
 }
 
-.MenuEdit .menu-tab-edit {
+.menuEdit .headerContainer{
+    margin-right: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.menuEdit .logoContainer {
+    margin: 0 98px 2vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+
+/*뒤로가기 버튼*/
+.menuEdit .goBackBtn {
+    border-radius: 10px;
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    padding: 14px 14.7px 13px 16px;
+    box-sizing: border-box;
+    width: 117px;
+    height: 54px;
+}
+.menuEdit .goBackTxt {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    width: 89px;
+    height: 29px;
+}
+/*뒤로가기 버튼*/
+
+
+.menuEdit .menu-tab-edit {
     margin: 0 98.3px 24px 4vw;
     display: inline-block;
     align-self: flex-start;
@@ -33,7 +81,7 @@
     font-size: 27px;
     color: #000000;
 }
-.MenuEdit .container-14 {
+.menuEdit .container-14 {
     margin: 0 98px 50px 4vw;
     display: flex;
     flex-direction: row;
@@ -42,7 +90,7 @@
     width: fit-content;
     box-sizing: border-box;
 }
-.MenuEdit .container-7 {
+.menuEdit .container-7 {
     margin: 0 98px 58px 4vw;
     display: flex;
     flex-direction: row;
@@ -53,7 +101,7 @@
     justify-content: space-between;
 
 }
-.MenuEdit .menu-list {
+.menuEdit .menu-list {
     margin: 0 4vw;
     display: flex;
     flex-direction: column;
@@ -63,7 +111,7 @@
     max-width: 1144px;
     box-sizing: border-box;
 }
-.MenuEdit .menu-1 {
+.menuEdit .menu-1 {
     border-radius: 20px;
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -78,7 +126,7 @@
     min-width: 800px;
     box-sizing: border-box;
 }
-.MenuEdit .menu-2 {
+.menuEdit .menu-2 {
     border-radius: 20px;
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -93,7 +141,7 @@
     min-width: 800px;
     box-sizing: border-box;
 }
-.MenuEdit .menu-3 {
+.menuEdit .menu-3 {
     border-radius: 20px;
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -108,7 +156,7 @@
     min-width: 800px;
     box-sizing: border-box;
 }
-.MenuEdit .menu-4 {
+.menuEdit .menu-4 {
     border-radius: 20px;
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -123,7 +171,7 @@
     box-sizing: border-box;
 }
 
-.MenuEdit .del-bt-4 {
+.menuEdit .del-bt-4 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -132,7 +180,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .del-4 {
+.menuEdit .del-4 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -140,7 +188,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .edit-bt-4 {
+.menuEdit .edit-bt-4 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -150,7 +198,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .edit-4 {
+.menuEdit .edit-4 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -158,13 +206,13 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-4-image {
+.menuEdit .menu-4-image {
     background: #D9D9D9;
     margin-right: 50px;
     width: 124px;
     height: 100px;
 }
-.MenuEdit .menu-4-name {
+.menuEdit .menu-4-name {
     margin-bottom: 14px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -174,7 +222,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-4-info {
+.menuEdit .menu-4-info {
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -183,7 +231,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-4-price {
+.menuEdit .menu-4-price {
     margin: 0 0.2px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -192,7 +240,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-4-tag {
+.menuEdit .menu-4-tag {
     margin: 0 14.2px 72px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -202,7 +250,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-3-tag {
+.menuEdit .menu-3-tag {
     margin: 0 14.2px 72px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -212,7 +260,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-2-tag {
+.menuEdit .menu-2-tag {
     margin: 0 14.2px 72px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -223,32 +271,32 @@
     color: #000000;
 }
 
-.MenuEdit .menu-2-image {
+.menuEdit .menu-2-image {
     background: #D9D9D9;
     margin-right: 50px;
     width: 124px;
     height: 100px;
 }
-.MenuEdit .container {
+.menuEdit .container {
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.MenuEdit .container-1 {
+.menuEdit .container-1 {
     margin-bottom: 29px;
     display: flex;
     flex-direction: row;
     width: 191px;
     box-sizing: border-box;
 }
-.MenuEdit .container-2 {
+.menuEdit .container-2 {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
 
-.MenuEdit .container-3 {
+.menuEdit .container-3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -257,7 +305,7 @@
 
 
 
-.MenuEdit .recommended {
+.menuEdit .recommended {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 300;
@@ -265,7 +313,7 @@
     color: #000000;
     width: fit-content;
 }
-.MenuEdit .recommended-menu {
+.menuEdit .recommended-menu {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -275,7 +323,7 @@
     height: 52px;
     width: 145px;
 }
-.MenuEdit .main-menu {
+.menuEdit .main-menu {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -285,7 +333,7 @@
     height: 52px;
     box-sizing: border-box;
 }
-.MenuEdit .main {
+.menuEdit .main {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 300;
@@ -294,7 +342,7 @@
     margin: 0 auto;
     width: fit-content;
 }
-.MenuEdit .side-tab {
+.menuEdit .side-tab {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -304,7 +352,7 @@
     height: 52px;
     box-sizing: border-box;
 }
-.MenuEdit .side {
+.menuEdit .side {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 300;
@@ -313,7 +361,7 @@
     margin: 0 auto;
     width: fit-content;
 }
-.MenuEdit .tab-add-bt {
+.menuEdit .tab-add-bt {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -323,7 +371,7 @@
     width: 145px;
     height: 52px;
 }
-.MenuEdit .tab-add {
+.menuEdit .tab-add {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-weight: 300;
@@ -331,7 +379,7 @@
     color: #000000;
     width: fit-content;
 }
-.MenuEdit .menu-edit {
+.menuEdit .menu-edit {
     margin: 12px 0 13px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -341,7 +389,7 @@
     color: #000000;
 
 }
-.MenuEdit .menu-add {
+.menuEdit .menu-add {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -349,7 +397,7 @@
     font-size: 30px;
     color: #FFFFFF;
 }
-.MenuEdit .menu-add-bt {
+.menuEdit .menu-add-bt {
     border-radius: 10px;
     background: #4097E8;
     position: relative;
@@ -360,7 +408,7 @@
     height: 58px;
 }
 
-.MenuEdit .del-bt-2 {
+.menuEdit .del-bt-2 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -369,7 +417,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .edit-2 {
+.menuEdit .edit-2 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -377,7 +425,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .edit-bt-2 {
+.menuEdit .edit-bt-2 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -387,7 +435,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .edit-21 {
+.menuEdit .edit-21 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -395,7 +443,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-2-name {
+.menuEdit .menu-2-name {
     margin-bottom: 14px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -405,7 +453,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-2-info {
+.menuEdit .menu-2-info {
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -414,7 +462,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-2-price {
+.menuEdit .menu-2-price {
     margin: 0 5.7px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -424,7 +472,7 @@
     color: #000000;
 }
 
-.MenuEdit .del-bt {
+.menuEdit .del-bt {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -435,7 +483,7 @@
     height: 36px;
     box-sizing: border-box;
 }
-.MenuEdit .del-1 {
+.menuEdit .del-1 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -443,7 +491,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .edit-bt-1 {
+.menuEdit .edit-bt-1 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -454,7 +502,7 @@
     height: 36px;
     box-sizing: border-box;
 }
-.MenuEdit .edit-1 {
+.menuEdit .edit-1 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -462,13 +510,13 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-1-image {
+.menuEdit .menu-1-image {
     border: solid 1px #000000;
     margin-right: 50px;
     width: 150px;
     height: 100px;
 }
-.MenuEdit .menu-1-name {
+.menuEdit .menu-1-name {
     margin-bottom: 14px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -478,7 +526,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-1-info {
+.menuEdit .menu-1-info {
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -487,7 +535,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-1-price {
+.menuEdit .menu-1-price {
     margin: 0 0.8px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -496,7 +544,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-1-tag {
+.menuEdit .menu-1-tag {
     margin: 0 14.2px 72px 0;
     display: inline-block;
     overflow-wrap: break-word;
@@ -507,7 +555,7 @@
     color: #000000;
 }
 
-.MenuEdit .del-bt-3 {
+.menuEdit .del-bt-3 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -516,7 +564,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .del-3 {
+.menuEdit .del-3 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -524,7 +572,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .edit-bt-3 {
+.menuEdit .edit-bt-3 {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
@@ -534,7 +582,7 @@
     width: 87px;
     box-sizing: border-box;
 }
-.MenuEdit .edit-3 {
+.menuEdit .edit-3 {
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -542,13 +590,13 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-3-image {
+.menuEdit .menu-3-image {
     background: #D9D9D9;
     margin-right: 50px;
     width: 124px;
     height: 100px;
 }
-.MenuEdit .menu-3-name {
+.menuEdit .menu-3-name {
     margin-bottom: 14px;
     display: inline-block;
     overflow-wrap: break-word;
@@ -558,7 +606,7 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .menu-3-info {
+.menuEdit .menu-3-info {
     align-self: flex-start;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -567,7 +615,7 @@
     font-size: 24px;
     color: #000000;
 }
-.MenuEdit .menu-3-price {
+.menuEdit .menu-3-price {
     margin: 0 1.5px;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -576,19 +624,19 @@
     font-size: 30px;
     color: #000000;
 }
-.MenuEdit .container-4 {
+.menuEdit .container-4 {
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.MenuEdit .container-5 {
+.menuEdit .container-5 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
 }
-.MenuEdit .container-6 {
+.menuEdit .container-6 {
     margin-bottom: 1px;
     display: flex;
     flex-direction: row;
@@ -596,82 +644,82 @@
     min-width: 320px;
 }
 
-.MenuEdit .container-8 {
+.menuEdit .container-8 {
     margin-bottom: 29px;
     display: flex;
     flex-direction: row;
     width: 191px;
     box-sizing: border-box;
 }
-.MenuEdit .container-9 {
+.menuEdit .container-9 {
     margin-bottom: 29px;
     display: flex;
     flex-direction: row;
     width: 191px;
     box-sizing: border-box;
 }
-.MenuEdit .container-10 {
+.menuEdit .container-10 {
     margin-bottom: 29px;
     display: flex;
     flex-direction: row;
     width: fit-content;
     box-sizing: border-box;
 }
-.MenuEdit .container-11 {
+.menuEdit .container-11 {
     margin-bottom: 1px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.MenuEdit .container-12 {
+.menuEdit .container-12 {
     margin-bottom: 1px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.MenuEdit .container-13 {
+.menuEdit .container-13 {
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-.MenuEdit .container-15 {
+.menuEdit .container-15 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
 }
-.MenuEdit .container-16 {
+.menuEdit .container-16 {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.MenuEdit .container-17 {
+.menuEdit .container-17 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
 }
-.MenuEdit .container-18 {
+.menuEdit .container-18 {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     min-width: 390px;
 }
-.MenuEdit .container-19 {
+.menuEdit .container-19 {
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.MenuEdit .container-20 {
+.menuEdit .container-20 {
     margin-bottom: 1px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
-.MenuEdit .menu4SecondContainer {
+.menuEdit .menu4SecondContainer {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;

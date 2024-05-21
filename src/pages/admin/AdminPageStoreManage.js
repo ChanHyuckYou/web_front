@@ -1,21 +1,28 @@
 import '../../css/admin/AdminPageStoreManage.css'
 
+import Icon from '../../assets/IconSample.png';
+
 export default function AdminPageStoreManage() {
     return (
         <div className="adminPageStoreManage">
-            <div className="logoContainer">
-                <span className="app-nupan">
-                    APP-nupan
-                </span>
-                <span className="admin">
+            <div className="headerContainer">
+                <div className="logoContainer">
+                    <img className="appNupanIcon" src={Icon} alt="">
+                    </img>
+                    <div className="app-nupan">
+                        APP-nupan
+                    </div>
+                </div>
+                <div className="admin">
                     Admin
-                </span>
+                </div>
             </div>
+
             <div className="line-5">
             </div>
             <div className="itemContainer">
                 <div className="menu-list">
-                    <div className="sign-in-confirm-bt">
+                <div className="sign-in-confirm-bt">
                         회원가입 승인
                     </div>
                     <div className="store-user-bt">
