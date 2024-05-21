@@ -1,5 +1,4 @@
 import '../css/Main.css'
-import MoreMenuBT from '../assets/MoreMenu_BT.png'
 import Vector from '../assets/Vector.png'
 import EPMENU from '../assets/ep_menu.png'
 import QR from '../assets/bi_qr-code-scan.png'
@@ -19,6 +18,10 @@ export default function Main() {
         localStorage.setItem('ownerid', ownerid);
         navigate('/Main/Menu/Edit');
     };
+    const goToMyPage = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main/MyPage');
+    };
     // useEffect(() => {
     //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
     //         .then(response => response.json())
@@ -37,7 +40,7 @@ export default function Main() {
                         APP-nupan
                     </div>
                 </div>
-                <div className="more-menu-bt-ad">
+                <div className="more-menu-bt-ad" onClick={goToMyPage} style={{cursor: 'pointer'}}>
                 <img className="vector-ad" src={MyPage} alt={""} />
                 </div>
             </div>
@@ -60,7 +63,8 @@ export default function Main() {
 
             <div className="container-1-ad">
                 <button className="container-6-ad"
-                        onClick={MenuEdit}>
+                        onClick={MenuEdit}
+                        style={{cursor: 'pointer'}}>
                     <div className="epmenu-ad">
                         <img className="vector-5-ad" src={EPMENU} alt="" />
                     </div>
@@ -77,7 +81,8 @@ export default function Main() {
                     </span>
                 </div>
                 <button className="qr-ad"
-                onClick={goToQr}>
+                onClick={goToQr}
+                        style={{cursor: 'pointer'}}>
                     <div className="biqr-code-scan-ad">
                         <img className="vector-5-ad" src={QR} alt=""/>
                     </div>

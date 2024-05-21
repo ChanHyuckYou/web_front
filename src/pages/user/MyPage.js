@@ -1,6 +1,18 @@
 import '../../css/user/MyPage.css'
+// import {useState} from "react";
+import {useNavigate} from 'react-router-dom';
+// import axios from "axios"
+
 
 export default function MyPage() {
+    const navigate = useNavigate();
+    const ownerid = localStorage.getItem('ownerid');
+
+
+    const goBack = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate(-1);
+    };
     return (
         <div className="myPage">
             <div className="app-nupan">
@@ -59,7 +71,7 @@ export default function MyPage() {
             변경저장
           </span>
                 </div>
-                <div className="add-cancel-bt">
+                <div className="add-cancel-bt" onClick={goBack} style={{cursor: 'pointer'}}>
           <span className="cancel">
             변경취소
           </span>

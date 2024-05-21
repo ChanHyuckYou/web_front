@@ -99,9 +99,9 @@ export default function MenuAdd() {
                         // eslint-disable-next-line jsx-a11y/img-redundant-alt
                         <img src={preview} alt="메뉴 미리보기" className="image-sample"/>
                     )}
-                    <button className="image-add-bt" onClick={handleButtonClick} type={"button"}>
+                    <div className="image-add-bt" onClick={handleButtonClick} type={"button"} style={{cursor: 'pointer'}}>
                         <span className="image-add">사진추가</span>
-                    </button>
+                    </div>
                     <input
                         type="file"
                         ref={fileInputRef}
@@ -171,22 +171,21 @@ export default function MenuAdd() {
                 </div>
             </div>
             <div className="tag-space">
-
-
             </div>
             <div className="price-sapce">
-
-
             </div>
             <div className="container">
-                <button className="menu-add-bt" type={"submit"}>
+                <button className="menu-add-bt"
+                        type={"submit"}
+                        style={{cursor: 'pointer'}}>
                     <span className="menu-add-2">
                         메뉴추가
                     </span>
                 </button>
                 <button className="add-cancel-bt"
                         type={"button"}
-                        onClick={goToMenuEdit}>
+                        onClick={goToMenuEdit}
+                        style={{cursor: 'pointer'}}>
                     <span className="cancel">
                         작성취소
                     </span>

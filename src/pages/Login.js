@@ -3,10 +3,8 @@ import '../css/Loginstyle.css'
 import {useNavigate} from 'react-router-dom';
 import axios from "axios"
 import {useMutation} from "react-query";
-
 import Icon from '../assets/IconSample.png';
-// eslint-disable-next-line no-unused-vars
-// import main from './main'
+
 
 export function Login() {
     const navigate = useNavigate();
@@ -120,27 +118,30 @@ export function Login() {
                     />
                 </div>
 
-                <button className="id1-3"
-                        onClick={loginHandleSubmit}>
+                <div className="id1-3"
+                        onClick={loginHandleSubmit}
+                     style={{cursor: 'pointer'}}>
                         <span className="id1-9">
                             로그인
                         </span>
-                </button>
+                </div>
 
             </div>
 
             <div className="container1-2">
-                <button>
+                <div>
                     <span className="id1-2"
-                          onClick={goTosign}>
+                          onClick={goTosign}
+                          style={{cursor: 'pointer'}}>
                         회원가입
                     </span>
-                </button>
-                <button>
-                    <span className="id1">
+                </div>
+                <div>
+                    <span className="id1"
+                          style={{cursor: 'pointer'}}>
                          ID/비밀번호찾기
                     </span>
-                </button>
+                </div>
             </div>
             <div className="info1">
                 <div className="mdiinformation-outline">

@@ -10,29 +10,34 @@ export default function MenuEditPage() {
     const [menus, setMenus] = useState([]); // 메뉴 정보를 저장할 상태
 
 
-    // 메뉴 정보를 가져오는 함수
-    const fetchMenus = async () => {
-        try {
-            // storeid를 예시로 '1'을 넣었습니다. 실제 storeid를 적절히 사용해야 합니다.
-            const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`);
-            if (!response.ok) {
-                throw new Error('서버 통신에 실패했습니다');
-            }
-            const data = await response.json();
-            setMenus(data.menu); // 가져온 메뉴 정보를 상태에 저장
-        } catch (error) {
-            console.error("메뉴 정보를 가져오는데 실패했습니다", error);
-        }
-    };
+
 
     // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
     useEffect(() => {
+        // 메뉴 정보를 가져오는 함수
+        const fetchMenus = async () => {
+            try {
+                const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`);
+                if (!response.ok) {
+                    throw new Error('서버 통신에 실패했습니다');
+                }
+                const data = await response.json();
+                setMenus(data.menu); // 가져온 메뉴 정보를 상태에 저장
+            } catch (error) {
+                console.error("메뉴 정보를 가져오는데 실패했습니다", error);
+            }
+        };
         fetchMenus();
-    }, []);
+    }, [ownerid]);
 
     const goToMenuAdd = () => {
         localStorage.setItem('ownerid', ownerid);
         navigate('/Main/Menu/Add');
+    };
+
+    const goBack = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate(-1);
     };
 
     return (
@@ -46,7 +51,7 @@ export default function MenuEditPage() {
                     </div>
                 </div>
                 <div className="goBackBtn">
-                    <div className="goBackTxt">
+                    <div className="goBackTxt" onClick={goBack} style={{cursor: 'pointer'}}>
                         뒤로가기
                     </div>
                 </div>
@@ -82,7 +87,7 @@ export default function MenuEditPage() {
                 <div className="menu-edit">
                     메뉴 관리
                 </div>
-                <button className="menu-add-bt" onClick={goToMenuAdd}>
+                <button className="menu-add-bt" onClick={goToMenuAdd} style={{cursor: 'pointer'}}>
                     <span className="menu-add">
                         메뉴 추가
                     </span>
@@ -92,12 +97,10 @@ export default function MenuEditPage() {
                 {menus.map((menu) => (
                     <div className="menu-1" key={menu.productid}>
                         <div className="container-6">
-
                                 {/* 이미지 URL이 있다면 아래와 같이 사용할 수 있습니다. */}
                                 <img
                                     className="menu-1-image"
                                      src={menu.imageurl} alt={""} />
-
                             <div className="container-4">
                                 <div className="menu-1-name">
                                     {menu.productname}
@@ -113,12 +116,12 @@ export default function MenuEditPage() {
                             </div>
                             <div className="container-3">
                                 <div className="container-10">
-                                    <button className="edit-bt-1" type="button">
+                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}}>
                                         <span className="edit-1">
                                             수정
                                         </span>
                                     </button>
-                                    <button className="del-bt" type="button">
+                                    <button className="del-bt" type="button" style={{cursor: 'pointer'}}>
                                         <span className="del-1">
                                             삭제
                                         </span>

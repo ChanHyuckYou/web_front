@@ -3,12 +3,18 @@ import Icon from '../assets/IconSample.png';
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode.react';
+import {useNavigate} from "react-router-dom";
 
 const QrCRUD = () => {
     const [showTableFrame, setShowTableFrame] = useState(false);
     const [tableCount, setTableCount] = useState(0);
     const [loading, setLoading] = useState([]);
     const ownerid = localStorage.getItem('ownerid');
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1);
+    };
 
     const handleTableCreateClick = () => {
         setShowTableFrame(true);
@@ -57,7 +63,10 @@ const QrCRUD = () => {
                     <img className="appNupanIcon-qr" src={Icon} alt="App Icon" />
                     <div className="app-nupan11">APP-nupan</div>
                 </div>
-                <div className="goBackBtn-qr">
+                <div
+                    className="goBackBtn-qr"
+                    onClick={goBack}
+                    style={{cursor: 'pointer'}}>
                     <div className="goBackTxt-qr">뒤로가기</div>
                 </div>
             </div>
@@ -65,7 +74,8 @@ const QrCRUD = () => {
             <div className="line-511"></div>
             <div className="container-511">
                 <div className="table-number11">테이블 번호</div>
-                <button className="table-add-bt" onClick={handleTableCreateClick}>
+                <button className="table-add-bt" onClick={handleTableCreateClick}
+                        style={{cursor: 'pointer'}}>
                     <span className="table-add">테이블추가</span>
                 </button>
             </div>
