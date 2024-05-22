@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,500;0,600;1,600&display=swap");
 body {
-    margin: 0;
+
     line-height: normal;
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; /* Safari와 Chrome에서 안티앨리어싱 활성화 */
+    -moz-osx-font-smoothing: grayscale; /* Firefox에서 그레이스케일 안티앨리어싱 활성화 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
 }
 :root {
     /* fonts */

@@ -4,6 +4,8 @@ import reportWebVitals from './reportWebVitals';
 import Routing from "./Routes/Routing";
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import './fonts/global.css';
+
 
 const queryClient = new QueryClient();
 
