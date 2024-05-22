@@ -1,6 +1,6 @@
 import '../../css/user/MenuEdit.css';
-import { useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 
 import Icon from '../../assets/IconSample.png';
 
@@ -8,8 +8,7 @@ export default function MenuEditPage() {
     const navigate = useNavigate();
     const ownerid = localStorage.getItem('ownerid');
     const [menus, setMenus] = useState([]); // 메뉴 정보를 저장할 상태
-
-
+    const [isTabOpen, setIsTabOpen] = useState(false);
 
 
     // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
@@ -38,6 +37,13 @@ export default function MenuEditPage() {
     const goBack = () => {
         localStorage.setItem('ownerid', ownerid);
         navigate(-1);
+    };
+
+    const openTabEdit = () => {
+        setIsTabOpen(true);
+    };
+    const closeTabEdit = () => {
+        setIsTabOpen(false);
     };
 
     return (
@@ -77,7 +83,7 @@ export default function MenuEditPage() {
                         사이드
                     </span>
                 </div>
-                <button className="tab-add-bt" type="button">
+                <button className="tab-add-bt" onClick={openTabEdit} style={{cursor: 'pointer'}}>
                     <span className="tab-add">
                         + 탭 추가
                     </span>
@@ -97,10 +103,10 @@ export default function MenuEditPage() {
                 {menus.map((menu) => (
                     <div className="menu-1" key={menu.productid}>
                         <div className="container-6">
-                                {/* 이미지 URL이 있다면 아래와 같이 사용할 수 있습니다. */}
-                                <img
-                                    className="menu-1-image"
-                                     src={menu.imageurl} alt={""} />
+                            {/* 이미지 URL이 있다면 아래와 같이 사용할 수 있습니다. */}
+                            <img
+                                className="menu-1-image"
+                                src={menu.imageurl} alt={""}/>
                             <div className="container-4">
                                 <div className="menu-1-name">
                                     {menu.productname}
@@ -128,17 +134,45 @@ export default function MenuEditPage() {
                                     </button>
                                 </div>
                                 <span className="menu-1-price">
-                                    <PriceComponent price={menu.price} />
+                                    <PriceComponent price={menu.price}/>
                                 </span>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+            {isTabOpen && (
+                <div className="tabEditContainer">
+                    <div className="tabEditTxt">
+                        메뉴 탭 관리
+                    </div>
+                    <div className="tabInsertContainer">
+                        <div className="tabName">
+                            탭 이름
+                        </div>
+                        <div className="inputTab">
+                        </div>
+                    </div>
+                    <div className="tabBtnContainer">
+                        <div className="closeBtn" onClick={closeTabEdit} style={{cursor: 'pointer'}}>
+                            <span className="close">
+                                닫기
+                            </span>
+                        </div>
+                        <div className="saveBtn">
+                            <span className="save">
+                                저장
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }
-function PriceComponent({ price }) {
+
+function PriceComponent({price}) {
     // 숫자를 지역화된 문자열로 변환하여 3자리마다 쉼표를 추가
     const formattedPrice = parseInt(price, 10).toLocaleString();
 
