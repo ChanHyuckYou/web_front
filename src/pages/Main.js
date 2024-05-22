@@ -5,10 +5,14 @@ import QR from '../assets/bi_qr-code-scan.png'
 import MyPage from '../assets/MyPage.png';
 import Icon from '../assets/IconSample.png';
 import {useNavigate} from "react-router-dom";
+import React, {useState, useEffect, useRef} from 'react';
+
 
 export default function Main() {
     const navigate = useNavigate();
     const ownerid = localStorage.getItem('ownerid');
+    const [isMoreOpen, setIsMoreOpen] = useState(false);
+    const timerRef = useRef(null);
 
     const goToQr = () => {
         localStorage.setItem('ownerid', ownerid);
@@ -22,6 +26,18 @@ export default function Main() {
         localStorage.setItem('ownerid', ownerid);
         navigate('/Main/MyPage');
     };
+    const goToOrderCheck = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main/Menu/OrderCheck');
+    }
+    const openMoreMenu = () => {
+        setIsMoreOpen(true);
+    };
+    const closeMoreMenu = () => {
+        setIsMoreOpen(false);
+    };
+
+
     // useEffect(() => {
     //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
     //         .then(response => response.json())
@@ -40,10 +56,14 @@ export default function Main() {
                         APP-nupan
                     </div>
                 </div>
-                <div className="more-menu-bt-ad" onClick={goToMyPage} style={{cursor: 'pointer'}}>
-                <img className="vector-ad" src={MyPage} alt={""} />
+                <div className="more-menu-bt-ad"
+                     onMouseEnter={openMoreMenu}
+                     onMouseLeave={closeMoreMenu}
+                     style={{cursor: 'pointer'}}>
+                    <img className="vector-ad" src={MyPage} alt={""}/>
                 </div>
             </div>
+
             <div className="line-5-ad">
             </div>
             <div className="userWelcome">
@@ -72,14 +92,16 @@ export default function Main() {
                         메뉴편집
                     </span>
                 </button>
-                <div className="container-4-ad">
+                <button className="container-4-ad"
+                        onClick={goToOrderCheck}
+                        style={{cursor: 'pointer'}}>
                     <div className="solarclipboard-list-outline-ad">
                         <img className="vector-5-ad" src={Vector}alt=""/>
                     </div>
                     <span className="container-5-ad">
                         주문확인
                     </span>
-                </div>
+                </button>
                 <button className="qr-ad"
                 onClick={goToQr}
                         style={{cursor: 'pointer'}}>
@@ -87,10 +109,24 @@ export default function Main() {
                         <img className="vector-5-ad" src={QR} alt=""/>
                     </div>
                     <span className="qr-1-ad">
-            QR, 출력
-          </span>
+                        QR, 출력
+                    </span>
                 </button>
             </div>
+            {isMoreOpen && (
+            <div className="moreContainer-main"
+                onMouseEnter={openMoreMenu}
+                onMouseLeave={closeMoreMenu}>
+                <div className="goToMyPage-main"
+                     onClick={goToMyPage}
+                     style={{cursor: 'pointer'}}>
+                    내 정보
+                </div>
+                <div className="goToLogout-main">
+                    로그아웃
+                </div>
+            </div>
+        )}
         </div>
     )
 }
