@@ -169,7 +169,7 @@
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
-    width: 89px;
+    /*width: 89px;*/
 }
 .container1-11 {
     margin: 0 1px 17px 0;

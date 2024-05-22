@@ -16,7 +16,7 @@ export function Login() {
     };
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         if (name === 'email') setOwnerId(value);
         if (name === 'password') setPassword(value);
     };
@@ -36,7 +36,7 @@ export function Login() {
         } catch (error) {
             let errorMessage = '로그인 중 오류가 발생했습니다.';
             if (error.response) {
-                const { status, data, statusText } = error.response;
+                const {status, data, statusText} = error.response;
                 switch (status) {
                     case 400:
                         errorMessage = '요청이 잘못되었습니다. 입력한 정보를 다시 확인해주세요.';
@@ -73,15 +73,14 @@ export function Login() {
     });
 
     const loginHandleSubmit = () => {
-        login.mutate({ ownerid, password });
+        login.mutate({ownerid, password});
     };
 
 
     return (
         <div className="id1-1">
             <div className="logoContainer-login">
-                <img className="appNupanIcon-login" src={Icon} alt="">
-                </img>
+                <img className="appNupanIcon-login" src={Icon} alt=""/>
                 <div className="app-nupan1-2">
                     APP-nupan
                 </div>
@@ -119,7 +118,7 @@ export function Login() {
                 </div>
 
                 <div className="id1-3"
-                        onClick={loginHandleSubmit}
+                     onClick={loginHandleSubmit}
                      style={{cursor: 'pointer'}}>
                         <span className="id1-9">
                             로그인
@@ -130,16 +129,13 @@ export function Login() {
 
             <div className="container1-2">
                 <div>
-                    <span className="id1-2"
-                          onClick={goTosign}
-                          style={{cursor: 'pointer'}}>
+                    <span className="id1-2" onClick={goTosign} style={{cursor: 'pointer'}}>
                         회원가입
                     </span>
                 </div>
                 <div>
-                    <span className="id1"
-                          style={{cursor: 'pointer'}}>
-                         ID/비밀번호찾기
+                    <span className="id1" style={{cursor: 'pointer'}}>
+                        ID/비밀번호찾기
                     </span>
                 </div>
             </div>
@@ -148,10 +144,11 @@ export function Login() {
                     {/*<img className="vector" />*/}
                 </div>
                 <span className="app-nupan1-6">
-          App-nupan웹은 사업자 전용입니다.
-        </span>
+                    App-nupan웹은 사업자 전용입니다.
+                </span>
             </div>
         </div>
     )
 }
+
 export default Login;
