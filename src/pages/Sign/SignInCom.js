@@ -7,7 +7,7 @@ import Icon from '../../assets/IconSample.png';
 export default function SignInCompletePage() {
     const navigate = useNavigate();
     const gotoLogin = () => {
-        navigate('/Sign_3');
+        navigate('/');
     };
     return (
         <div className="signInCom">

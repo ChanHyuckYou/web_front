@@ -87,8 +87,8 @@ export default function Main() {
                         <img className="vector-5-ad" src={QR} alt=""/>
                     </div>
                     <span className="qr-1-ad">
-            QR, 출력
-          </span>
+                        QR, 출력
+                    </span>
                 </button>
             </div>
         </div>

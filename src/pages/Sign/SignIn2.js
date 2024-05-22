@@ -224,7 +224,7 @@ export default function SignInPage2() {
                                     style={{display: 'block'}}
                                 />
                                 <button type="button" onClick={() => setIsPostOpen(false)}
-                                        style={{margin: '0 0 10px 10px'}} style={{cursor: 'pointer'}}>닫기
+                                        style={{margin: '0 0 10px 10px', cursor: 'pointer'}} >닫기
                                 </button>
                             </div>
                         )}

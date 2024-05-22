@@ -176,9 +176,9 @@ export default function SignInPage1() {
                             autoComplete="contact" // 수정
                             className="inputPhone"/>
                     </div>
-                    <div
-                        className="btnContainer">
+                    <div className="btnContainer">
                         <button className="nick-ok"
+                                style={{cursor: 'pointer'}}
                                 type={"button"}
                                 onClick={checkIdDuplicate}>
                             <span className="id-ok">
@@ -188,6 +188,7 @@ export default function SignInPage1() {
                     </div>
                 </div>
                 <button className="nextform"
+                        style={{cursor: 'pointer'}}
                         type="submit">
                     <span className="nexybtn">
                          다음으로
