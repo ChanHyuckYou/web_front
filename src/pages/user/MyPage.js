@@ -79,6 +79,5 @@ export default function MyPage() {
                 </div>
             </div>
         </div>
-
     )
 }
