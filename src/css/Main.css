@@ -213,3 +213,40 @@
     width: fit-content;
     box-sizing: border-box;
 }
+
+/*마이페이지, 로그아웃*/
+.moreContainer-main {
+    border-radius: 20px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    position: absolute;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 36px 15px;
+    width: 136px;
+    box-sizing: border-box;
+    top: 8vh;
+    left: 85vw;
+}
+.goToMyPage-main {
+    margin-bottom: 21px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+.goToLogout-main {
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+/*마이페이지, 로그아웃*/

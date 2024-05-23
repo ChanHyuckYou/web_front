@@ -2,11 +2,11 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 4vh 0 152px 0;
+    padding: 2vh 0 152px 0;
     box-sizing: border-box;
 }
 .myPage .app-nupan {
-    margin: 0 98px 5vh 4vw;
+    margin-top: 26px;
     display: inline-block;
     align-self: flex-start;
     overflow-wrap: break-word;
@@ -17,10 +17,10 @@
     color: #000000;
 }
 .myPage .line-5 {
-    background: #000000;
+    background: #DC6721;
     margin-bottom: 28px;
     width: 100%;
-    height: 1px;
+    height: 2px;
 }
 .myPage .my-info {
     margin: 2vh 98px 5vh 4vw;
@@ -32,6 +32,20 @@
     font-weight: 600;
     font-size: 30px;
     color: #000000;
+}
+.myPage .appNupanIcon{
+    width: 79px;
+    height: 80px;
+    margin-right: 26px;
+}
+
+.myPage .logoContainer {
+    margin: 0 98px 2vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-self: flex-start;
+    width: fit-content;
 }
 
 .myPage .myItemContainer {

@@ -3,6 +3,8 @@ import '../../css/user/MyPage.css'
 import {useNavigate} from 'react-router-dom';
 // import axios from "axios"
 
+import Icon from '../../assets/IconSample.png';
+
 
 export default function MyPage() {
     const navigate = useNavigate();
@@ -15,8 +17,12 @@ export default function MyPage() {
     };
     return (
         <div className="myPage">
-            <div className="app-nupan">
-                APP-nupan
+            <div className="logoContainer">
+                <img className="appNupanIcon" src={Icon} alt="">
+                </img>
+                <div className="app-nupan">
+                    APP-nupan
+                </div>
             </div>
             <div className="line-5">
             </div>
@@ -38,9 +44,6 @@ export default function MyPage() {
                         <div className="store-name-text">
                             가게 이름
                         </div>
-                        <div className="store-office-text">
-                            지점
-                        </div>
                         <div className="store-address-text">
                             가게 주소
                         </div>
@@ -53,8 +56,6 @@ export default function MyPage() {
                     </div>
                     <div className="inputContainer">
                         <div className="store-name-space">
-                        </div>
-                        <div className="store-office-space">
                         </div>
                         <div className="store-address-space">
                         </div>

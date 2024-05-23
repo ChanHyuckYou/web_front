@@ -1,8 +1,18 @@
-import '../../css/user/Ordercheck.css'
+import '../../css/user/Ordercheck.css';
+import React, {useState, useEffect} from 'react';
 
 import Icon from '../../assets/IconSample.png';
 
 export default function OrderCheckPage() {
+    const [isOrderDetail, setIsOrderDetail] = useState(false);
+
+    const openOrderDetail = () => {
+        setIsOrderDetail(true);
+    };
+    const closeOrderDetail = () => {
+        setIsOrderDetail(false);
+    }
+
     return (
         <div className="orderCheck">
             <div className="headerContainer">

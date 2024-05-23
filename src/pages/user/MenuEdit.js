@@ -11,16 +11,6 @@ export default function MenuEditPage() {
 
 
 
-    const goToMenuEdit = (selectedMenu) => {
-        localStorage.setItem('ownerid', ownerid);
-        localStorage.setItem('productid', selectedMenu.productid);
-        console.log("선택된 productid :", selectedMenu);
-        // navigate 함수를 통해 선택한 menu만을 상태로 전달합니다.
-        navigate('/Main/Menu/Add', { state: { selectedMenu } });
-    };
-
-
-
 
     // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
     useEffect(() => {
@@ -49,7 +39,6 @@ export default function MenuEditPage() {
         localStorage.setItem('ownerid', ownerid);
         navigate(-1);
     };
-
 
     return (
         <div className="menuEdit">
@@ -127,7 +116,7 @@ export default function MenuEditPage() {
                             </div>
                             <div className="container-3">
                                 <div className="container-10">
-                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}} onClick={() => goToMenuEdit(menu)}>
+                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}}>
                                         <span className="edit-1">
                                             수정
                                         </span>
