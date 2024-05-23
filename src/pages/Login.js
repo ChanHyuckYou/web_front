@@ -24,7 +24,7 @@ export function Login() {
     const login = useMutation(async () => {
         if ((ownerid === 'admin' && password === '1234') || (ownerid === 'appnupan' && password === '1234')) {
             localStorage.setItem('ownerid', ownerid);
-            navigate(ownerid === 'admin' ? '/Main' : '/adminsign');
+            navigate(ownerid === 'admin' ? '/Main' : '/admin');
             return;
         }
         try {

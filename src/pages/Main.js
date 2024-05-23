@@ -22,14 +22,6 @@ export default function Main() {
         localStorage.setItem('ownerid', ownerid);
         navigate('/Main/MyPage');
     };
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log(data); // 여기서 받은 데이터를 활용
-    //         })
-    //         .catch(error => console.error("Error fetching data: ", error));
-    // }, [ownerid]); // ownerid가 변경될 때마다 다시 호출
     return (
         <div className="container-2-ad">
             <div className="container-ad">

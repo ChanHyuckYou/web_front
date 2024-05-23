@@ -116,7 +116,7 @@
     position: relative;
     margin-top: 99px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* 항목들을 세로로 나열 */
     padding: 34px 0 0 28px;
     width: 1023px;
     height: 636px;
@@ -150,6 +150,7 @@
     padding: 11px 0 11px 7px;
     width: 784px;
     height: fit-content;
+    margin-bottom: 20px; /* 각 사용자 정보 사이의 간격 */
     box-sizing: border-box;
 }
 .AdminPageAppManage .ellipse-1 {
@@ -187,7 +188,7 @@
 .AdminPageAppManage .container-2 {
     margin: 0 71px 0 76px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* 항목들을 세로로 나열 */
     width: fit-content;
     box-sizing: border-box;
 }

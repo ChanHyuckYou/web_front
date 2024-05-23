@@ -11,6 +11,12 @@
     margin-right: 26px;
 }
 
+.adminPageSignInConfirm .menu-item.active {
+    background-color: #f0f0f0; /* 활성 메뉴의 배경색 */
+    color: #000; /* 활성 메뉴의 글씨 색 */
+    /* 추가적인 스타일링 */
+}
+
 .adminPageSignInConfirm .app-nupan {
     margin-top: 26px;
     display: inline-block;
@@ -33,6 +39,10 @@
     font-size: 30px;
     color: #000000;
 }
+.adminPageSignInConfirm .hidden {
+    display: none;
+}
+
 .adminPageSignInConfirm .line-5 {
     background: #DC6721;
     margin-bottom: 28px;

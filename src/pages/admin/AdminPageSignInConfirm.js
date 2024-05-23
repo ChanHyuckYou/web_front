@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import '../../css/admin/AdminPageSignInConfirm.css'
 import axios from 'axios';
 
-import Icon from '../../assets/IconSample.png';
 
 export default function AdminPageSignInConfirm() {
     // 상태 정의
@@ -52,35 +51,11 @@ export default function AdminPageSignInConfirm() {
     };
     return (
         <div className="adminPageSignInConfirm">
-            <div className="headerContainer">
-                <div className="logoContainer">
-                    <img className="appNupanIcon" src={Icon} alt="">
-                    </img>
-                    <div className="app-nupan">
-                        APP-nupan
-                    </div>
-                </div>
-                <div className="admin">
-                    Admin
-                </div>
-            </div>
 
-            <div className="line-5">
-            </div>
+
+
             <div className="itemContainer">
-                <div className="menu-list">
-                    <div className="sign-in-confirm-bt">
-                        회원가입 승인
-                    </div>
-                    <div className="line-8">
-                    </div>
-                    <div className="store-user-bt">
-                        사업자 회원 조회
-                    </div>
-                    <div className="app-user-bt">
-                        앱 회원 조회
-                    </div>
-                </div>
+
                 <div className="store-info">
                     {Array.isArray(storeInfo) && storeInfo.map((store, index) => (
                         <div key={index} className="storeContainer"> {/* key 추가 권장 */}
@@ -111,6 +86,6 @@ export default function AdminPageSignInConfirm() {
                     ))}
                 </div>
             </div>
-        </div>
+         </div>
     )
 }
