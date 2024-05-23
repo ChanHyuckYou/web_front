@@ -1,8 +1,8 @@
-import '../../css/user/MenuAdd.css'
+import '../../css/user/MenuAdd.css';
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import Icon from '../../assets/IconSample.png'
+import Icon from '../../assets/IconSample.png';
 
 export default function MenuAdd() {
     const navigate = useNavigate();
@@ -15,31 +15,24 @@ export default function MenuAdd() {
     const storename = '스타벅스';
     const fileInputRef = useRef();
     const ownerid = localStorage.getItem('ownerid');
+    const productid = localStorage.getItem('productid');
     const location = useLocation();
-    const productid = location.state?.productid;
+    const menus = location.state?.selectedMenu;
 
     useEffect(() => {
-        if (productid) {
+        if (productid && menus) {
             const fetchMenuData = async () => {
-                try {
-                    const response = await fetch(`http://43.201.92.62/store/${productid}/menu`);
-                    if (!response.ok) {
-                        throw new Error('서버 통신에 실패했습니다');
-                    }
-                    const data = await response.json();
-                    setProductName(data.productname);
-                    setPrice(data.price);
-                    setCategory(data.category);
-                    setDescription(data.description);
-                    setAvailable(data.available);
-                    setPreview(data.imageurl);
-                } catch (error) {
-                    console.error("메뉴 데이터를 가져오는데 실패했습니다", error);
+                const data = menus;
+                setProductName(data.productname || '');
+                setPrice(data.price || '');
+                setCategory(data.category || '');
+                setDescription(data.description || '');
+                setAvailable(data.available);
+                setPreview(data.imageurl || '');
                 }
-            };
             fetchMenuData();
         }
-    }, [productid]);
+    }, [productid, menus]);
 
     const goToMenuEdit = () => {
         navigate('/Main/Menu/Edit');
@@ -186,5 +179,5 @@ export default function MenuAdd() {
                 </div>
             </div>
         </form>
-    )
+    );
 }

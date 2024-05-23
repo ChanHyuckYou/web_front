@@ -11,11 +11,14 @@ export default function MenuEditPage() {
 
 
 
-    const goToMenuEdit = (productid) => {
-        navigate('/Main/Menu/Add', { state: { productid } });
+    const goToMenuEdit = (selectedMenu) => {
         localStorage.setItem('ownerid', ownerid);
-        console.log("선택된 productid :" , productid)
+        localStorage.setItem('productid', selectedMenu.productid);
+        console.log("선택된 productid :", selectedMenu);
+        // navigate 함수를 통해 선택한 menu만을 상태로 전달합니다.
+        navigate('/Main/Menu/Add', { state: { selectedMenu } });
     };
+
 
 
 
@@ -124,7 +127,7 @@ export default function MenuEditPage() {
                             </div>
                             <div className="container-3">
                                 <div className="container-10">
-                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}} onClick={() => goToMenuEdit(menu.productid)}>
+                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}} onClick={() => goToMenuEdit(menu)}>
                                         <span className="edit-1">
                                             수정
                                         </span>
