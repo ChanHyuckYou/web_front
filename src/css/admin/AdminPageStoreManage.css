@@ -86,6 +86,11 @@
     box-sizing: border-box;
     flex-wrap: wrap;
 }
+.adminPageStoreManage .accountInfoContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
+}
 
 
 /*검색컨테이너*/
@@ -110,6 +115,7 @@
     box-sizing: border-box;
 }
 /*검색컨테이너*/
+
 
 /*검색텍스트*/
 .adminPageStoreManage .store-name {
@@ -142,6 +148,7 @@
     font-size: 24px;
     color: #000000;
 }
+/*검색텍스트*/
 
 
 /*메뉴 버튼*/
@@ -187,11 +194,12 @@
     background: #FFFFFF;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 34px 0 0 28px;
     min-width: 690px;
     width: 71vw;
-    height: 636px;
+    height: fit-content;
+    min-height: 636px;
     box-sizing: border-box;
 }
 
@@ -204,7 +212,6 @@
     padding: 9px 21px 9px 22px;
     width: 88px;
     height: 47px;
-    height: fit-content;
     box-sizing: border-box;
 }
 .adminPageStoreManage .delete-1 {

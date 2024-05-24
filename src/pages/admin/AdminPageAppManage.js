@@ -1,9 +1,9 @@
 import '../../css/admin/AdminPageAppManage.css'
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function AdminPageAppAccountManage() {
     const [users, setUsers] = useState([]);
-    const [searchCriteria, setSearchCriteria] = useState({ userid: '', username: '' });
+    const [searchCriteria, setSearchCriteria] = useState({userid: '', username: ''});
 
     useEffect(() => {
         fetchUsers();
@@ -41,56 +41,63 @@ export default function AdminPageAppAccountManage() {
     };
 
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setSearchCriteria({ ...searchCriteria, [name]: value });
+        const {name, value} = e.target;
+        setSearchCriteria({...searchCriteria, [name]: value});
     };
 
     return (
-        <div className="AdminPageAppManage">
-            <div className="container-3">
-                <div className="container">
-                    <div className="user-name">
-                        사용자명:
+        <div className="adminPageAppManage">
+            <div className="itemContainer">
+                <div className="manageContainer">
+                    <div className="searchContainer">
+                        <div className="nameSearchContainer">
+                            <div className="user-name">
+                                사용자명:
+                            </div>
+                            <input
+                                className="user-name-space"
+                                type="text"
+                                name="username"
+                                value={searchCriteria.username}
+                                onChange={handleInputChange}>
+                            </input>
+                        </div>
+                        <div className="phoneSearchContainer">
+                            <div className="phone-number">
+                                전화번호:
+                            </div>
+                            <input
+                                className="phone-number-space"
+                                type="text"
+                                name="userid"
+                                value={searchCriteria.userid}
+                                onChange={handleInputChange}>
+                            </input>
+                        </div>
+                            <button className="searchBtn"
+                                    onClick={searchUser}>
+                                <span className="searchTxt">
+                                    검색
+                                </span>
+                            </button>
                     </div>
-                    <input
-                        className="user-name-space"
-                        type="text"
-                        name="username"
-                        value={searchCriteria.username}
-                        onChange={handleInputChange}>
-                    </input>
-                </div>
-                <div className="container-4">
-                    <div className="phone-number">
-                        전화번호:
-                    </div>
-                    <input
-                        className="phone-number-space"
-                        type="text"
-                        name="userid"
-                        value={searchCriteria.userid}
-                        onChange={handleInputChange}>
-                    </input>
-                </div>
-                <button onClick={searchUser}>검색</button>
-            </div>
-            <div className="container-2">
-                    <div className="account-info" >
+                    <div className="accountContainer">
                         {users.map((user) => (
-                            <div>
-                        <div className="account-1">
-                            <div className="ellipse-1"></div>
-                            <div className="container-5">
-                                <div className="user-name-1">{user.username}</div>
-                                <span className="user-mailemail-com">{user.usercontact}</span>
+                            <div className="accountInfoContainer">
+                                <div className="account-1">
+                                    <div className="ellipse-1"></div>
+                                    <div className="container-5">
+                                        <div className="user-name-1">{user.username}</div>
+                                        <span className="user-mailemail-com">{user.usercontact}</span>
+                                    </div>
+                                </div>
+                                <div className="delete-bt-1">
+                                    <span className="delete-1">삭제</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="delete-bt-1">
-                            <span className="delete-1">삭제</span>
-                        </div>
-                            </div>
-                            ))}
+                        ))}
                     </div>
+                </div>
             </div>
         </div>
     );

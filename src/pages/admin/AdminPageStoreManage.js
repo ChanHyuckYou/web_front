@@ -31,28 +31,30 @@ export default function AdminPageStoreManage() {
                     </div>
 
                     <div className="account-info">
-                        <div className="store-1">
-                            <div className="container">
+                        <div className="accountInfoContainer">
+                            <div className="store-1">
+                                <div className="container">
                                 <span className="store-1-name">
                                     가게이름-1
                                 </span>
-                                <span className="store-1-user-name">
+                                    <span className="store-1-user-name">
                                     (회원_이름)
                                 </span>
-                            </div>
-                            <div className="container-4">
+                                </div>
+                                <div className="container-4">
                                 <span className="store-1-adress">
                                     00시 00동 ...
                                 </span>
-                                <span className="store-1-phon-num">
+                                    <span className="store-1-phon-num">
                                     010-0000-0000
                                 </span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="delete-bt-1">
+                            <div className="delete-bt-1">
                             <span className="delete-1">
                                 삭제
                             </span>
+                            </div>
                         </div>
                     </div>
                 </div>
