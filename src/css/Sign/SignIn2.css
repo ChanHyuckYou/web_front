@@ -118,12 +118,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-between;
     box-sizing: border-box;
     min-width: 200px;
+    padding: 17px 0 30px 0;
 }
 
-.signInPage2 .store-name {
-    margin: 17px 0 20px 0;
+.signInPage2 .owner-name {
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -132,8 +133,7 @@
     font-size: 24px;
     color: #000000;
 }
-.signInPage2 .phone-num {
-    margin: 27px 0 25px 0;
+.signInPage2 .store-name {
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -143,7 +143,15 @@
     color: #000000;
 }
 .signInPage2 .store-address {
-    margin: 22px 0 29px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+.signInPage2 .store-id {
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -153,17 +161,6 @@
     color: #000000;
 }
 .signInPage2 .store-date {
-    margin: 17px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
-.signInPage2 .store-office {
-    margin: 20px 0 34px 0;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';

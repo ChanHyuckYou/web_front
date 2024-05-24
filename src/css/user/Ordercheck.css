@@ -65,9 +65,9 @@
     position: relative;
     display: flex;
     margin-top: 12px;
-    padding: 14px 14.7px 13px 16px;
+    padding: 12px 14.7px 14px 16px;
     box-sizing: border-box;
-    width: 117px;
+    width: 127px;
     height: 54px;
 }
 .orderCheck .goBackTxt {
@@ -76,7 +76,7 @@
     font-weight: 400;
     font-size: 24px;
     color: #000000;
-    width: 89px;
+    width: 99px;
     height: 29px;
 }
 /*뒤로가기 버튼*/
@@ -627,7 +627,7 @@
     align-items: center;
     padding: 41px 18.7px 41px 51px;
     width: 85vw;
-    min-width: 1000px;
+    min-width: 1015px;
     max-width: 1233px;
     height: 673px;
     box-sizing: border-box;

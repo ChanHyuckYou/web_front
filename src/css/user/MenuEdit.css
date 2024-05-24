@@ -54,9 +54,9 @@
     position: relative;
     display: flex;
     margin-top: 12px;
-    padding: 14px 14.7px 13px 16px;
+    padding: 12px 14.7px 14px 16px;
     box-sizing: border-box;
-    width: 117px;
+    width: 127px;
     height: 54px;
 }
 .menuEdit .goBackTxt {
@@ -65,7 +65,7 @@
     font-weight: 400;
     font-size: 24px;
     color: #000000;
-    width: 89px;
+    width: 99px;
     height: 29px;
 }
 /*뒤로가기 버튼*/
@@ -151,16 +151,18 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 6px 22px 5px 24px;
-    width: 85px;
+    padding: 6px 24px 5px 23px;
+    width: 90px;
+    height: 35px;
     box-sizing: border-box;
 }
 .menuEdit .saveBtn {
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 6px 22px 5px 24px;
-    width: 85px;
+    padding: 6px 24px 5px 23px;
+    width: 90px;
+    height: 35px;
     box-sizing: border-box;
 }
 /*이벤트 컨테이너*/
@@ -183,7 +185,9 @@
     align-self: flex-start;
     column-gap: 20px;
     width: fit-content;
+    max-width: 1144px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .menuEdit .container-7 {
     margin: 0 98px 58px 4vw;
@@ -416,15 +420,15 @@
     padding: 9px 19px 10px 19px;
     box-sizing: border-box;
     height: 52px;
-    width: 145px;
+    width: fit-content;
 }
 .menuEdit .main-menu {
     border-radius: 10px;
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 9px 0 10px 0;
-    width: 145px;
+    padding: 9px 19px 10px 19px;
+    width: fit-content;
     height: 52px;
     box-sizing: border-box;
 }
@@ -442,8 +446,8 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 9px 0 10px 0;
-    width: 145px;
+    padding: 9px 19px 10px 19px;
+    width: fit-content;
     height: 52px;
     box-sizing: border-box;
 }
@@ -461,9 +465,9 @@
     background: #D9D9D9;
     position: relative;
     display: flex;
-    padding: 9px 18.4px 10px 19.4px;
+    padding: 6px 19px 10px 19px;
     box-sizing: border-box;
-    width: 145px;
+    width: fit-content;
     height: 52px;
 }
 .menuEdit .tab-add {
@@ -499,7 +503,7 @@
     display: flex;
     padding: 11px 16.2px 11px 16px;
     box-sizing: border-box;
-    width: 150px;
+    width: 170px;
     height: 58px;
 }
 
@@ -574,7 +578,7 @@
     margin-right: 17px;
     display: flex;
     padding: 3px 21px 4px 20px;
-    width: 89px;
+    width: 94px;
     height: 36px;
     box-sizing: border-box;
 }
@@ -593,7 +597,7 @@
     margin-right: 17px;
     display: flex;
     padding: 3px 21px 4px 20px;
-    width: 89px;
+    width: 94px;
     height: 36px;
     box-sizing: border-box;
 }

@@ -2,7 +2,6 @@
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 2vh 0 359px 0;
     box-sizing: border-box;
 }
@@ -23,17 +22,6 @@
     width: 100%;
     height: 2px;
 }
-.signInCom .sign-in-complete {
-    margin: 0 394.7px 82px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 50px;
-    color: #000000;
-}
-
 .signInCom .appNupanIcon{
     width: 79px;
     height: 80px;
@@ -49,9 +37,26 @@
     width: fit-content;
 }
 
+.signInCom .itemContainer {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 36px 4vw;
+    min-width: 800px;
+}
 
+.signInCom .sign-in-complete {
+    margin: 0 0 130px 36px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+    color: #000000;
+}
 .signInCom .waitting-for-admin {
-    margin: 0 723.2px 165px 0;
+    margin: 0 0 90px 36px;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -60,6 +65,15 @@
     font-size: 30px;
     color: #000000;
 }
+.signInCom .to-main-bt {
+    margin-left: 36px;
+    background: #FF4C00;
+    position: relative;
+    display: flex;
+    padding: 16px 22px 16px 23px;
+    width: fit-content;
+    box-sizing: border-box;
+}
 .signInCom .to-main {
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -67,13 +81,4 @@
     font-weight: 600;
     font-size: 24px;
     color: #FFFFFF;
-}
-.signInCom .to-main-bt {
-    background: #FF4C00;
-    position: relative;
-    margin-right: 894px;
-    display: flex;
-    padding: 16px 22px 16px 23px;
-    width: 184px;
-    box-sizing: border-box;
 }

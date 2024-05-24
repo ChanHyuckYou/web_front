@@ -1,6 +1,6 @@
 import '../../css/user/MenuEdit.css';
-import { useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 
 import Icon from '../../assets/IconSample.png';
 
@@ -8,17 +8,10 @@ export default function MenuEditPage() {
     const navigate = useNavigate();
     const ownerid = localStorage.getItem('ownerid');
     const [menus, setMenus] = useState([]); // 메뉴 정보를 저장할 상태
-
-    const goToMenuEdit = (selectedMenu) => {
-        localStorage.setItem('ownerid', ownerid);
-        localStorage.setItem('productid', selectedMenu.productid);
-        console.log("선택된 productid :", selectedMenu.productid);
-        // navigate 함수를 통해 선택한 menu만을 상태로 전달합니다.
-        navigate('/Main/Menu/Add', { state: { selectedMenu } });
-    };
+    const [isTabOpen, setIsTabOpen] = useState(false);
 
 
-// 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
+    // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
     useEffect(() => {
         // 메뉴 정보를 가져오는 함수
         const fetchMenus = async () => {
@@ -46,6 +39,12 @@ export default function MenuEditPage() {
         navigate(-1);
     };
 
+    const openTabEdit = () => {
+        setIsTabOpen(true);
+    };
+    const closeTabEdit = () => {
+        setIsTabOpen(false);
+    };
 
     return (
         <div className="menuEdit">
@@ -70,24 +69,24 @@ export default function MenuEditPage() {
             </div>
             <div className="container-14">
                 <div className="recommended-menu">
-                <span className="recommended">
-                    추천 메뉴
-                </span>
+                    <span className="recommended">
+                        추천 메뉴
+                    </span>
                 </div>
                 <div className="main-menu">
-                <span className="main">
-                    주 메뉴
-                </span>
+                    <span className="main">
+                        주 메뉴
+                    </span>
                 </div>
                 <div className="side-tab">
-                <span className="side">
-                    사이드
-                </span>
+                    <span className="side">
+                        사이드
+                    </span>
                 </div>
-                <button className="tab-add-bt" type="button">
-                <span className="tab-add">
-                    + 탭 추가
-                </span>
+                <button className="tab-add-bt" onClick={openTabEdit} style={{cursor: 'pointer'}}>
+                    <span className="tab-add">
+                        + 탭 추가
+                    </span>
                 </button>
             </div>
             <div className="container-7">
@@ -95,9 +94,9 @@ export default function MenuEditPage() {
                     메뉴 관리
                 </div>
                 <button className="menu-add-bt" onClick={goToMenuAdd} style={{cursor: 'pointer'}}>
-                <span className="menu-add">
-                    메뉴 추가
-                </span>
+                    <span className="menu-add">
+                        메뉴 추가
+                    </span>
                 </button>
             </div>
             <div className="menu-list">
@@ -107,14 +106,14 @@ export default function MenuEditPage() {
                             {/* 이미지 URL이 있다면 아래와 같이 사용할 수 있습니다. */}
                             <img
                                 className="menu-1-image"
-                                src={menu.imageurl} alt={""} />
+                                src={menu.imageurl} alt={""}/>
                             <div className="container-4">
                                 <div className="menu-1-name">
                                     {menu.productname}
                                 </div>
                                 <span className="menu-1-info">
-                                {menu.description}
-                            </span>
+                                    {menu.description}
+                                </span>
                             </div>
                         </div>
                         <div className="container-18">
@@ -123,32 +122,59 @@ export default function MenuEditPage() {
                             </div>
                             <div className="container-3">
                                 <div className="container-10">
-                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}} onClick={() => goToMenuEdit(menu)}>
-                                    <span className="edit-1">
-                                        수정
-                                    </span>
+                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}}>
+                                        <span className="edit-1">
+                                            수정
+                                        </span>
                                     </button>
                                     <button className="del-bt" type="button" style={{cursor: 'pointer'}}>
-                                    <span className="del-1">
-                                        삭제
-                                    </span>
+                                        <span className="del-1">
+                                            삭제
+                                        </span>
                                     </button>
                                 </div>
                                 <span className="menu-1-price">
-                                <PriceComponent price={menu.price} />
-                            </span>
+                                    <PriceComponent price={menu.price}/>
+                                </span>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+            {isTabOpen && (
+                <div className="tabEditContainer">
+                    <div className="tabEditTxt">
+                        메뉴 탭 관리
+                    </div>
+                    <div className="tabInsertContainer">
+                        <div className="tabName">
+                            탭 이름
+                        </div>
+                        <div className="inputTab">
+                        </div>
+                    </div>
+                    <div className="tabBtnContainer">
+                        <div className="closeBtn" onClick={closeTabEdit} style={{cursor: 'pointer'}}>
+                            <span className="close">
+                                닫기
+                            </span>
+                        </div>
+                        <div className="saveBtn">
+                            <span className="save">
+                                저장
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }
-function PriceComponent({ price }) {
-// 숫자를 지역화된 문자열로 변환하여 3자리마다 쉼표를 추가
-    const formattedPrice = parseInt(price, 10).toLocaleString();
 
+function PriceComponent({price}) {
+    // 숫자를 지역화된 문자열로 변환하여 3자리마다 쉼표를 추가
+    const formattedPrice = parseInt(price, 10).toLocaleString();
 
     return <div>{formattedPrice}원</div>;
 }

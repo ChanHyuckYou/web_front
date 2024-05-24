@@ -166,19 +166,19 @@ export default function SignInPage2() {
                 </div>
                 <div className="itemContainer">
                     <div className="textContainer">
-                    <div className="store-name">
+                    <div className="owner-name">
                             가맹점 대표자이름
                         </div>
-                        <div className="phone-num">
+                        <div className="store-name">
                             상호명
                         </div>
                         <div className="store-address">
                             가게주소
                         </div>
-                        <div className={"store-date"}>
+                        <div className={"store-id"}>
                             사업자 등록번호
                         </div>
-                        <div className="store-office">
+                        <div className="store-date">
                             사업자 등록일자
                         </div>
 

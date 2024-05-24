@@ -148,16 +148,18 @@
     position: relative;
     margin-left: 145px;
     display: flex;
-    padding: 10px 25px 9px 26px;
-    width: 140px;
+    padding: 10px 25px 9px 25px;
+    width: fit-content;
     box-sizing: border-box;
 }
 .signInPage .nick-ok {
     background: #FF4C00;
     position: relative;
     display: flex;
-    padding: 19px 19.7px 14px 19px;
+    padding: 12px 14px 14px 14px;
     box-sizing: border-box;
+    height: 56px;
+    width: fit-content;
 }
 .signInPage .itemContainer {
 
@@ -219,7 +221,6 @@
 }
 
 .signInPage .btnContainer {
-
     display: flex;
     flex-direction: column;
     align-items: center;
