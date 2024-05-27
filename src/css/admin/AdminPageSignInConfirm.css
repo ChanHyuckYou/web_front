@@ -83,6 +83,7 @@
     min-width: 690px;
     width: 71vw;
     height: fit-content;
+    min-height: 636px;
     box-sizing: border-box;
 }
 .adminPageSignInConfirm .storeContainer {

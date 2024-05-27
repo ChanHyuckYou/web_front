@@ -25,7 +25,7 @@ export default function OrderCheckPage() {
                 </div>
                 <div className="goBackBtn">
                     <div className="goBackTxt">
-                            뒤로가기
+                        뒤로가기
                     </div>
                 </div>
             </div>
@@ -60,7 +60,8 @@ export default function OrderCheckPage() {
                 </div>
                 <div className="order-list">
                     <div className="order-no-4">
-                        <div className="order4InfoContainer">
+                        <div className="order4InfoContainer"
+                             onClick={openOrderDetail}>
                             <div className="orderNoContainer">
                                 <div className="order-4">
                                     004
@@ -215,8 +216,6 @@ export default function OrderCheckPage() {
                                     8000₩
                                 </div>
                             </div>
-
-
                         </div>
                         <div className="order-1-check">
                             <div className="material-symbolscheck-1">
@@ -226,6 +225,76 @@ export default function OrderCheckPage() {
                     </div>
                 </div>
             </div>
+            {isOrderDetail && (
+                <div className="orderDetailFrame">
+                    <div className="frameHeader">
+                        <span className="order-detail">
+                            주문상세
+                        </span>
+                        <div className="orderDetailTxt">
+                            <span className="container-10">
+                                테이블 번호
+                            </span>
+                            <span className="container-11">
+                                주문번호
+                            </span>
+                        </div>
+                        <div className="orderDetailInfo">
+                            <span className="container-13">
+                                3
+                            </span>
+                            <span className="container-12">
+                                004
+                            </span>
+                        </div>
+                    </div>
+                    <div className="detailList">
+                        <span className="listMenuName">
+                            메뉴이름
+                        </span>
+                        <span className="listMenuNum">
+                            수량
+                        </span>
+                        <span className="listMenuPrice">
+                            금액
+                        </span>
+                    </div>
+                    <div className="detailInfoContainer">
+                        <div className="ordersDetailContainer">
+                            <span className="detailMenuName">
+                                메뉴 1이름
+                            </span>
+                            <span className="detailMenuNum">
+                                1
+                            </span>
+                            <span className="detailMenuPrice">
+                                8000₩
+                            </span>
+                        </div>
+                    </div>
+                    <div className="price-sum">
+                        <span className="container-4">
+                            금액합계
+                        </span>
+                        <span className="container-5">
+                            8000₩
+                        </span>
+                    </div>
+                    <div className="btnContainer-detail">
+                        <div className="close-bt"
+                             onClick={closeOrderDetail}>
+                            <span className="container-7">
+                                닫기
+                            </span>
+                        </div>
+                        <div className="serve-done-bt">
+                            <span className="container-6">
+                                서빙완료
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

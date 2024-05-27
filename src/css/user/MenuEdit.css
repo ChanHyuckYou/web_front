@@ -503,7 +503,7 @@
     display: flex;
     padding: 11px 16.2px 11px 16px;
     box-sizing: border-box;
-    width: 170px;
+    width: fit-content;
     height: 58px;
 }
 
