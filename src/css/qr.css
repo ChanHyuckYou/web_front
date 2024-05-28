@@ -543,3 +543,151 @@
     display: flex !important; /* 보이도록 함 */
 
 }
+
+/*테이블추가 임시*/
+.qrCRUD .qrAddEvntFrame {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    display: none; /* 초기에는 숨김 */
+    position: absolute;
+    width: 447px;
+    height: 316px;
+    top: 205px;
+    left: 25vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 29px 41px 29px;
+    box-sizing: border-box;
+}
+.qrCRUD .tableAddTxt {
+    margin-bottom: 71px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}.qrCRUD .table-add-container {
+     margin: 0 50px 71px 0;
+     display: flex;
+     flex-direction: row;
+     width: fit-content;
+     box-sizing: border-box;
+ }
+.qrCRUD .setTableAddTxt {
+    margin: 5px 24.9px 2px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+.qrCRUD .eventReduceBtn {
+    position: relative;
+    margin-right: 13px;
+    display: flex;
+    padding: 0 8.2px 0 8px;
+    box-sizing: border-box;
+}
+.qrCRUD .reduceBox {
+    border: solid 1px #000000;
+    border-radius: 15px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    translate: -50% 0;
+    width: 30px;
+    height: 30px;
+}
+.qrCRUD .reduceMinus {
+    user-select: none; /*텍스트 선택이 되지 않게 해줌*/
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+}
+.qrCRUD .eventAddBtn {
+    position: relative;
+    display: flex;
+    padding: 0 5.2px 0 5px;
+    box-sizing: border-box;
+}
+.qrCRUD .addBox {
+    border: solid 1px #000000;
+    border-radius: 15px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    translate: -50% 0;
+    width: 30px;
+    height: 30px;
+}
+.qrCRUD .addPlus {
+    user-select: none;
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+
+}
+.qrCRUD .tableCountTxt {
+    margin: 4px 13.9px 3px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.qrCRUD .eventBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 213px;
+    box-sizing: border-box;
+}
+.qrCRUD .evntSaveBtn {
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    padding: 5.8px 17.9px 5.2px 17.9px;
+    box-sizing: border-box;
+}
+.qrCRUD .evntSaveTxt {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+.qrCRUD .evntCancleBtn {
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    padding: 4.8px 17.9px 6.2px 17.9px;
+    box-sizing: border-box;
+}
+.qrCRUD .evntCancleTxt {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+/*테이블추가 임시*/

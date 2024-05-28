@@ -1,9 +1,9 @@
 import '../css/qr.css';
 import Icon from '../assets/IconSample.png';
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, {useState, useEffect, useCallback, useRef} from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode.react';
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import jsPDF from 'jspdf';
 
 const QrCRUD = () => {
@@ -15,6 +15,7 @@ const QrCRUD = () => {
     const navigate = useNavigate();
     const [openQRdetail, setOpenQRdetail] = useState(false);
     const qrCanvasRef = useRef(null); // Reference for QR canvas
+
 
     const goBack = () => {
         navigate(-1);
@@ -30,7 +31,7 @@ const QrCRUD = () => {
     };
 
     const qrDetailOpen = (qr, index) => {
-        setSelectedQR({ url: qr, tableNumber: index + 1 });
+        setSelectedQR({url: qr, tableNumber: index + 1});
         setOpenQRdetail(true);
     };
 
@@ -38,6 +39,8 @@ const QrCRUD = () => {
         setOpenQRdetail(false);
         setSelectedQR(null);
     };
+
+
 
     const printQRCode = () => {
         if (selectedQR && qrCanvasRef.current) {
@@ -56,7 +59,7 @@ const QrCRUD = () => {
     const handleGenerateQRClick = async () => {
         if (tableCount > 0) {
             try {
-                const response = await axios.post(`http://43.201.92.62/store/${ownerid}/qr`, { table_count: tableCount });
+                const response = await axios.post(`http://43.201.92.62/store/${ownerid}/qr`, {table_count: tableCount});
                 if (response.status === 201) {
                     setLoading([...loading, ...response.data.qr_urls]);
                     setShowTableFrame(false);
@@ -88,13 +91,13 @@ const QrCRUD = () => {
         <div className="qrCRUD">
             <div className="headerContainer-qr">
                 <div className="logoContainer-qr">
-                    <img className="appNupanIcon-qr" src={Icon} alt="App Icon" />
+                    <img className="appNupanIcon-qr" src={Icon} alt="App Icon"/>
                     <div className="app-nupan11">APP-nupan</div>
                 </div>
                 <div
                     className="goBackBtn-qr"
                     onClick={goBack}
-                    style={{ cursor: 'pointer' }}>
+                    style={{cursor: 'pointer'}}>
                     <div className="goBackTxt-qr">뒤로가기</div>
                 </div>
             </div>
@@ -103,7 +106,7 @@ const QrCRUD = () => {
             <div className="container-511">
                 <div className="table-number11">테이블 번호</div>
                 <button className="table-add-bt" onClick={handleTableCreateClick}
-                        style={{ cursor: 'pointer' }}>
+                        style={{cursor: 'pointer'}}>
                     <span className="table-add">테이블추가</span>
                 </button>
             </div>
@@ -114,7 +117,7 @@ const QrCRUD = () => {
                     <div className="container-211">{index + 1}</div>
                     <div className="container11">
                         <div className="qradd-bt-111">
-                            <QRCode value={url} />
+                            <QRCode value={url}/>
                         </div>
                     </div>
                 </div>
@@ -130,7 +133,7 @@ const QrCRUD = () => {
                         </span>
                     </div>
                     <div className="qr-code" ref={qrCanvasRef}>
-                        <QRCode value={selectedQR.url} />
+                        <QRCode value={selectedQR.url}/>
                     </div>
                     <div className="container">
                         <div className="close-bt"
@@ -146,23 +149,48 @@ const QrCRUD = () => {
                 </div>
             )}
 
-            <div className={`tableframeeee11 ${showTableFrame ? 'show-tableframe' : ''}`}>
-                <div className="tablessssss11">테이블 생성</div>
-                <div className="container-311">
-                    <div className="tablenummmmm11">추가할 테이블 수 :</div>
-                    <input
-                        type="number"
-                        value={tableCount}
-                        onChange={(e) => setTableCount(Number(e.target.value))}
-                        min={0}
-                    />
+            <div className={`qrAddEvntFrame ${showTableFrame ? 'show-tableframe' : ''}`}>
+                <div className="tableAddTxt">
+                    테이블 추가
                 </div>
-                <div className="container-11111">
-                    <div className="tablesubmit11" onClick={handleCancelClick}>
-                        <span className="tbsub11">취소</span>
+                <div className="table-add-container">
+                    <div className="setTableAddTxt">
+                        추가할 테이블 수
                     </div>
-                    <div className="tablesubmit-111" onClick={handleGenerateQRClick}>
-                        <span className="tbsub-111">생성</span>
+                    <div className="eventReduceBtn"
+                         onClick={() => setTableCount(prevCount => Math.max(prevCount - 1, 0))}
+                         style={{cursor: 'pointer'}}>
+                        <div className="reduceBox">
+                        </div>
+                        <span className="reduceMinus">
+                            -
+                        </span>
+                    </div>
+                    <div className="tableCountTxt">
+                        {tableCount}
+                    </div>
+                    <div className="eventAddBtn"
+                         onClick={() => setTableCount(prevCount => prevCount + 1)}
+                         style={{cursor: 'pointer'}}>
+                        <div className="addBox">
+                        </div>
+                        <span className="addPlus">
+                            +
+                        </span>
+                    </div>
+                </div>
+                <div className="eventBtnContainer">
+                    <div className="evntCancleBtn"
+                         onClick={handleCancelClick}>
+                            <span className="evntCancleTxt">
+                                취소
+                            </span>
+                    </div>
+                    <div className="evntSaveBtn"
+                         onClick={handleGenerateQRClick}>
+                            <span className="evntSaveTxt">
+                                추가
+                            </span>
                     </div>
                 </div>
             </div>
