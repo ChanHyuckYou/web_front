@@ -9,6 +9,7 @@
     "axios": "^1.6.8",
     "date-fns": "^3.6.0",
     "firebase": "^10.11.1",
+    "jspdf": "^2.5.1",
     "mongoose": "^8.2.3",
     "nginx": "^1.0.8",
     "qrcode.react": "^3.1.0",

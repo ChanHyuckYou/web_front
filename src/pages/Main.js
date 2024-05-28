@@ -33,6 +33,9 @@ export default function Main() {
     const toggleMoreMenu = () => {
         setIsMoreOpen(prevState => !prevState);
     };
+    const goToLogOut = () => {
+        navigate('/');
+    }
 
 
 
@@ -65,7 +68,7 @@ export default function Main() {
                                  style={{cursor: 'pointer'}}>
                                 내 정보
                             </div>
-                            <div className="goToLogout-main">
+                            <div className="goToLogout-main" onClick={goToLogOut}>
                                 로그아웃
                             </div>
                         </div>

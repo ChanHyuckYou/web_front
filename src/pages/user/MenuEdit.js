@@ -167,7 +167,6 @@ export default function MenuEditPage() {
                     </div>
                 </div>
             )}
-
         </div>
     );
 }
