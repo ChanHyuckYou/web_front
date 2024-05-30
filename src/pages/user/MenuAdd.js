@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Icon from '../../assets/IconSample.png';
 
+
+
 export default function MenuAdd() {
     const navigate = useNavigate();
     const [productname, setProductName] = useState('');
@@ -29,7 +31,7 @@ export default function MenuAdd() {
                 setDescription(data.description || '');
                 setAvailable(data.available);
                 setPreview(data.imageurl || '');
-                }
+            }
             fetchMenuData();
         }
     }, [productid, menus]);
@@ -58,9 +60,11 @@ export default function MenuAdd() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const formattedPrice = parseInt(price, 10).toLocaleString();
+
         const formData = new FormData();
         formData.append('productname', productname);
-        formData.append('price', price);
+        formData.append('price', formattedPrice);
         formData.append('category', category);
         formData.append('description', description);
         formData.append('available', available);
@@ -100,7 +104,7 @@ export default function MenuAdd() {
         <form onSubmit={handleSubmit}>
             <div className="menuAdd">
                 <div className="logoContainer">
-                    <img className="appNupanIcon" src={Icon} alt=""/>
+                    <img className="appNupanIcon" src={Icon} alt="" />
                     <div className="app-nupan">APP-nupan</div>
                 </div>
                 <div className="line-5"></div>
@@ -108,16 +112,16 @@ export default function MenuAdd() {
                 <div className="menuItemContainer">
                     <div className="image">
                         {preview && (
-                            <img src={preview} alt="메뉴 미리보기" className="image-sample"/>
+                            <img src={preview} alt="메뉴 미리보기" className="image-sample" />
                         )}
-                        <div className="image-add-bt" onClick={handleButtonClick} type="button" style={{cursor: 'pointer'}}>
+                        <div className="image-add-bt" onClick={handleButtonClick} type="button" style={{ cursor: 'pointer' }}>
                             <span className="image-add">사진추가</span>
                         </div>
                         <input
                             type="file"
                             ref={fileInputRef}
                             onChange={handleFileChange}
-                            style={{display: 'none'}}
+                            style={{ display: 'none' }}
                         />
                     </div>
                     <div className="menuInfoContainer">
@@ -134,13 +138,13 @@ export default function MenuAdd() {
                                 onChange={(e) => setProductName(e.target.value)}
                                 className="inputMenuName"
                                 placeholder="메뉴이름을 입력해주세요"
-                                autoComplete="off"/>
+                                autoComplete="off" />
                             <textarea
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                                 className="inputMenuInfo"
                                 placeholder="메뉴설명을 입력해주세요"
-                                autoComplete="off"/>
+                                autoComplete="off" />
                             <input
                                 list="categories"
                                 type="text"
@@ -148,7 +152,7 @@ export default function MenuAdd() {
                                 onChange={(e) => setCategory(e.target.value)}
                                 className="inputMenuTag"
                                 placeholder="태그 이름"
-                                autoComplete="off"/>
+                                autoComplete="off" />
                             <datalist id="categories">
                                 <option value="태그1"></option>
                                 <option value="태그2"></option>
@@ -160,20 +164,20 @@ export default function MenuAdd() {
                                 onChange={(e) => setPrice(e.target.value)}
                                 className="inputMenuPrice"
                                 placeholder="가격을 입력해주세요"
-                                autoComplete="off"/>
+                                autoComplete="off" />
                         </div>
                     </div>
                 </div>
                 <div className="container">
                     <button className="menu-add-bt"
                             type="submit"
-                            style={{cursor: 'pointer'}}>
+                            style={{ cursor: 'pointer' }}>
                         <span className="menu-add-2">메뉴추가</span>
                     </button>
                     <button className="add-cancel-bt"
                             type="button"
                             onClick={goToMenuEdit}
-                            style={{cursor: 'pointer'}}>
+                            style={{ cursor: 'pointer' }}>
                         <span className="cancel">작성취소</span>
                     </button>
                 </div>

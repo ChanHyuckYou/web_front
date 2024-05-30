@@ -10,6 +10,13 @@ export default function MenuEditPage() {
     const [menus, setMenus] = useState([]); // 메뉴 정보를 저장할 상태
     const [isTabOpen, setIsTabOpen] = useState(false);
 
+    const goToMenuEdit = (selectedMenu) => {
+        localStorage.setItem('ownerid', ownerid);
+        localStorage.setItem('productid', selectedMenu.productid);
+        console.log("선택된 productid :", selectedMenu.productid);
+        // navigate 함수를 통해 선택한 menu만을 상태로 전달합니다.
+        navigate('/Main/Menu/Add', { state: { selectedMenu } });
+    };
 
     // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
     useEffect(() => {
@@ -30,6 +37,7 @@ export default function MenuEditPage() {
     }, [ownerid]);
 
     const goToMenuAdd = () => {
+        localStorage.removeItem('productid');
         localStorage.setItem('ownerid', ownerid);
         navigate('/Main/Menu/Add');
     };
@@ -44,6 +52,26 @@ export default function MenuEditPage() {
     };
     const closeTabEdit = () => {
         setIsTabOpen(false);
+    };
+
+    const handleDelete = async (productid) => {
+        try {
+            const response = await fetch(`http://43.201.92.62/store/${productid}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setMenus(menus.filter(menu => menu.productid !== productid));
+                alert('메뉴가 성공적으로 삭제되었습니다.');
+            } else {
+                const errorResponse = await response.json();
+                console.error('Failed to delete menu item:', errorResponse.error);
+                alert(`Failed to delete menu: ${errorResponse.error}`);
+            }
+        } catch (error) {
+            console.error('Error deleting menu item:', error);
+            alert("Failed to delete menu");
+        }
     };
 
     return (
@@ -122,19 +150,21 @@ export default function MenuEditPage() {
                             </div>
                             <div className="container-3">
                                 <div className="container-10">
-                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}}>
+                                    <button className="edit-bt-1" type="button" style={{cursor: 'pointer'}}
+                                            onClick={() => goToMenuEdit(menu)}>
                                         <span className="edit-1">
                                             수정
                                         </span>
                                     </button>
-                                    <button className="del-bt" type="button" style={{cursor: 'pointer'}}>
+                                    <button className="del-bt" type="button" style={{cursor: 'pointer'}}
+                                            onClick={() => handleDelete(menu.productid)}>
                                         <span className="del-1">
                                             삭제
                                         </span>
                                     </button>
                                 </div>
                                 <span className="menu-1-price">
-                                    <PriceComponent price={menu.price}/>
+                                    {menu.price}
                                 </span>
                             </div>
                         </div>
@@ -171,9 +201,4 @@ export default function MenuEditPage() {
     );
 }
 
-function PriceComponent({price}) {
-    // 숫자를 지역화된 문자열로 변환하여 3자리마다 쉼표를 추가
-    const formattedPrice = parseInt(price, 10).toLocaleString();
 
-    return <div>{formattedPrice}원</div>;
-}
