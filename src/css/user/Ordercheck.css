@@ -165,7 +165,7 @@
 .orderCheck .orderNoContainer {
     border-right: 1px solid #000000;
     display: flex;
-    width: 100px;
+    width: 120px;
 }
 .orderCheck .orderTableContainer {
     border-right: 1px solid #000000;
@@ -200,7 +200,7 @@
 
 /*주문정보 테이블*/
 .orderCheck .order-number {
-    margin-right: 30px;
+    margin-right: 40px;
     overflow-wrap: break-word;
     font-family: 'Inter';
     font-style: italic;
@@ -411,7 +411,7 @@
 
 /*주문 수량*/
 .orderCheck .orderAmount {
-    margin: 15px 0 0 5px;
+    margin: 15px 0 15px 5px;
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';

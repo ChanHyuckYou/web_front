@@ -103,9 +103,6 @@ export default function OrderCheckPage() {
                     <span className="order-price">
                         금액
                     </span>
-                    <span className="serving-check">
-                        서빙완료
-                    </span>
                 </div>
                 <div className="order-list">
                     {orders.map((order, index) => (
@@ -138,7 +135,7 @@ export default function OrderCheckPage() {
                                 </div>
                                 <div className="orderPaymentContainer">
                                     <div className="orderPayment">
-                                        추후결제
+                                        결제완료
                                     </div>
                                 </div>
                                 <div className="orderPriceContainer">
@@ -147,10 +144,6 @@ export default function OrderCheckPage() {
                                             {formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}
                                         </div>
                                     ))}
-                                </div>
-                            </div>
-                            <div className={`order-${index + 1}-check`}>
-                                <div className="rectangle-46">
                                 </div>
                             </div>
                         </div>
