@@ -1,17 +1,44 @@
 import '../../css/user/Ordercheck.css';
-import React, {useState, useEffect} from 'react';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Icon from '../../assets/IconSample.png';
 
 export default function OrderCheckPage() {
+    const [orders, setOrders] = useState([]);
+    const ownerid = localStorage.getItem('ownerid');
     const [isOrderDetail, setIsOrderDetail] = useState(false);
+    const [selectedOrder, setSelectedOrder] = useState(null);
 
-    const openOrderDetail = () => {
+    useEffect(() => {
+        // 데이터 불러오기
+        const fetchOrders = async () => {
+            try {
+                const response = await axios.post('http://43.201.92.62/order/serve_list', {
+                    ownerid: ownerid  // 가맹점의 ID를 여기에 넣습니다.
+                });
+                setOrders(response.data);
+            } catch (error) {
+                console.error("주문 현황을 불러오는 중 오류가 발생했습니다!", error);
+                window.alert("오류", "주문 현황을 불러오는 중 오류가 발생했습니다.");
+            }
+        };
+
+        fetchOrders();
+    }, [ownerid]);
+
+    const openOrderDetail = (order) => {
+        setSelectedOrder(order);
         setIsOrderDetail(true);
     };
+
     const closeOrderDetail = () => {
         setIsOrderDetail(false);
-    }
+        setSelectedOrder(null);
+    };
+
+    const formatPrice = (price) => {
+        return Number(price).toLocaleString('ko-KR') + '₩';
+    };
 
     return (
         <div className="orderCheck">
@@ -59,173 +86,56 @@ export default function OrderCheckPage() {
                     </span>
                 </div>
                 <div className="order-list">
-                    <div className="order-no-4">
-                        <div className="order4InfoContainer"
-                             onClick={openOrderDetail}>
-                            <div className="orderNoContainer">
-                                <div className="order-4">
-                                    004
+                    {orders.map((order, index) => (
+                        <div className={`order-no-4`} key={order.orderid}>
+                            <div className="order4InfoContainer"
+                                 onClick={() => openOrderDetail(order)}>
+                                <div className="orderNoContainer">
+                                    <div className={`order-4`}>
+                                        {order.orderid}
+                                    </div>
+                                </div>
+                                <div className="orderTableContainer">
+                                    <div className={`order-4-table`}>
+                                        {order.tablenumber}
+                                    </div>
+                                </div>
+                                <div className="orderMenuContainer">
+                                    {order.order_details.map((detail, idx) => (
+                                        <div className={`order-4-menu-1`} key={idx}>
+                                            {detail.menu_name}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="orderAmountContainer">
+                                    {order.order_details.map((detail, idx) => (
+                                        <div className="orderAmount" key={idx}>
+                                            {detail.quantity}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="orderPaymentContainer">
+                                    <div className="orderPayment">
+                                        추후결제
+                                    </div>
+                                </div>
+                                <div className="orderPriceContainer">
+                                    {order.order_details.map((detail, idx) => (
+                                        <div className="orderPrice" key={idx}>
+                                            {formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
-                            <div className="orderTableContainer">
-                                <div className="order-4-table">
-                                    3
-                                </div>
-                            </div>
-                            <div className="orderMenuContainer">
-                                <div className="order-4-menu-1">
-                                    메뉴 1 이름
-                                </div>
-                            </div>
-                            <div className="orderAmountContainer">
-                                <div className="orderAmount">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderPaymentContainer">
-                                <div className="orderPayment">
-                                    추후결제
-                                </div>
-                            </div>
-                            <div className="orderPriceContainer">
-                                <div className="orderPrice">
-                                    8000₩
-                                </div>
-                            </div>
-                        </div>
-                        <div className="order-4-check">
-                            <div className="rectangle-46">
-                            </div>
-                        </div>
-                    </div>
-                    <div className="order-no-3">
-                        <div className="order3InfoContainer">
-                            <div className="orderNoContainer">
-                                <div className="order-3">
-                                    003
-                                </div>
-                            </div>
-                            <div className="orderTableContainer">
-                                <div className="order-3-table">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderMenuContainer">
-                                <div className="order-3-menu-1">
-                                    메뉴 1 이름
-                                </div>
-                            </div>
-                            <div className="orderAmountContainer">
-                                <div className="orderAmount">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderPaymentContainer">
-                                <div className="orderPayment">
-                                    즉시결제
-                                </div>
-                            </div>
-                            <div className="orderPriceContainer">
-                                <div className="orderPrice">
-                                    8000₩
+                            <div className={`order-${index + 1}-check`}>
+                                <div className="rectangle-46">
                                 </div>
                             </div>
                         </div>
-                        <div className="order-3-check">
-                            <div className="rectangle-461">
-                            </div>
-                        </div>
-                    </div>
-                    <div className="order-no-2">
-                        <div className="order2Info2Container">
-                            <div className="orderNoContainer">
-                                <div className="order-2">
-                                    002
-                                </div>
-                            </div>
-                            <div className="orderTableContainer">
-                                <div className="order-2-table">
-                                    2
-                                </div>
-                            </div>
-                            <div className="orderMenuContainer">
-                                <div className="order-2-menu-1">
-                                    메뉴 1 이름
-                                </div>
-                                <div className="order-2-menu-2">
-                                    메뉴 3 이름
-                                </div>
-                            </div>
-                            <div className="orderAmountContainer">
-                                <div className="orderAmount">
-                                    1
-                                </div>
-                                <div className="orderAmount">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderPaymentContainer">
-                                <div className="orderPayment">
-                                    추후결제
-                                </div>
-                            </div>
-                            <div className="orderPriceContainer">
-                                <div className="orderPrice">
-                                    8000₩
-                                </div>
-                                <div className="orderPrice">
-                                    6500₩
-                                </div>
-                            </div>
-                        </div>
-                        <div className="order-2-check">
-                            <div className="material-symbolscheck">
-                                <img className="vector" src="assets/vectors/Vector1_x2.svg"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="order-no-1">
-                        <div className="order1Info1Container">
-                            <div className="orderNoContainer">
-                                <div className="order-1">
-                                    001
-                                </div>
-                            </div>
-                            <div className="orderTableContainer">
-                                <div className="order-1-table">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderMenuContainer">
-                                <div className="order-1-menu-1">
-                                    메뉴 1 이름
-                                </div>
-                            </div>
-                            <div className="orderAmountContainer">
-                                <div className="orderAmount">
-                                    1
-                                </div>
-                            </div>
-                            <div className="orderPaymentContainer">
-                                <div className="orderPayment">
-                                    즉시결제
-                                </div>
-                            </div>
-                            <div className="orderPriceContainer">
-                                <div className="orderPrice">
-                                    8000₩
-                                </div>
-                            </div>
-                        </div>
-                        <div className="order-1-check">
-                            <div className="material-symbolscheck-1">
-                                <img className="vector-1" src="assets/vectors/Vector6_x2.svg"/>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-            {isOrderDetail && (
+            {isOrderDetail && selectedOrder && (
                 <div className="orderDetailFrame">
                     <div className="frameHeader">
                         <span className="order-detail">
@@ -241,10 +151,10 @@ export default function OrderCheckPage() {
                         </div>
                         <div className="orderDetailInfo">
                             <span className="container-13">
-                                3
+                                {selectedOrder.tablenumber}
                             </span>
                             <span className="container-12">
-                                004
+                                {selectedOrder.orderid}
                             </span>
                         </div>
                     </div>
@@ -260,24 +170,26 @@ export default function OrderCheckPage() {
                         </span>
                     </div>
                     <div className="detailInfoContainer">
-                        <div className="ordersDetailContainer">
-                            <span className="detailMenuName">
-                                메뉴 1이름
-                            </span>
-                            <span className="detailMenuNum">
-                                1
-                            </span>
-                            <span className="detailMenuPrice">
-                                8000₩
-                            </span>
-                        </div>
+                        {selectedOrder.order_details.map((detail, idx) => (
+                            <div className="ordersDetailContainer" key={idx}>
+                                <span className="detailMenuName">
+                                    {detail.menu_name}
+                                </span>
+                                <span className="detailMenuNum">
+                                    {detail.quantity}
+                                </span>
+                                <span className="detailMenuPrice">
+                                    {formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                     <div className="price-sum">
                         <span className="container-4">
                             금액합계
                         </span>
                         <span className="container-5">
-                            8000₩
+                            {formatPrice(selectedOrder.order_details.reduce((total, item) => total + (parseFloat(item.menu_price) * parseInt(item.quantity)), 0))}
                         </span>
                     </div>
                     <div className="btnContainer-detail">
