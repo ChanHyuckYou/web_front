@@ -22,7 +22,6 @@ export default function OrderCheckPage() {
                 window.alert("오류", "주문 현황을 불러오는 중 오류가 발생했습니다.");
             }
         };
-
         fetchOrders();
     }, [ownerid]);
 
@@ -38,6 +37,29 @@ export default function OrderCheckPage() {
 
     const formatPrice = (price) => {
         return Number(price).toLocaleString('ko-KR') + '₩';
+    };
+
+    const formatTime = (dateString) => {
+        const date = new Date(dateString);
+        const hours = date.getHours().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+        const seconds = date.getSeconds().toString().padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
+
+    const handleServeDone = async (orderid) => {
+        try {
+            const response = await axios.post('http://43.201.92.62/order/serve_done', { orderid: orderid });
+            if (response.data.message) {
+                setOrders(orders.filter(order => order.orderid !== orderid));
+                closeOrderDetail();
+            } else {
+                window.alert("오류", "서빙 완료 처리 중 오류가 발생했습니다.");
+            }
+        } catch (error) {
+            console.error("서빙 완료 처리 중 오류가 발생했습니다!", error);
+            window.alert("오류", "서빙 완료 처리 중 오류가 발생했습니다.");
+        }
     };
 
     return (
@@ -64,7 +86,7 @@ export default function OrderCheckPage() {
             <div className="order-list-table">
                 <div className="table-list">
                     <span className="order-number">
-                        주문번호
+                        주문시간
                     </span>
                     <span className="order-table">
                         테이블 번호
@@ -92,7 +114,7 @@ export default function OrderCheckPage() {
                                  onClick={() => openOrderDetail(order)}>
                                 <div className="orderNoContainer">
                                     <div className={`order-4`}>
-                                        {order.orderid}
+                                        {formatTime(order.ordertime)}
                                     </div>
                                 </div>
                                 <div className="orderTableContainer">
@@ -146,7 +168,7 @@ export default function OrderCheckPage() {
                                 테이블 번호
                             </span>
                             <span className="container-11">
-                                주문번호
+                                주문시간
                             </span>
                         </div>
                         <div className="orderDetailInfo">
@@ -154,7 +176,7 @@ export default function OrderCheckPage() {
                                 {selectedOrder.tablenumber}
                             </span>
                             <span className="container-12">
-                                {selectedOrder.orderid}
+                                {formatTime(selectedOrder.ordertime)}
                             </span>
                         </div>
                     </div>
@@ -199,7 +221,7 @@ export default function OrderCheckPage() {
                                 닫기
                             </span>
                         </div>
-                        <div className="serve-done-bt">
+                        <div className="serve-done-bt" onClick={() => handleServeDone(selectedOrder.orderid)}>
                             <span className="container-6">
                                 서빙완료
                             </span>

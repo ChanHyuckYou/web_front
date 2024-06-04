@@ -476,8 +476,7 @@
     position: relative;
     margin-bottom: 7px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 14.5px 14.8px 0 23px;
     width: 633px;
     height: 351px;
