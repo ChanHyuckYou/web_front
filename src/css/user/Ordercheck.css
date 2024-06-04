@@ -835,7 +835,7 @@
     color: #000000;
 }
 .orderCheck .order-list {
-
+    border: 1px solid #000000;
     margin-right: 28.3px;
     display: flex;
     flex-direction: column;
@@ -845,7 +845,17 @@
     height: 550px;
     padding-top: 10px;
     box-sizing: border-box;
+    /*스크롤기능*/
+    overflow-y: auto;
+    /*스크롤바 없애기*/
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
 }
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.orderCheck .order-list::-webkit-scrollbar {
+    display: none;
+}
+
 .orderCheck .order-list-table {
     border-radius: 20px;
     border: 3px solid #DC6721;
