@@ -180,9 +180,9 @@ const QrCRUD = () => {
                     </div>
                 </div>
                 <div className="eventBtnContainer">
-                    <div className="evntCancleBtn"
+                    <div className="evntCancelBtn"
                          onClick={handleCancelClick}>
-                            <span className="evntCancleTxt">
+                            <span className="evntCancelTxt">
                                 취소
                             </span>
                     </div>
