@@ -2,7 +2,7 @@ import '../../css/user/Ordercheck.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Icon from '../../assets/IconSample.png';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function OrderCheckPage() {
     const navigate = useNavigate();
@@ -14,14 +14,18 @@ export default function OrderCheckPage() {
     useEffect(() => {
         if (!ownerid) {
             alert("잘못된 접근입니다. 다시 로그인 해주세요.");
-            navigate('/');}
+            navigate('/');
+        }
         // 데이터 불러오기
         const fetchOrders = async () => {
             try {
                 const response = await axios.post('http://43.201.92.62/order/serve_list', {
                     ownerid: ownerid  // 가맹점의 ID를 여기에 넣습니다.
                 });
-                setOrders(response.data);
+
+                // 주문 내역을 최신순으로 정렬
+                const sortedOrders = response.data.sort((a, b) => new Date(b.ordertime) - new Date(a.ordertime));
+                setOrders(sortedOrders);
             } catch (error) {
                 console.error("주문 현황을 불러오는 중 오류가 발생했습니다!", error);
                 window.alert("오류", "주문 현황을 불러오는 중 오류가 발생했습니다.");
@@ -32,7 +36,7 @@ export default function OrderCheckPage() {
 
     const goBack = () => {
         localStorage.setItem('ownerid', ownerid);
-        navigate('/Main')
+        navigate('/Main');
     }
 
     const openOrderDetail = (order) => {
@@ -49,12 +53,17 @@ export default function OrderCheckPage() {
         return Number(price).toLocaleString('ko-KR') + '₩';
     };
 
-    const formatTime = (dateString) => {
-        const date = new Date(dateString);
-        const hours = date.getHours().toString().padStart(2, '0');
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-        const seconds = date.getSeconds().toString().padStart(2, '0');
-        return `${hours}:${minutes}:${seconds}`;
+    const formatTime = (timeString) => {
+        if (timeString && typeof timeString === 'string') {
+            const parts = timeString.split('T');
+            if (parts.length > 1) {
+                const timeParts = parts[1].split('.');
+                if (timeParts.length > 0) {
+                    return timeParts[0]; // 시간만 추출
+                }
+            }
+        }
+        return '';
     };
 
     const handleServeDone = async (orderid) => {
@@ -129,14 +138,13 @@ export default function OrderCheckPage() {
                     </div>
                     <div className="detail-info">
                         <div className="detail-list">
-
-                            <span className={"detail-menu-quantity"}>테이블 번호 : {selectedOrder.tablenumber}</span>
+                            <span className="detail-menu-quantity">테이블 번호 : {selectedOrder.tablenumber}</span>
                             <span>주문시간 : {formatTime(selectedOrder.ordertime)}</span>
                         </div>
                     </div>
                     <div className="detail-list">
                         <span>메뉴이름</span>
-                        <span className={"detail-menu-quantity"}>수량</span>
+                        <span className="detail-menu-quantity">수량</span>
                         <span>금액</span>
                     </div>
                     <div className="detail-info-container">
@@ -154,11 +162,10 @@ export default function OrderCheckPage() {
                     </div>
                     <div className="btn-container-detail">
                         <button className="close-btn" onClick={closeOrderDetail}>닫기</button>
-                        <button className="serve-done-btn" onClick={() => handleServeDone(selectedOrder.orderid)}>서빙완료
-                        </button>
+                        <button className="serve-done-btn" onClick={() => handleServeDone(selectedOrder.orderid)}>서빙완료</button>
                     </div>
                 </div>
             )}
         </div>
-    )
+    );
 }

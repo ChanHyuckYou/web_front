@@ -2,6 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    height: 100%;
+    overflow: auto; /* Prevent body overflow */
 }
 
 .menu-edit-container {
@@ -9,7 +11,6 @@ body, html {
     flex-direction: column;
     min-height: 100vh;
     background-color: #f5f5f5;
-
     box-sizing: border-box;
 }
 
@@ -83,6 +84,8 @@ body, html {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scroll */
 }
 
 .menu-edit-item {

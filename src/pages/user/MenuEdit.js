@@ -19,7 +19,8 @@ export default function MenuEditPage() {
     useEffect(() => {
         if (!ownerid) {
             alert("잘못된 접근입니다. 다시 로그인 해주세요.");
-            navigate('/');}
+            navigate('/');
+        }
         const fetchMenus = async () => {
             try {
                 const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`);
