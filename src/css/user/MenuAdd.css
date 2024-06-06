@@ -1,244 +1,105 @@
-.menuAdd {
-    background: #FFFFFF;
+/* MenuAdd.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menu-add-container {
     display: flex;
     flex-direction: column;
-    padding: 2vh 0 152px 0;
+    min-height: 100vh;
+    background-color: #f5f5f5;
     box-sizing: border-box;
 }
-.menuAdd .app-nupan {
-    margin-top: 26px;
-    display: inline-block;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
+
+.divider {
+    margin: 20px 0;
 }
-.menuAdd .line-5 {
-    background: #DC6721;
-    margin-bottom: 28px;
+
+.menu-add-header {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.form-label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.form-input {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
     width: 100%;
-    height: 2px;
-}
-.menuAdd .appNupanIcon{
-    width: 79px;
-    height: 80px;
-    margin-right: 26px;
-}
-.menuAdd .logoContainer {
-    margin: 0 98px 2vh 4vw;
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: row;
-    align-self: flex-start;
-    width: fit-content;
 }
 
-.menuAdd .menu-add-1 {
-    margin: 2vh 98px 5vh 4vw;
-    display: inline-block;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
-}
-
-
-.menuAdd .menuItemContainer {
-    margin-left: 4vw;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.menuAdd .menuInfoContainer {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-.menuAdd .textContainer {
-    margin-right: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    box-sizing: border-box;
-}
-.menuAdd .inputContainer {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items: flex-start;
-}
-
-.menuAdd .image {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    position: relative;
-    margin: 0 4vw 82px 0;
+.image-preview {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 13px 0 10px 0;
-    width: 255px;
-    min-width: 255px;
-    height: fit-content;
-    box-sizing: border-box;
+    gap: 10px;
 }
 
-
-/*메뉴인포텍스트*/
-.menuAdd .menu-name {
-    margin: 8px 0 33px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-    height: 29px;
-}
-.menuAdd .menu-info {
-    margin: 8px 0 210px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-    height: 29px;
-}
-.menuAdd .tag {
-    margin: 5px 0 34px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-    height: 29px;
-}
-.menuAdd .price {
-    margin: 9px 0 29px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 24px;
-    color: #000000;
-    height: 29px;
-}
-/*메뉴인포텍스트*/
-
-.menuAdd .image-sample {
-    border: 1px solid #000000;
-    background: #D9D9D9;
-    margin-bottom: 9px;
+.image-sample {
     width: 176px;
     height: 141px;
+    border: 1px solid #000;
+    background: #d9d9d9;
 }
-.menuAdd .image-add {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-weight: 300;
-    font-size: 20px;
-    color: #000000;
-    margin: 0 auto;
+
+.image-add-btn {
+    background-color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
-.menuAdd .image-add-bt {
-    border: 1px solid #000000;
-    background: #D9D9D9;
-    position: relative;
-    margin-right: 1px;
+
+.button-group {
     display: flex;
-    padding: 9px 0 8px 1px;
-    width: 125px;
-    box-sizing: border-box;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/*인풋스페이스*/
-.menuAdd .inputMenuName {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 45vw;
-    max-width: 382px;
-    min-width: 382px;
-    height: 42px;
-    margin-bottom: 29px;
-}
-.menuAdd .inputMenuInfo {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 45vw;
-    max-width: 540px;
-    min-width: 387px;
-    height: 212px;
-    margin-bottom: 29px;
-}
-.menuAdd .inputMenuTag {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 45vw;
-    max-width: 382px;
-    min-width: 382px;
-    height: 42px;
-    margin-bottom: 29px;
-
-}
-.menuAdd .inputMenuPrice {
-    border: 1px solid #000000;
-    background: #FFFFFF;
-    width: 45vw;
-    max-width: 382px;
-    min-width: 382px;
-    height: 42px;
-    margin-bottom: 29px;
-}
-/*인풋스페이스*/
-
-
-
-.menuAdd .menu-add-2 {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #FFFFFF;
-}
-.menuAdd .cancel {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-}
-.menuAdd .menu-add-bt {
-    background: #4097E8;
-    position: relative;
-    margin-right: 30px;
-    display: flex;
-    padding: 6px 9.7px 6px 9px;
-    box-sizing: border-box;
-}
-.menuAdd .add-cancel-bt {
-    background: #D9D9D9;
-    position: relative;
-    display: flex;
-    padding: 6px 9.7px 6px 9px;
-    box-sizing: border-box;
-}
-.menuAdd .container {
-    margin-left: 30px;
-    margin-top: auto;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: fit-content;
-    box-sizing: border-box;
+.submit-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
 }
 
+.submit-btn {
+    background-color: #4097e8;
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: #d9d9d9;
+}

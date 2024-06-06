@@ -14,8 +14,7 @@ const QrCRUD = () => {
     const ownerid = localStorage.getItem('ownerid');
     const navigate = useNavigate();
     const [openQRdetail, setOpenQRdetail] = useState(false);
-    const qrCanvasRef = useRef(null); // Reference for QR canvas
-
+    const qrCanvasRef = useRef(null);
 
     const goBack = () => {
         navigate(-1);
@@ -40,8 +39,6 @@ const QrCRUD = () => {
         setSelectedQR(null);
     };
 
-
-
     const printQRCode = () => {
         if (selectedQR && qrCanvasRef.current) {
             const pdf = new jsPDF();
@@ -64,7 +61,7 @@ const QrCRUD = () => {
                     setLoading([...loading, ...response.data.qr_urls]);
                     setShowTableFrame(false);
                     setTableCount(0);
-                    console.log("생성된 tableidx : ", loading)
+                    console.log("생성된 tableidx : ", loading);
                 }
             } catch (error) {
                 console.error('Error generating QR codes:', error);
@@ -84,8 +81,11 @@ const QrCRUD = () => {
     }, [ownerid]);
 
     useEffect(() => {
+        if (!ownerid) {
+            alert("잘못된 접근입니다. 다시 로그인 해주세요.");
+            navigate('/');}
         fetchQRCodes();
-    }, [fetchQRCodes]);
+    }, [fetchQRCodes, ownerid, navigate]);
 
     return (
         <div className="qrCRUD">
@@ -101,7 +101,6 @@ const QrCRUD = () => {
                     <div className="goBackTxt-qr">뒤로가기</div>
                 </div>
             </div>
-            <div className="line-511"></div>
 
             <div className="container-511">
                 <div className="table-number11">테이블 번호</div>

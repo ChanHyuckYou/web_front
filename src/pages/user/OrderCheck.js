@@ -12,6 +12,9 @@ export default function OrderCheckPage() {
     const [selectedOrder, setSelectedOrder] = useState(null);
 
     useEffect(() => {
+        if (!ownerid) {
+            alert("잘못된 접근입니다. 다시 로그인 해주세요.");
+            navigate('/');}
         // 데이터 불러오기
         const fetchOrders = async () => {
             try {
@@ -25,7 +28,7 @@ export default function OrderCheckPage() {
             }
         };
         fetchOrders();
-    }, [ownerid]);
+    }, [ownerid, navigate]);
 
     const goBack = () => {
         localStorage.setItem('ownerid', ownerid);
@@ -70,90 +73,48 @@ export default function OrderCheckPage() {
     };
 
     return (
-        <div className="orderCheck">
-            <div className="headerContainer">
-                <div className="logoContainer">
-                    <img className="appNupanIcon" src={Icon} alt="">
-                    </img>
-                    <div className="app-nupan">
-                        APP-nupan
-                    </div>
+        <div className="order-check-container">
+            <div className="header">
+                <div className="logo">
+                    <img className="appNupanIcon" src={Icon} alt="App Nupan Logo" />
+                    <h1 className="app-title">APP-nupan</h1>
                 </div>
-                <div className="goBackBtn" onClick={goBack} style={{cursor: 'pointer'}}>
-                    <div className="goBackTxt">
-                        뒤로가기
-                    </div>
-                </div>
+                <button className="back-button" onClick={goBack} style={{ cursor: 'pointer' }}>뒤로가기</button>
             </div>
-            <div className="line-5">
+            <div className="divider"></div>
+            <div className="order-header">
+                <h2>주문확인</h2>
+                <h2>현재 주문 건수 : {orders.length}건</h2>
             </div>
-            <div className="order-check">
-                주문확인
-            </div>
-
-                <span className="order-check">
-                    현재 주문 건수 : {orders.length}건
-                </span>
             <div className="order-list-table">
                 <div className="table-list">
-                    <span className="order-number">
-                        주문시간
-                    </span>
-                    <span className="order-table">
-                        테이블 번호
-                    </span>
-                    <span className="order-menu">
-                        주문 메뉴
-                    </span>
-                    <span className="order-amount">
-                        수량
-                    </span>
-                    <span className="order-payment">
-                        결제여부
-                    </span>
-                    <span className="order-price">
-                        금액
-                    </span>
+                    <span className="order-column">주문시간</span>
+                    <span className="order-column">테이블 번호</span>
+                    <span className="order-column">주문 메뉴</span>
+                    <span className="order-column">수량</span>
+                    <span className="order-column">결제여부</span>
+                    <span className="order-column">금액</span>
                 </div>
                 <div className="order-list">
                     {orders.map((order, index) => (
-                        <div className={`order-no-4`} key={order.orderid}>
-                            <div className="order4InfoContainer"
-                                 onClick={() => openOrderDetail(order)}>
-                                <div className="orderNoContainer">
-                                    <div className={`order-4`}>
-                                        {formatTime(order.ordertime)}
-                                    </div>
-                                </div>
-                                <div className="orderTableContainer">
-                                    <div className={`order-4-table`}>
-                                        {order.tablenumber}
-                                    </div>
-                                </div>
-                                <div className="orderMenuContainer">
+                        <div className="order-item" key={order.orderid}>
+                            <div className="order-info" onClick={() => openOrderDetail(order)}>
+                                <div className="order-detail">{formatTime(order.ordertime)}</div>
+                                <div className="order-detail">{order.tablenumber}</div>
+                                <div className="order-detail">
                                     {order.order_details.map((detail, idx) => (
-                                        <div className={`order-4-menu-1`} key={idx}>
-                                            {detail.menu_name}
-                                        </div>
+                                        <div key={idx}>{detail.menu_name}</div>
                                     ))}
                                 </div>
-                                <div className="orderAmountContainer">
+                                <div className="order-detail">
                                     {order.order_details.map((detail, idx) => (
-                                        <div className="orderAmount" key={idx}>
-                                            {detail.quantity}
-                                        </div>
+                                        <div key={idx}>{detail.quantity}</div>
                                     ))}
                                 </div>
-                                <div className="orderPaymentContainer">
-                                    <div className="orderPayment">
-                                        결제완료
-                                    </div>
-                                </div>
-                                <div className="orderPriceContainer">
+                                <div className="order-detail">{order.pg}</div>
+                                <div className="order-detail">
                                     {order.order_details.map((detail, idx) => (
-                                        <div className="orderPrice" key={idx}>
-                                            {formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}
-                                        </div>
+                                        <div key={idx}>{formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}</div>
                                     ))}
                                 </div>
                             </div>
@@ -162,74 +123,39 @@ export default function OrderCheckPage() {
                 </div>
             </div>
             {isOrderDetail && selectedOrder && (
-                <div className="orderDetailFrame">
-                    <div className="frameHeader">
-                        <span className="order-detail">
-                            주문상세
-                        </span>
-                        <div className="orderDetailTxt">
-                            <span className="container-10">
-                                테이블 번호
-                            </span>
-                            <span className="container-11">
-                                주문시간
-                            </span>
-                        </div>
-                        <div className="orderDetailInfo">
-                            <span className="container-13">
-                                {selectedOrder.tablenumber}
-                            </span>
-                            <span className="container-12">
-                                {formatTime(selectedOrder.ordertime)}
-                            </span>
+                <div className="order-detail-frame">
+                    <div className="frame-header">
+                        <span className="order-detail-title">주문상세</span>
+                    </div>
+                    <div className="detail-info">
+                        <div className="detail-list">
+
+                            <span className={"detail-menu-quantity"}>테이블 번호 : {selectedOrder.tablenumber}</span>
+                            <span>주문시간 : {formatTime(selectedOrder.ordertime)}</span>
                         </div>
                     </div>
-                    <div className="detailList">
-                        <span className="listMenuName">
-                            메뉴이름
-                        </span>
-                        <span className="listMenuNum">
-                            수량
-                        </span>
-                        <span className="listMenuPrice">
-                            금액
-                        </span>
+                    <div className="detail-list">
+                        <span>메뉴이름</span>
+                        <span className={"detail-menu-quantity"}>수량</span>
+                        <span>금액</span>
                     </div>
-                    <div className="detailInfoContainer">
+                    <div className="detail-info-container">
                         {selectedOrder.order_details.map((detail, idx) => (
-                            <div className="ordersDetailContainer" key={idx}>
-                                <span className="detailMenuName">
-                                    {detail.menu_name}
-                                </span>
-                                <span className="detailMenuNum">
-                                    {detail.quantity}
-                                </span>
-                                <span className="detailMenuPrice">
-                                    {formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}
-                                </span>
+                            <div className="detail-item" key={idx}>
+                                <span className="detail-menu-name">{detail.menu_name}</span>
+                                <span className="detail-menu-quantity">{detail.quantity}</span>
+                                <span className="detail-menu-price">{formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}</span>
                             </div>
                         ))}
                     </div>
                     <div className="price-sum">
-                        <span className="container-4">
-                            금액합계
-                        </span>
-                        <span className="container-5">
-                            {formatPrice(selectedOrder.order_details.reduce((total, item) => total + (parseFloat(item.menu_price) * parseInt(item.quantity)), 0))}
-                        </span>
+                        <span>금액합계</span>
+                        <span>{formatPrice(selectedOrder.order_details.reduce((total, item) => total + (parseFloat(item.menu_price) * parseInt(item.quantity)), 0))}</span>
                     </div>
-                    <div className="btnContainer-detail">
-                        <div className="close-bt"
-                             onClick={closeOrderDetail}>
-                            <span className="container-7">
-                                닫기
-                            </span>
-                        </div>
-                        <div className="serve-done-bt" onClick={() => handleServeDone(selectedOrder.orderid)}>
-                            <span className="container-6">
-                                서빙완료
-                            </span>
-                        </div>
+                    <div className="btn-container-detail">
+                        <button className="close-btn" onClick={closeOrderDetail}>닫기</button>
+                        <button className="serve-done-btn" onClick={() => handleServeDone(selectedOrder.orderid)}>서빙완료
+                        </button>
                     </div>
                 </div>
             )}

@@ -1,7 +1,6 @@
 import '../../css/user/MenuEdit.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-
 import Icon from '../../assets/IconSample.png';
 
 export default function MenuEditPage() {
@@ -18,6 +17,9 @@ export default function MenuEditPage() {
 
     // 컴포넌트가 마운트될 때 메뉴 정보를 가져옴
     useEffect(() => {
+        if (!ownerid) {
+            alert("잘못된 접근입니다. 다시 로그인 해주세요.");
+            navigate('/');}
         const fetchMenus = async () => {
             try {
                 const response = await fetch(`http://43.201.92.62/store/${ownerid}/menu`);
@@ -32,7 +34,7 @@ export default function MenuEditPage() {
         };
 
         fetchMenus();
-    }, [ownerid]);
+    }, [ownerid, navigate]);
 
     const goToMenuAdd = () => {
         localStorage.removeItem('productid');
@@ -74,72 +76,32 @@ export default function MenuEditPage() {
     };
 
     return (
-        <div className="menuEdit">
-            <div className="headerContainer">
-                <div className="logoContainer">
-                    <img className="appNupanIcon" src={Icon} alt="">
-                    </img>
-                    <div className="app-nupan">
-                        APP-nupan
-                    </div>
+        <div className="menu-edit-container">
+            <div className="menu-edit-header">
+                <div className="menu-edit-logo">
+                    <img className="menu-edit-appNupanIcon" src={Icon} alt="App Nupan Logo" />
+                    <h1 className="menu-edit-app-title">APP-nupan</h1>
                 </div>
-                <div className="goBackBtn">
-                    <div className="goBackTxt" onClick={goBack} style={{ cursor: 'pointer' }}>
-                        뒤로가기
-                    </div>
-                </div>
+                <button className="menu-edit-back-button" onClick={goBack} style={{ cursor: 'pointer' }}>뒤로가기</button>
             </div>
-
-            <div className="line-5"></div>
-            <div className="container-7">
-                <div className="menu-edit">
-                    메뉴 관리
-                </div>
-                <button className="menu-add-bt" onClick={goToMenuAdd} style={{ cursor: 'pointer' }}>
-                    <span className="menu-add">
-                        메뉴 추가
-                    </span>
-                </button>
+            <div className="menu-edit-divider"></div>
+            <div className="menu-edit-menu-header">
+                <h2>메뉴 관리</h2>
+                <button className="menu-edit-add-button" onClick={goToMenuAdd} style={{ cursor: 'pointer' }}>메뉴 추가</button>
             </div>
-            <div className="menu-list">
+            <div className="menu-edit-list">
                 {menus.map((menu) => (
-                    <div className="menu-1" key={menu.productid}>
-                        <div className="container-6">
-                            <img
-                                className="menu-1-image"
-                                src={menu.imageurl} alt={""} />
-                            <div className="container-4">
-                                <div className="menu-1-name">
-                                    {menu.productname}
-                                </div>
-                                <span className="menu-1-info">
-                                    {menu.description}
-                                </span>
-                            </div>
+                    <div className="menu-edit-item" key={menu.productid}>
+                        <img className="menu-edit-image" src={menu.imageurl} alt={menu.productname} />
+                        <div className="menu-edit-details">
+                            <h3 className="menu-edit-name">{menu.productname}</h3>
+                            <p className="menu-edit-description">{menu.description}</p>
+                            <p className="menu-edit-category">{menu.category}</p>
                         </div>
-                        <div className="container-18">
-                            <div className="menu-1-tag">
-                                {menu.category}
-                            </div>
-                            <div className="container-3">
-                                <div className="container-10">
-                                    <button className="edit-bt-1" type="button" style={{ cursor: 'pointer' }}
-                                            onClick={() => goToMenuEdit(menu)}>
-                                        <span className="edit-1">
-                                            수정
-                                        </span>
-                                    </button>
-                                    <button className="del-bt" type="button" style={{ cursor: 'pointer' }}
-                                            onClick={() => handleDelete(menu.productid)}>
-                                        <span className="del-1">
-                                            삭제
-                                        </span>
-                                    </button>
-                                </div>
-                                <span className="menu-1-price">
-                                    {numberWithCommas(menu.price)}₩
-                                </span>
-                            </div>
+                        <div className="menu-edit-actions">
+                            <button className="menu-edit-edit-button" onClick={() => goToMenuEdit(menu)} style={{ cursor: 'pointer' }}>수정</button>
+                            <button className="menu-edit-delete-button" onClick={() => handleDelete(menu.productid)} style={{ cursor: 'pointer' }}>삭제</button>
+                            <p className="menu-edit-price">Price : {numberWithCommas(menu.price)}₩</p>
                         </div>
                     </div>
                 ))}
