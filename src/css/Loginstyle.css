@@ -1,180 +1,133 @@
-.id1-1 {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2vh 0 331px 0;
-    box-sizing: border-box;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.logoContainer-login{
-    margin: 0 98px 2vh 4vw;
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: row;
-    align-self: flex-start;
-    width: fit-content;
-}
-.app-nupan1-2 {
-    margin-top: 26px;
-    display: inline-block;
-    align-self: flex-start;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
-}
-.appNupanIcon-login {
-    width: 79px;
-    height: 80px;
-    margin-right: 26px;
+body, html {
+    font-family: 'Inter', sans-serif;
+    background: #FFFFFF;
 }
 
-.line1-5 {
-    background: #DC6721;
-    margin-bottom: 25vh;
-    width: 100%;
-    height: 2px;
-}
-
-.container1-1 {
-    margin-right: 19px;
+.main-container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 297px;
+    /*min-height: 100vh;*/
+    padding: 2vh 0;
     box-sizing: border-box;
 }
 
-.container1-2 {
-    margin: 0 0 53px 106.7px;
+.header1 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 424.7px;
-    box-sizing: border-box;
-}
-
-.id1-2 {
-    margin-right: 14.5px;
-    width: 246.5px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #000000;
-}
-.id1 {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #000000;
-}
-.id1-3 {
-    background: #FF4C00;
-    position: relative;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 36px 14px 37px 12px;
-    box-sizing: border-box;
-    width: 119px;
-    height: 109px;
-
+    width: 100%;
+    padding: 20px 0;
+    background-color: #FFFFFF;
 }
 
-.id1-4 {
-    border: 4px solid #FF4C00;
-    background: #FFFFFF;
-    margin-bottom: 17px;
-    width: 297px;
-    height: 46px;
-}
-.id1-5 {
-    border: 4px solid #FF4C00;
-    background: #FFFFFF;
-    width: 297px;
-    height: 46px;
-}
-.app-nupan1-6 {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #515151;
-}
-.mdiinformation-outline1 {
-    margin: 4px 5px 5px 0;
+.logo1 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    box-sizing: border-box;
+    align-items: center;
 }
-.vector1 {
-    width: 20px;
-    height: 20px;
+
+.appNupanIcon1 {
+    width: 79px;
+    height: 80px;
+    margin-right: 20px;
 }
-.info1 {
-    margin-right: 137.3px;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    box-sizing: border-box;
-}
-.id1-7 {
-    margin-bottom: 34px;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #000000;
-}
-.id1-8 {
-    margin-right: 0.3px;
-    overflow-wrap: break-word;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #000000;
-}
-.id1-9 {
-    overflow-wrap: break-word;
-    font-family: 'Inter';
+
+.app-title1 {
     font-style: italic;
     font-weight: 600;
     font-size: 30px;
-    color: #FFFFFF;
-    width: 93px;
-    height: 36px;
+    color: #000000;
 }
-.container1-10 {
-    margin: 9px 19.4px 8px 0;
+
+.container1-11 {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    box-sizing: border-box;
-    /*width: 89px;*/
+    align-items: center;
+    margin-bottom: 30px;
 }
-.container1-11 {
-    margin: 0 1px 17px 0;
+
+.form-group {
     display: flex;
     flex-direction: row;
-    width: fit-content;
-    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 130px;
+}
+
+.form-group label {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    margin-right: 10px;
+    width: 100px;
+    text-align: right;
+}
+
+.form-group input {
+    border: 2px solid #FF4C00;
+    width: 300px;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.id1-3 {
+    background: #FF4C00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /*margin-left: 130px;*/
+}
+
+.id1-9 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.container1-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    margin-bottom: 50px;
+    margin-left: 115px;
+}
+
+.id1-2, .id1 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main-container2 {
+    align-items: center;
+    justify-content: center;
+}
+
+.info1 {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.app-nupan1-6 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: #515151;
 }

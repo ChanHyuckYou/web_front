@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-import '../css/Loginstyle.css'
-import {useNavigate} from 'react-router-dom';
-import axios from "axios"
-import {useMutation} from "react-query";
+import React, { useState } from 'react';
+import '../css/Loginstyle.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useMutation } from 'react-query';
 import Icon from '../assets/IconSample.png';
-
 
 export function Login() {
     const navigate = useNavigate();
@@ -16,7 +15,7 @@ export function Login() {
     };
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         if (name === 'email') setOwnerId(value);
         if (name === 'password') setPassword(value);
     };
@@ -36,7 +35,7 @@ export function Login() {
         } catch (error) {
             let errorMessage = '로그인 중 오류가 발생했습니다.';
             if (error.response) {
-                const {status, data, statusText} = error.response;
+                const { status, data, statusText } = error.response;
                 switch (status) {
                     case 400:
                         errorMessage = '요청이 잘못되었습니다. 입력한 정보를 다시 확인해주세요.';
@@ -73,82 +72,60 @@ export function Login() {
     });
 
     const loginHandleSubmit = () => {
-        login.mutate({ownerid, password});
+        login.mutate({ ownerid, password });
     };
 
-
     return (
-        <div className="id1-1">
-            <div className="logoContainer-login">
-                <img className="appNupanIcon-login" src={Icon} alt=""/>
-                <div className="app-nupan1-2">
-                    APP-nupan
+        <div className="main-container1">
+            <div className="header1">
+                <div className="logo1">
+                    <img className="appNupanIcon1" src={Icon} alt="App Nupan Logo" />
+                    <div className="app-title1">APP-nupan</div>
                 </div>
             </div>
-            <div className="line1-5">
-            </div>
-            <div className="container1-11">
-                <div className="container1-10">
-                    <div className="id1-7">
-                        ID
+            <div className="main-container2">
+                <div className="container1-11">
+                    <div className="form-group">
+                        <label htmlFor="email">ID</label>
+                        <input
+                            type="text"
+                            name="email"
+                            className="id1-4"
+                            placeholder="아이디를 입력해주세요"
+                            onChange={handleChange}
+                            value={ownerid}
+                        />
                     </div>
-                    <span className="id1-8">
-                     비밀번호
-                    </span>
+                    <div className="form-group">
+                        <label htmlFor="password">비밀번호</label>
+                        <input
+                            type="password"
+                            name="password"
+                            className="id1-5"
+                            placeholder="비밀번호를 입력해주세요"
+                            autoComplete="current-password"
+                            onChange={handleChange}
+                            value={password}
+                        />
+                    </div>
+                    <div className="id1-3" onClick={loginHandleSubmit}>
+                        <span className="id1-9">로그인</span>
+                    </div>
                 </div>
-                <div className="container1-1">
-                    <input
-                        type="text"
-                        name="email" // name 속성 추가
-                        className="id1-4"
-                        placeholder="아이디를 입력해주세요"
-                        onChange={handleChange}
-                        value={ownerid} // 수정
-                    />
-
-                    <input
-                        type="password"
-                        name="password" // name 속성 추가
-                        className="id1-5"
-                        placeholder="비밀번호를 입력해주세요"
-                        autoComplete="current-password"
-                        onChange={handleChange}
-                        value={password} // 수정
-                    />
+                <div className="container1-2">
+                    <div>
+                        <span className="id1-2" onClick={goTosign} style={{ cursor: 'pointer' }}>회원가입</span>
+                    </div>
+                    <div>
+                        <span className="id1" style={{ cursor: 'pointer' }}>ID/비밀번호찾기</span>
+                    </div>
                 </div>
-
-                <div className="id1-3"
-                     onClick={loginHandleSubmit}
-                     style={{cursor: 'pointer'}}>
-                        <span className="id1-9">
-                            로그인
-                        </span>
+                <div className="info1">
+                    <span className="app-nupan1-6">App-nupan웹은 사업자 전용입니다.</span>
                 </div>
-
-            </div>
-
-            <div className="container1-2">
-                <div>
-                    <span className="id1-2" onClick={goTosign} style={{cursor: 'pointer'}}>
-                        회원가입
-                    </span>
-                </div>
-                <div>
-                    <span className="id1" style={{cursor: 'pointer'}}>
-                        ID/비밀번호찾기
-                    </span>
-                </div>
-            </div>
-            <div className="info1">
-                <div className="mdiinformation-outline">
-                    {/*<img className="vector" />*/}
-                </div>
-                <span className="app-nupan1-6">
-                    App-nupan웹은 사업자 전용입니다.
-                </span>
             </div>
         </div>
-    )
+    );
 }
 
 export default Login;

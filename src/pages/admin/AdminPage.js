@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import AdminAppManage from "./AdminPageAppManage";
 import AdminSignIn from "./AdminPageSignInConfirm";
 import AdminStoreManage from "./AdminPageStoreManage";
 import Icon from '../../assets/IconSample.png';
 import '../../css/admin/AdminPageSignInConfirm.css';
+import {useNavigate} from 'react-router-dom';
 
 export default function AdminPage() {
+    const navigate = useNavigate();
+    const ownerid = localStorage.getItem('ownerid');
     // 현재 활성화된 메뉴를 추적하는 상태, 초기값은 null
     const [activeMenu, setActiveMenu] = useState('signIn');
 
@@ -17,6 +20,12 @@ export default function AdminPage() {
     const getLineClassName = (menuName) => {
         return `line-8 ${activeMenu === menuName ? 'active' : 'hidden'}`;
     };
+    useEffect(() => {
+        if (ownerid !== "appnupan") {
+            alert("잘못된 접근입니다. 다시 로그인 해주세요.");
+            navigate('/');
+        }
+    }, [ownerid, navigate]);
     return (
         <div className="adminPageSignInConfirm">
                 <div className="headerContainer">
