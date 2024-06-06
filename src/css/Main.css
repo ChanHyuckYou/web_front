@@ -53,6 +53,8 @@
 
 .profile-button {
     position: relative;
+    background-color: #fff;
+    border: none;
 }
 
 .profile-icon {
