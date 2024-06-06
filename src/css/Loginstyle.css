@@ -5,6 +5,7 @@ body, html {
     font-family: 'Inter', sans-serif;
     height: 100%;
     overflow: auto; /* Prevent body overflow */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .main-container1 {

@@ -130,7 +130,7 @@ export default function MenuAdd() {
                             />
                         </div>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group123">
                         <label className="form-label">메뉴이름</label>
                         <input
                             type="text"
@@ -140,7 +140,7 @@ export default function MenuAdd() {
                             placeholder=" 메뉴이름을 입력해주세요"
                             autoComplete="off" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group123">
                         <label className="form-label">메뉴설명</label>
                         <textarea
                             value={description}
@@ -149,7 +149,7 @@ export default function MenuAdd() {
                             placeholder=" 메뉴설명을 입력해주세요"
                             autoComplete="off" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group123">
                         <label className="form-label">태그</label>
                         <input
                             list="categories"
@@ -165,7 +165,7 @@ export default function MenuAdd() {
                             <option value="음료"></option>
                         </datalist>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group123">
                         <label className="form-label">가격</label>
                         <input
                             type="text"

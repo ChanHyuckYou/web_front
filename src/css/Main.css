@@ -1,9 +1,9 @@
 
-/*#root {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    height: 100%;*/
-/*}*/
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 .main-container {
     display: flex;
@@ -27,6 +27,7 @@
 .logo {
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .appNupanIcon {
@@ -55,6 +56,7 @@
     position: relative;
     background-color: #fff;
     border: none;
+    margin-right: 20px;
 }
 
 .profile-icon {

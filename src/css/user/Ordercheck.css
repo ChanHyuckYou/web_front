@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.logo1234 {
+    display: flex;
+    align-items: center;
+}
 
 .back-button {
     background-color: #d9d9d9;
@@ -17,10 +21,6 @@
     cursor: pointer;
 }
 
-.divider {
-    margin: 20px 0;
-    border: none;
-}
 
 .order-header {
     display: flex;

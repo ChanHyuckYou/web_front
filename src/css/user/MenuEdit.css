@@ -5,6 +5,11 @@ body, html {
     height: 100%;
     overflow: auto; /* Prevent body overflow */
 }
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 .menu-edit-container {
     display: flex;
@@ -49,6 +54,13 @@ body, html {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-edit-back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-edit-divider {
@@ -77,6 +89,13 @@ body, html {
     font-size: 1rem;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-edit-add-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-edit-list {
@@ -95,6 +114,12 @@ body, html {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-edit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-edit-image {
@@ -138,6 +163,13 @@ body, html {
     font-size: 1rem;
     margin-bottom: 10px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-edit-edit-button:hover, .menu-edit-delete-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-edit-price {

@@ -83,8 +83,8 @@ export default function OrderCheckPage() {
 
     return (
         <div className="order-check-container">
-            <div className="header">
-                <div className="logo">
+            <div className="menu-edit-header">
+                <div className="logo1234">
                     <img className="appNupanIcon" src={Icon} alt="App Nupan Logo" />
                     <h1 className="app-title">APP-nupan</h1>
                 </div>
