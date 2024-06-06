@@ -137,13 +137,13 @@ export default function MenuAdd() {
                                 value={productname}
                                 onChange={(e) => setProductName(e.target.value)}
                                 className="inputMenuName"
-                                placeholder="메뉴이름을 입력해주세요"
+                                placeholder=" 메뉴이름을 입력해주세요"
                                 autoComplete="off" />
                             <textarea
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                                 className="inputMenuInfo"
-                                placeholder="메뉴설명을 입력해주세요"
+                                placeholder=" 메뉴설명을 입력해주세요"
                                 autoComplete="off" />
                             <input
                                 list="categories"
@@ -151,19 +151,19 @@ export default function MenuAdd() {
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
                                 className="inputMenuTag"
-                                placeholder="태그 이름"
+                                placeholder=" 태그 이름"
                                 autoComplete="off" />
                             <datalist id="categories">
-                                <option value="태그1"></option>
-                                <option value="태그2"></option>
-                                <option value="태그3"></option>
+                                <option value="추천메뉴"></option>
+                                <option value="사이드"></option>
+                                <option value="음료"></option>
                             </datalist>
                             <input
                                 type="text"
                                 value={price}
                                 onChange={(e) => setPrice(e.target.value)}
                                 className="inputMenuPrice"
-                                placeholder="가격을 입력해주세요"
+                                placeholder=" 가격을 입력해주세요"
                                 autoComplete="off" />
                         </div>
                     </div>

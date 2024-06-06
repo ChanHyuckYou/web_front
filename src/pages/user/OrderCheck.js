@@ -2,8 +2,10 @@ import '../../css/user/Ordercheck.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Icon from '../../assets/IconSample.png';
+import {useNavigate} from 'react-router-dom';
 
 export default function OrderCheckPage() {
+    const navigate = useNavigate();
     const [orders, setOrders] = useState([]);
     const ownerid = localStorage.getItem('ownerid');
     const [isOrderDetail, setIsOrderDetail] = useState(false);
@@ -24,6 +26,11 @@ export default function OrderCheckPage() {
         };
         fetchOrders();
     }, [ownerid]);
+
+    const goBack = () => {
+        localStorage.setItem('ownerid', ownerid);
+        navigate('/Main')
+    }
 
     const openOrderDetail = (order) => {
         setSelectedOrder(order);
@@ -72,7 +79,7 @@ export default function OrderCheckPage() {
                         APP-nupan
                     </div>
                 </div>
-                <div className="goBackBtn">
+                <div className="goBackBtn" onClick={goBack} style={{cursor: 'pointer'}}>
                     <div className="goBackTxt">
                         뒤로가기
                     </div>
@@ -83,6 +90,10 @@ export default function OrderCheckPage() {
             <div className="order-check">
                 주문확인
             </div>
+
+                <span className="order-check">
+                    현재 주문 건수 : {orders.length}건
+                </span>
             <div className="order-list-table">
                 <div className="table-list">
                     <span className="order-number">

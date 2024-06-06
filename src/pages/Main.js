@@ -5,14 +5,20 @@ import QR from '../assets/bi_qr-code-scan.png'
 import MyPage from '../assets/MyPage.png';
 import Icon from '../assets/IconSample.png';
 import {useNavigate} from "react-router-dom";
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect } from 'react';
 
 
 export default function Main() {
     const navigate = useNavigate();
     const ownerid = localStorage.getItem('ownerid');
     const [isMoreOpen, setIsMoreOpen] = useState(false);
-    const timerRef = useRef(null);
+
+    useEffect(() => {
+        if (!ownerid) {
+            alert('잘못된 접근입니다. 다시 로그인 해주세요.');
+            navigate('/');
+        }
+    }, [ownerid, navigate]);
 
     const goToQr = () => {
         localStorage.setItem('ownerid', ownerid);
@@ -34,19 +40,10 @@ export default function Main() {
         setIsMoreOpen(prevState => !prevState);
     };
     const goToLogOut = () => {
+        localStorage.removeItem('ownerid'); // ownerid 제거
         navigate('/');
     }
 
-
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/storeinfo/${ownerid}`)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log(data); // 여기서 받은 데이터를 활용
-    //         })
-    //         .catch(error => console.error("Error fetching data: ", error));
-    // }, [ownerid]); // ownerid가 변경될 때마다 다시 호출
     return (
         <div className="container-2-ad">
             <div className="container-ad">
@@ -80,16 +77,9 @@ export default function Main() {
             </div>
             <div className="userWelcome">
                 <div className="user-name-ad">
-                    {ownerid}님 환영합니다.
+                    {ownerid} 님 환영합니다!
                 </div>
-                <div className="container-2111-ad">
-                <span className="storeName">
-                    가게이름-1
-                </span>
-                    <span className="container-122-ad">
-                    00지점
-                </span>
-                </div>
+                <div></div>
             </div>
 
 
