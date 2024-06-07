@@ -103,16 +103,16 @@ export default function MenuAdd() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
             <div className="menu-add-container">
-                <div className="header">
-                    <div className="logo">
-                        <img className="appNupanIcon" src={Icon} alt="" />
-                        <div className="app-title">APP-nupan</div>
+                <div className="menu-edit-header">
+                    <div className="menu-edit-logo">
+                        <img className="menu-edit-appNupanIcon" src={Icon} alt=""/>
+                        <div className="menu-edit-app-title">APP-nupan</div>
                     </div>
                 </div>
-                <div className="divider"></div>
-                <div className="menu-add-header">메뉴추가</div>
+                <div className="menu-edit-divider"></div>
+                <div className="menu-add-header">
+                    </div>
                 <div className="menu-form">
                     <div className="form-group">
                         <div className="image-preview">
@@ -176,11 +176,10 @@ export default function MenuAdd() {
                             autoComplete="off" />
                     </div>
                     <div className="button-group">
-                        <button className="submit-btn" type="submit">메뉴추가</button>
+                        <button className="submit-btn" type="submit" onClick={handleSubmit}>메뉴추가</button>
                         <button className="cancel-btn" type="button" onClick={goToMenuEdit}>작성취소</button>
                     </div>
                 </div>
             </div>
-        </form>
     );
 }

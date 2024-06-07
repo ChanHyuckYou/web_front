@@ -1,3 +1,5 @@
+
+
 .menu-add-container {
     display: flex;
     flex-direction: column;
@@ -5,6 +7,8 @@
     background-color: #f5f5f5;
     box-sizing: border-box;
 }
+
+
 
 .divider {
     margin: 20px 0;
@@ -15,13 +19,17 @@
     font-weight: bold;
     margin-bottom: 20px;
     padding: 40px;
+    align-self: center;
 }
 
 .menu-form {
     display: flex;
+    align-self: center;
     flex-direction: column;
     gap: 20px;
+    width: 800px;
     background-color: #fff;
+    border: 2px solid #FF4C00;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

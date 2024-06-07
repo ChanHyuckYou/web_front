@@ -1,10 +1,4 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    height: 100%;
-    overflow: auto; /* Prevent body overflow */
-}
+
 #root {
     display: flex;
     flex-direction: column;
