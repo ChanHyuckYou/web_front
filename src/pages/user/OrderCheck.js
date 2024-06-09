@@ -168,7 +168,6 @@ export default function OrderCheckPage() {
                 </div>
 
 
-
             )}
         </div>
     );

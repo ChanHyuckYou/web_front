@@ -147,7 +147,6 @@ const QrCRUD = () => {
                     </div>
                 </div>
             )}
-
             <div className={`qrAddEvntFrame ${showTableFrame ? 'show-tableframe' : ''}`}>
                 <div className="tableAddTxt">
                     테이블 추가
