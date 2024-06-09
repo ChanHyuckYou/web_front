@@ -101,7 +101,6 @@ export function Login() {
                         <input
                             type="password"
                             name="password"
-                            className="id1-5"
                             placeholder="비밀번호를 입력해주세요"
                             autoComplete="current-password"
                             onChange={handleChange}

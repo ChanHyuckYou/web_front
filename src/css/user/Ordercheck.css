@@ -20,7 +20,10 @@
     font-size: 1rem;
     cursor: pointer;
 }
-
+.order-divider {
+    margin: 20px 0;
+    border: none;
+}
 
 .order-header {
     display: flex;
@@ -77,6 +80,8 @@
     width: 100%;
 }
 
+
+/*이벤트 프레임*/
 .order-detail {
     flex: 1;
     text-align: center;
@@ -96,6 +101,7 @@
     max-width: 900px;
     box-sizing: border-box;
 }
+
 
 .frame-header {
     display: flex;
@@ -120,6 +126,7 @@
     justify-content: space-between;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 0 20px;
 }
 
 .detail-info-container {
@@ -127,6 +134,9 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
+    border: solid 1px #000;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .detail-item {
@@ -142,6 +152,9 @@
 .detail-menu-quantity {
     flex: 1;
     text-align: center;
+}
+.detail-menu-quantity-margin {
+    margin-left: 25px;
 }
 .detail-menu-price {
     flex: 1;

@@ -64,6 +64,7 @@ export default function Main() {
                     </button>
                 </div>
             </div>
+            
             <div className="main-content">
                 <div className="button-container">
                     <button className="main-button menu-edit" onClick={MenuEdit} style={{cursor: 'pointer'}}>

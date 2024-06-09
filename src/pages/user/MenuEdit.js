@@ -85,6 +85,7 @@ export default function MenuEditPage() {
                 </div>
                 <button className="menu-edit-back-button" onClick={goBack} style={{ cursor: 'pointer' }}>뒤로가기</button>
             </div>
+
             <div className="menu-edit-divider"></div>
             <div className="menu-edit-menu-header">
                 <h2>메뉴 관리</h2>
@@ -99,11 +100,18 @@ export default function MenuEditPage() {
                             <p className="menu-edit-description">{menu.description}</p>
                             <p className="menu-edit-category">{menu.category}</p>
                         </div>
-                        <div className="menu-edit-actions">
-                            <button className="menu-edit-edit-button" onClick={() => goToMenuEdit(menu)} style={{ cursor: 'pointer' }}>수정</button>
-                            <button className="menu-edit-delete-button" onClick={() => handleDelete(menu.productid)} style={{ cursor: 'pointer' }}>삭제</button>
+                        <div className="menu-edit-actions-container">
+                            <div className="menu-edit-actions">
+                                <button className="menu-edit-edit-button" onClick={() => goToMenuEdit(menu)}
+                                        style={{cursor: 'pointer'}}>수정
+                                </button>
+                                <button className="menu-edit-delete-button" onClick={() => handleDelete(menu.productid)}
+                                        style={{cursor: 'pointer'}}>삭제
+                                </button>
+                            </div>
                             <p className="menu-edit-price">Price : {numberWithCommas(menu.price)}₩</p>
                         </div>
+
                     </div>
                 ))}
             </div>

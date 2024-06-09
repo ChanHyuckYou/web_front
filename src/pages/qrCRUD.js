@@ -101,7 +101,7 @@ const QrCRUD = () => {
                     <div className="goBackTxt-qr">뒤로가기</div>
                 </div>
             </div>
-
+            
             <div className="container-511">
                 <div className="table-number11">테이블 번호</div>
                 <button className="table-add-bt" onClick={handleTableCreateClick}

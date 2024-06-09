@@ -105,14 +105,13 @@ export default function MenuAdd() {
     return (
             <div className="menu-add-container">
                 <div className="menu-edit-header">
-                    <div className="menu-edit-logo">
-                        <img className="menu-edit-appNupanIcon" src={Icon} alt=""/>
-                        <div className="menu-edit-app-title">APP-nupan</div>
+                    <div className="menu-add-logo">
+                        <img className="menu-add-appNupanIcon" src={Icon} alt=""/>
+                        <div className="menu-add-app-title">APP-nupan</div>
                     </div>
                 </div>
-                <div className="menu-edit-divider"></div>
-                <div className="menu-add-header">
-                    </div>
+                <div className="divider"></div>
+
                 <div className="menu-form">
                     <div className="form-group">
                         <div className="image-preview">

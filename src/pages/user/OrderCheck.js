@@ -1,8 +1,8 @@
 import '../../css/user/Ordercheck.css';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Icon from '../../assets/IconSample.png';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function OrderCheckPage() {
     const navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function OrderCheckPage() {
 
     const handleServeDone = async (orderid) => {
         try {
-            const response = await axios.post('http://43.201.92.62/order/serve_done', { orderid: orderid });
+            const response = await axios.post('http://43.201.92.62/order/serve_done', {orderid: orderid});
             if (response.data.message) {
                 setOrders(orders.filter(order => order.orderid !== orderid));
                 closeOrderDetail();
@@ -85,12 +85,12 @@ export default function OrderCheckPage() {
         <div className="order-check-container">
             <div className="menu-edit-header">
                 <div className="logo1234">
-                    <img className="appNupanIcon" src={Icon} alt="App Nupan Logo" />
+                    <img className="appNupanIcon" src={Icon} alt="App Nupan Logo"/>
                     <h1 className="app-title">APP-nupan</h1>
                 </div>
-                <button className="back-button" onClick={goBack} style={{ cursor: 'pointer' }}>뒤로가기</button>
+                <button className="back-button" onClick={goBack} style={{cursor: 'pointer'}}>뒤로가기</button>
             </div>
-            <div className="divider"></div>
+            <div className="order-divider"></div>
             <div className="order-header">
                 <h2>주문확인</h2>
                 <h2>현재 주문 건수 : {orders.length}건</h2>
@@ -123,7 +123,8 @@ export default function OrderCheckPage() {
                                 <div className="order-detail">{order.pg}</div>
                                 <div className="order-detail">
                                     {order.order_details.map((detail, idx) => (
-                                        <div key={idx}>{formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}</div>
+                                        <div
+                                            key={idx}>{formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}</div>
                                     ))}
                                 </div>
                             </div>
@@ -151,7 +152,7 @@ export default function OrderCheckPage() {
                         {selectedOrder.order_details.map((detail, idx) => (
                             <div className="detail-item" key={idx}>
                                 <span className="detail-menu-name">{detail.menu_name}</span>
-                                <span className="detail-menu-quantity">{detail.quantity}</span>
+                                <span className={"detail-menu-quantity", "detail-menu-quantity-margin"}>{detail.quantity}</span>
                                 <span className="detail-menu-price">{formatPrice(parseFloat(detail.menu_price) * parseInt(detail.quantity))}</span>
                             </div>
                         ))}
@@ -165,6 +166,9 @@ export default function OrderCheckPage() {
                         <button className="serve-done-btn" onClick={() => handleServeDone(selectedOrder.orderid)}>서빙완료</button>
                     </div>
                 </div>
+
+
+
             )}
         </div>
     );
