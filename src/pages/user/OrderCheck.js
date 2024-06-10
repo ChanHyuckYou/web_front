@@ -138,7 +138,7 @@ export default function OrderCheckPage() {
                         <span className="order-detail-title">주문상세</span>
                     </div>
                     <div className="detail-info">
-                        <div className="detail-list">
+                        <div className="order-table-time">
                             <span className="detail-menu-quantity">테이블 번호 : {selectedOrder.tablenumber}</span>
                             <span>주문시간 : {formatTime(selectedOrder.ordertime)}</span>
                         </div>
