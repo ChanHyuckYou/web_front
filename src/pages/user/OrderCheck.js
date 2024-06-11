@@ -32,6 +32,12 @@ export default function OrderCheckPage() {
             }
         };
         fetchOrders();
+
+        const intervalId = setInterval(fetchOrders, 2000);
+
+        // Clear interval on component unmount
+        return () => clearInterval(intervalId);
+
     }, [ownerid, navigate]);
 
     const goBack = () => {
