@@ -78,7 +78,7 @@
 
 /*입력값 텍스트*/
 .signInPage .id {
-    margin: 17px 0 18px 0;
+
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -89,7 +89,7 @@
     height: 29px;
 }
 .signInPage .pwd {
-    margin: 29px 0 20px 0;
+
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -100,7 +100,7 @@
     height: 29px;
 }
 .signInPage .confirmpwd {
-    margin: 26px 0 26px 0;
+
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -111,7 +111,7 @@
     height: 29px;
 }
 .signInPage .name {
-    margin: 24px 0 30px 0;
+
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -122,7 +122,7 @@
     height: 29px;
 }
 .signInPage .phoneNum {
-    margin: 20px 0 29px 0;
+
     display: inline-block;
     overflow-wrap: break-word;
     font-family: 'Inter';
@@ -146,11 +146,12 @@
 .signInPage .nextform {
     background: #FF4C00;
     position: relative;
-    margin-left: 145px;
+    margin-left: 175px;
     display: flex;
     padding: 10px 25px 9px 25px;
     width: fit-content;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 .signInPage .nick-ok {
     background: #FF4C00;
@@ -160,6 +161,7 @@
     box-sizing: border-box;
     height: 56px;
     width: fit-content;
+    border-radius: 5px;
 }
 .signInPage .itemContainer {
 
@@ -174,6 +176,9 @@
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
+    padding: 20px 0;
+    justify-content: space-between;
+    height: 380px;
 }
 
 .signInPage .inputContainer {
@@ -185,39 +190,39 @@
     box-sizing: border-box;
 }
 .signInPage .inputid {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
-    height: 56px;
+    height: 54px;
 }
 .signInPage .inputpwd {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
-    height: 56px;
+    height: 54px;
 }
 .signInPage .inputpwd2 {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
-    height: 56px;
+    height: 54px;
 }
 .signInPage .inputName {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
-    height: 56px;
+    height: 54px;
 }
 .signInPage .inputPhone {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
-    height: 56px;
+    height: 54px;
 }
 
 .signInPage .btnContainer {
