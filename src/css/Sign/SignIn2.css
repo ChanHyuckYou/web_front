@@ -84,15 +84,17 @@
     display: flex;
     padding: 9px 14.6px 10px 14px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 .signInPage2 .idCheckBtn {
     background: #FF4C00;
     position: relative;
-    margin-top: 230px;
+    margin-top: 250px;
     display: flex;
     padding: 9px 14px 10px 14px;
     box-sizing: border-box;
     min-width: 70px;
+    border-radius: 5px;
 }
 .signInPage2 .idCheck {
     overflow-wrap: break-word;
@@ -180,14 +182,14 @@
     box-sizing: border-box;
 }
 .signInPage2 .inputStoreName {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
     height: 56px;
 }
 .signInPage2 .inputStoreNum {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
@@ -195,20 +197,20 @@
 }
 .signInPage2 .inputStoreAddress {
     background: #FFFFFF;
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     margin-bottom: 20px;
     width: 309px;
     height: 56px;
 }
 .signInPage2 .inputBossName {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
     height: 56px;
 }
 .signInPage2 .inputStoreId {
-    border: 3px solid #B0B0B0;
+    border: 2px solid #B0B0B0;
     background: #FFFFFF;
     margin-bottom: 20px;
     width: 309px;
